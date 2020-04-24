@@ -1,0 +1,249 @@
+.mui-content{
+	background: #314173;
+	height: 100vh;
+	position: relative;
+}
+.container{
+	display: flex;
+	margin-top: 1rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.lightbulb__container {
+  position: relative;
+  width: 15rem;
+  height: 19rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 灯泡上部 */
+.lightbulb__container .lightbulb__bulb {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  background: #FEFFBE;
+  border-radius: 50%;
+  background: #000;
+}
+/* 灯泡内部的白色 */
+.lightbulb__container .lightbulb__bulb_inside {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  width: 6rem;
+  height: 6rem;
+  border-right: 1.15rem solid #FCFCF7;
+  border-radius: 50%;
+  transform: rotateZ(-20deg);
+}
+/* 接连灯泡的下部 */
+.lightbulb__container .lightbulb__bulb_bottom {
+  position: absolute;
+  width: 10rem;
+  height: 2.5rem;
+  bottom: -1rem;
+  left: calc(50% - 5rem);
+  background: #FEFFBE;
+  border-radius: 0 0 1rem 1rem;
+  background: #000;
+}
+/* 制作伪类 下部形成弧度 */
+.lightbulb__container .lightbulb__bulb::before, .lightbulb__container .lightbulb__bulb::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 70%;
+  width: 6.5rem;
+  height: 10rem;
+  background: #314173;
+  z-index: 5;
+}
+.lightbulb__container .lightbulb__bulb::before {
+  left: -41%;
+  border-top-right-radius: 50%;
+}
+.lightbulb__container .lightbulb__bulb::after {
+  right: -41%;
+  border-top-left-radius: 50%;
+}
+/* 接触灯泡底部灰色部分*/
+.lightbulb__container .lightbulb__base {
+  position: absolute;
+  bottom: 6.2rem;
+  width: 5rem;
+  height: 1.5rem;
+  background: #888F98;
+  border-radius: 0.3rem;
+  z-index: 10;
+}
+/* 灯泡螺旋部分 */
+.lightbulb__container .lightbulb__spiral {
+  position: absolute;
+  bottom: 5rem;
+  width: 3.5rem;
+  height: 1rem;
+  background: #7a828c;
+  border-radius: 0.2rem;
+  background-image: linear-gradient(180deg, transparent 45%, #565c64 10%);
+  background-size: 50% 30%;
+}
+/* 灯泡背景 */
+.lightbulb__container .lightbulb__glow {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-15%) scale(0.5);
+  filter: blur(5rem);
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  background: radial-gradient(#FEFFBE 25%, transparent 80%);
+  /* animation: glow 5s ease infinite; */
+  z-index: 8;
+}
+
+/* 动画效果结合灯泡背景使用 */
+@keyframes glow {
+  0% {
+    transform: translateX(-50%) translateY(-15%) scale(0.5);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-15%) scale(1.15);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-15%) scale(0.5);
+  }
+}
+
+/* 电源开关部分 switch1*/
+.switch .switch1{
+	position: absolute;
+	right: 1.5rem;
+	/* width: 2.5rem;
+	height: 2.5rem; */
+	top: 4rem;
+	z-index: 10;
+	/* background: red; */
+}
+.switch .switch2{
+	position: absolute;
+	top: 16rem;
+	left: 1rem;
+	width: 3rem;
+	height: 1.8rem;
+	line-height: 1.8rem;
+	color: #FFFFFF;
+	text-align: center;
+	background: #009F3C;
+	z-index: 22;
+}
+.switch1 img{
+	width: 2.5rem;
+	z-index: 3;
+}
+.mui-input-row .mui-input-range input{
+	position: absolute;
+	z-index: 20;
+}
+/* 滑块区域 slider */
+.slider{
+	position: absolute;
+	width: 100%;
+	top: 18rem;
+	/* background: red; */
+	z-index: 100;
+	color: #C8C7CC;
+	/* opacity: 0.5; */
+	pointer-events: none;
+}
+
+/* 改变数字提示框样式 */
+.mui-input-range .mui-tooltip{
+	font-size: 1rem;
+	line-height:  30px;
+	width: 30px;
+	height: 30px;
+	font-weight: border;
+	top: -30px;
+}
+/* 改变滑块的颜色 */
+.mui-input-range input[type='range']::-webkit-slider-thumb
+{
+	width: 20px;
+	height: 20px;
+	background-color:#C8C7CC; 
+}
+
+/* 颜色模块选择 */
+.mui-input-row ul{
+	float: left;
+	display:flex; 
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: space-between;
+	align-content: space-between;
+	margin: 0;
+	padding: 0;
+	width: 50%;
+}
+.mui-input-row ul li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin: 3px;
+	border: 3px solid transparent;
+	cursor: pointer;
+}
+/* 红色 */
+#Color1{
+	border-color:#DF0023;
+}
+/* 浅红色 */
+#Color2{
+	border-color: #EC6B9E;
+}
+/* 浅青豆绿 */
+#Color3{
+	border-color: #AAD46D;
+}
+/* 浅黄绿 */
+#Color4{
+	border-color: #79C471;
+}
+/* 绿色 */
+#Color5{
+	border-color: #009F3C;
+}
+/* 浅绿青 */
+#Color6{
+    border-color: #3DB7B4;
+}
+/* 浅青蓝 */
+#Color7{
+	border-color: #5D8AC6;
+}
+/* 浅青 */
+#Color8{
+	border-color: #3EBCDF;
+}
+/* 蓝色 */
+#Color9{
+	border-color: #314396;
+}
+/* 浅蓝 */
+#Color10{
+	border-color: #666EB0;
+}
+/* 浅蓝紫 */
+#Color11{
+	border-color: #6A509A;
+}
+/* 浅紫洋红 */
+#Color12{
+	border-color: #AE5D9C;
+}

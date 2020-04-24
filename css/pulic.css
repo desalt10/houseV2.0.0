@@ -1,0 +1,6 @@
+header{
+	background: linear-gradient(to right , #314173 10%,#393952 100%);
+}
+header h1,a{
+	color: #FFFFFF!important;
+}

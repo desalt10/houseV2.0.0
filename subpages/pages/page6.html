@@ -1,0 +1,45 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />  
+    <title>窗帘</title> 
+	<link href="../../css/pulic.css" rel="stylesheet" />
+    <link href="../../css/mui.min.css" rel="stylesheet"/>  
+	<link href="../../css/page6.css" rel="stylesheet"/>
+</head>  
+<body>  
+ <header class="mui-bar mui-bar-nav">
+ 	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>
+ 	<h1 class="mui-title">窗帘</h1>
+ </header>
+    <div class="mui-content">
+        <div class='wrapper'>
+			<img src="../../img/Page6-1.png" id="Page6_1" class="Page6_1">
+			<img src="../../img/Page6-2.png" id="Page6_2" class="Page6_2">
+		</div>
+        <div class='glares'>
+          <div class='glare'></div>
+          <div class='glare'></div>
+          <div class='glare'></div>
+          <div class='glare'></div>
+        </div>
+        <div class='ledge'>
+			<div class="btns">
+				<button id="btn1" class='mui-btn btn1' onclick="btnOpen_6();">打开</button>
+				<button id="btn2" class="mui-btn btn2" onclick="btnClose_6();">关闭</button>
+				<button id="btn3" class="mui-btn btn3" onclick="btnPause_6();">暂停</button>
+			</div>
+		</div>
+    </div>  
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/jquery-3.4.1.js"></script>
+<script src="../../js/websocket.js"></script>
+<script src="../../js/Control.js"></script>
+<script src="../../js/Receive6.js"></script>
+<script src="../../js/Send.js"></script>
+<script type="text/javascript">
+	mui.init();
+</script>
+</body>
+</html>

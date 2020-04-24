@@ -1,0 +1,105 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />  
+    <title>RGB灯</title>  
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+	<link href="../../css/page2.css" rel="stylesheet"/>
+	<link href="../../css/pulic.css" rel="stylesheet"/>
+	
+</head>  
+<body> 
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	<h1 class="mui-title">RGB灯</h1>
+</header>
+    <div class="mui-content">  
+		<div class="container">
+		  <div class="lightbulb__container">
+		    <div class="lightbulb__bulb">
+		      <div class="lightbulb__bulb_inside"></div>
+		      <div class="lightbulb__bulb_bottom"></div>
+		    </div>
+		    <div class="lightbulb__base"></div>
+		    <div class="lightbulb__glow"></div>
+		    <div class="lightbulb__spiral"></div>
+		  </div>
+		</div>
+        <div class="switch">
+        	<div class="switch1" onclick="Power()">
+				<img src="../../img/p2-off.png" id="img">
+			</div>
+			<div class="switch2" onclick="rgbPower()">开启
+			</div>
+        </div>
+		<div class="slider">
+			<div class="mui-input-row mui-input-range">
+				<label>闪烁模式</label>
+				<input type="range" min="1" max="4" id="rangel" value="1" onClick="getVal()" >
+				<p>共有4种模式，当前模式1</p>
+			</div>
+			<div class="mui-input-row mui-input-range">
+				<label>音乐模式</label>
+				<input type="range" min="1" max="4" id="range2" value="1" onClick="getVal()" >
+				<p>共有4种模式，默认开启模式1</p>
+			</div>
+			<div class="mui-input-row mui-input-range">
+				<label>亮度模式</label>
+				<input type="range" min="1" max="8" id="range3" value="1" onClick="getVal()" >
+				<p>共有8种模式，默认开启模式1</p>
+			</div>
+			<div class="mui-input-row">
+				<label>颜色选择</label>
+				<ul>
+					<li id="Color1" onclick="Color(1)"></li>
+					<li id="Color2" onclick="Color(2)"></li>
+					<li id="Color3" onclick="Color(3)"></li>
+					<li id="Color4" onclick="Color(4)"></li>
+					<li id="Color5" onclick="Color(5)"></li>
+					<li id="Color6" onclick="Color(6)"></li>
+					<li id="Color7" onclick="Color(7)"></li>
+					<li id="Color8" onclick="Color(8)"></li>
+					<li id="Color9" onclick="Color(9)"></li>
+					<li id="Color10"onclick="Color(10)"></li>
+					<li id="Color11" onclick="Color(11)"></li>
+					<li id="Color12" onclick="Color(12)></li>
+				</ul>
+				<!-- <p>共有8种模式，默认开启模式1</p> -->
+			</div>
+		</div>      
+    </div> 
+	<script src="../../js/jquery-3.4.1.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/control2.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		var Powermask=false;
+		function Power(){
+			if(Powermask){
+				console.log("打开");
+				$("#img").attr("src", "../../img/p2-off.png");
+			}else{
+				console.log("关闭");
+				$("#img").attr("src", "../../img/p2-on.png");
+			}
+			Powermask = !Powermask;
+		}
+		function getVal(){
+		    var rangeobj = mui('#rangel');
+		        mui.toast(rangeobj[0].value);
+		    }
+		function Color(sta){
+			switch(sta){
+				case 1:{
+					console.log(123);
+				}
+			}
+		}
+		function rgbPower(){
+			$(".slider").css("background-color","red");
+			console.log(789)
+		}
+	</script>
+</body>  
+</html>
