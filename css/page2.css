@@ -30,7 +30,7 @@
   background: #000;
 }
 /* 灯泡内部的白色 */
-.lightbulb__container .lightbulb__bulb_inside {
+/* .lightbulb__container .lightbulb__bulb_inside {
   position: absolute;
   right: 1rem;
   top: 2rem;
@@ -39,7 +39,7 @@
   border-right: 1.15rem solid #FCFCF7;
   border-radius: 50%;
   transform: rotateZ(-20deg);
-}
+} */
 /* 接连灯泡的下部 */
 .lightbulb__container .lightbulb__bulb_bottom {
   position: absolute;
@@ -129,6 +129,11 @@
 	z-index: 10;
 	/* background: red; */
 }
+.switch1 img{
+	width: 2.5rem;
+	z-index: 3;
+}
+/* RGB电源开关部分 */
 .switch .switch2{
 	position: absolute;
 	top: 16rem;
@@ -138,17 +143,30 @@
 	line-height: 1.8rem;
 	color: #FFFFFF;
 	text-align: center;
-	background: #009F3C;
+	background: #CDCDCD;
 	z-index: 22;
+	display: none;
 }
-.switch1 img{
-	width: 2.5rem;
-	z-index: 3;
-}
-.mui-input-row .mui-input-range input{
+/* .mui-input-row .mui-input-range input{
 	position: absolute;
 	z-index: 20;
+} */
+
+/* RGB颜色开关 */
+.switch .switch3{
+	position: absolute;
+	top: 16rem;
+	right: 1rem;
+	width: 5rem;
+	height: 1.8rem;
+	line-height: 1.8rem;
+	color: #009F3C;
+	text-align: center;
+	background: #FCFCF7;
+	z-index: 22;
+	display: none;
 }
+
 /* 滑块区域 slider */
 .slider{
 	position: absolute;
@@ -157,7 +175,7 @@
 	/* background: red; */
 	z-index: 100;
 	color: #C8C7CC;
-	/* opacity: 0.5; */
+	opacity: 0.5;
 	pointer-events: none;
 }
 
@@ -231,9 +249,9 @@
 #Color8{
 	border-color: #3EBCDF;
 }
-/* 蓝色 */
+/* 蜡笔蓝 */
 #Color9{
-	border-color: #314396;
+	border-color: #6495ED;
 }
 /* 浅蓝 */
 #Color10{
@@ -246,4 +264,8 @@
 /* 浅紫洋红 */
 #Color12{
 	border-color: #AE5D9C;
+}
+/* 初始灯泡亮度 */
+.lightbulb__bulb{
+	filter: opacity(35%);
 }

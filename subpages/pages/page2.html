@@ -7,7 +7,14 @@
     <link href="../../css/mui.min.css" rel="stylesheet"/>
 	<link href="../../css/page2.css" rel="stylesheet"/>
 	<link href="../../css/pulic.css" rel="stylesheet"/>
-	
+	<script src="../../js/jquery-3.4.1.js"></script>
+	<script src="../../js/Control.js"></script>
+	<script src="../../js/websocket.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+	</script>
+	<script src="../../js/control2.js"></script>
 </head>  
 <body> 
 <header class="mui-bar mui-bar-nav">
@@ -30,28 +37,29 @@
         	<div class="switch1" onclick="Power()">
 				<img src="../../img/p2-off.png" id="img">
 			</div>
-			<div class="switch2" onclick="rgbPower()">开启
+			<div class="switch2" onclick="RGBpower()">开启
 			</div>
+			<div class="switch3" onclick="RGBColor()">正白\黄白</div>
         </div>
 		<div class="slider">
 			<div class="mui-input-row mui-input-range">
 				<label>闪烁模式</label>
-				<input type="range" min="1" max="4" id="rangel" value="1" onClick="getVal()" >
-				<p>共有4种模式，当前模式1</p>
+				<input type="range" min="1" max="4" id="rangel" value="1" onchange="getVal1();">
+				<p class="text1">共有4种模式，当前为模式1</p>
 			</div>
 			<div class="mui-input-row mui-input-range">
 				<label>音乐模式</label>
-				<input type="range" min="1" max="4" id="range2" value="1" onClick="getVal()" >
-				<p>共有4种模式，默认开启模式1</p>
+				<input type="range" min="1" max="4" id="range2" value="1"  onchange="getVal2();" >
+				<p class="text2">共有4种模式，当前为模式1</p>
 			</div>
 			<div class="mui-input-row mui-input-range">
 				<label>亮度模式</label>
-				<input type="range" min="1" max="8" id="range3" value="1" onClick="getVal()" >
-				<p>共有8种模式，默认开启模式1</p>
+				<input type="range" min="1" max="8" id="range3" value="1" onchange="getVal3();">
+				<p class="text3">共有8种模式，当前为亮度1</p>
 			</div>
 			<div class="mui-input-row">
 				<label>颜色选择</label>
-				<ul>
+				<ul class="color">
 					<li id="Color1" onclick="Color(1)"></li>
 					<li id="Color2" onclick="Color(2)"></li>
 					<li id="Color3" onclick="Color(3)"></li>
@@ -63,43 +71,19 @@
 					<li id="Color9" onclick="Color(9)"></li>
 					<li id="Color10"onclick="Color(10)"></li>
 					<li id="Color11" onclick="Color(11)"></li>
-					<li id="Color12" onclick="Color(12)></li>
+					<li id="Color12" onclick="Color(12)"></li>
 				</ul>
 				<!-- <p>共有8种模式，默认开启模式1</p> -->
 			</div>
 		</div>      
-    </div> 
-	<script src="../../js/jquery-3.4.1.js"></script>
-	<script src="../../js/mui.min.js"></script>
-	<script src="../../js/control2.js"></script>
-	<script type="text/javascript">
-		mui.init();
-		var Powermask=false;
-		function Power(){
-			if(Powermask){
-				console.log("打开");
-				$("#img").attr("src", "../../img/p2-off.png");
-			}else{
-				console.log("关闭");
-				$("#img").attr("src", "../../img/p2-on.png");
-			}
-			Powermask = !Powermask;
-		}
-		function getVal(){
-		    var rangeobj = mui('#rangel');
-		        mui.toast(rangeobj[0].value);
-		    }
-		function Color(sta){
-			switch(sta){
-				case 1:{
-					console.log(123);
-				}
-			}
-		}
-		function rgbPower(){
-			$(".slider").css("background-color","red");
-			console.log(789)
-		}
+    </div>
+	<script type="text/javascript"> 
+	    /*获取滑块值*/ 
+	    $("#range1").bind('input porpertychange',function(){
+				//逻辑部分
+			// console.log('rangel:'+$(this).val());
+			console.log(123)
+	    });
 	</script>
 </body>  
 </html>
