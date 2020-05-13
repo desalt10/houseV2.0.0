@@ -4,3 +4,9 @@ header{
 header h1,a{
 	color: #FFFFFF!important;
 }
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}
