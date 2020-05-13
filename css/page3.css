@@ -4,8 +4,136 @@
 	background-color: #314173;
 }
 .container{
-	width: 80%;
+	position: relative;
+	width: 85%;
 	/* margin-top: calc(100vw/1); */
-	height:  calc(100vw/10);
+	border-top: 0.5rem solid rgba(255,255,255,.5);
+	border-right: 0.5rem solid rgba(255,255,255,.4);
+	border-bottom: 0.5rem solid rgba(255,255,255,.3);
+	border-left: 0.5rem solid rgba(255,255,255,.3);
+	height:  calc(100vw/1.5);
+	top: 10%;
 	margin: 0 auto;
+    background: #CCCCCC;
+	overflow:hidden;
+	
+}
+.tx-head{
+	height: 30%;
+	margin-top: calc(100vw/30);
+	/* margin-bottom: calc(100vw/30); */
+}
+.head1{
+	width: 30%;
+}
+.head1 img{
+	width: 100%;
+	/* padding: 0.2rem; */
+	padding-left: 0.2rem;
+	margin:0 auto;
+	display: block; 
+}
+.head2{
+	width: 16%;
+	/* height: 100%; */
+	/* background: green; */
+}
+.head2 p{
+	margin: 0;
+	text-align: center;
+	color: #000000;
+	font-size: calc(100vw/25);
+}
+.head3{
+	width: 47%;
+}
+.head3 p{
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	color: #000000;
+}
+.head3-1{
+	text-decoration: underline;
+	font-size: calc(100vw/25);
+}
+.head3-2{
+	font-size: calc(100vw/28);
+}
+.inlink{
+	display: inline-block;
+}
+.buttons{
+	height: 30%;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.buttons .btnes{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	margin: 0 auto;
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:space-between;
+	margin-bottom: calc(100vw/10);
+}
+.buttons .btnes li{
+	width: calc(100vw/12);
+	height: calc(100vw/17);
+	border-top: 0.3rem solid rgba(0,0,0,.4) ;
+	border-left: 0.3rem solid rgba(0,0,0,.2) ;
+	border-right: 0.3rem solid rgba(0,0,0,.5) ;
+	border-bottom: 0.3rem solid rgba(0,0,0,.3) ;
+	text-align: center;
+	background:brown;
+}
+.buttons .btnes li span{
+	display: block;
+	font-weight: bold;
+	margin-top: calc(100vw/17);
+	font-size: calc(100vw/20);
+	color: brown;
+}
+.buttons .but-text{
+	margin-left: calc(100vw/2);
+	width:50%;
+	right: 0;
+	/* float: right; */
+	/* background:red; */
+}
+.buttons .but-text button{
+	margin: 0;
+	padding: 0;
+	width: calc(100vw/15);
+	height: calc(100vw/15);
+	border:  0.2rem solid rgba(0,0,0,.5);
+	border-radius: 50%;
+	background:#006926;
+}
+.buttons .but-text span{
+	font-size: calc(100vw/28);
+	height: calc(100vw/15);
+	line-height: calc(100vw/15);
+}
+.buttom{
+	height: 20%;
+	margin-top: calc(100vw/10);
+	width: 100%;
+	/* background: yellow; */
+}
+
+.buttom p{
+	margin: 0;
+	padding: 0;
+	font-size: calc(100vw/28);
+	line-height: 150%;
+	text-align: center;
+	color:#000;
 }

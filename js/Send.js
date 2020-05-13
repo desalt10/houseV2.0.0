@@ -81,6 +81,7 @@ function airSpeed(){
 		}
 	}
 }
+
 // 空调模式
 var mode_buf=0;
 function airMode(){
