@@ -62,19 +62,20 @@ button:active {
 }
 /* 功能选择 */
 #selet{
+	position: relative;
 	width: 80%;
 	left: 0;
 	right: 0;
 	margin: auto;
-	top: 70%;
 	height: calc(100vw/10);
 	background: #FFFFFF;
+	
 }
 #selet .selet-text{
 	margin: 0;
 }
 #selet #showUserPicker1{
-	width: 50%;
+	width: 40%;
 	padding: 0;
 	margin: 0;
 	font-size: 14px;

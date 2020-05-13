@@ -9,10 +9,10 @@
 	<link href="../../css/mui.picker.all.css" rel="stylesheet"/>
 	<link href="../../css/mui.picker.css" rel="stylesheet"/>
 	<link href="../../css/pulic.css" rel="stylesheet"/>
-	<!--<script src="../../js/Control.js"></script>-->
-	<!--<script src="../../js/websocket.js"></script>-->
+	<script src="../../js/Control.js"></script>
+	<script src="../../js/websocket.js"></script>
 	
-	
+	<script src="../../js/jquery-3.4.1.js"></script>
 	<!-- <script src="../../js/Receive4.js" type="text/javascript"></script> -->
 	<script src="../../js/Send.js"></script>
 </head>  
@@ -24,25 +24,27 @@
     <div class="mui-content">  
         <div class="button-group">
         	<div class="text-show">
-        		<p class="t-14">当前风速：<span class="text-bule t-14">自动</span></p>
-        		<p class="t-40 t-align">30℃</p>
-        		<p><span class="text-bule fl t-14" >制冷</span>
-        		<span class="text-bule fr t-14">上下摆风</span></p>
+        		<p class="t-14">当前风速：<span id="text-speed" class="text-bule t-14"></span></p>
+        		<p id="text-tem" class="t-40 t-align ">26℃</p>
+        		<p>
+					<span id="text-wind"class="text-bule fl t-14 "></span>
+					<span id="text-mode" class="text-bule fr t-14 "></span>
+				</p>
         	</div>
 		  
 			<div class="text-bottom">
-				<button>开/关</button>
-				<button class="fr">风速</button></br>
-				<button >扫风</button>
-				<button class="fr">模式</button></br>
-				<button><img src="../../img/page4.png" width="30%"; class="btn-img"></button>
-				<button class="fr"><img src="../../img/page4.png" width="30%"></button>
+				<button onclick="airPower()">开/关</button>
+				<button id="air-speed"class="fr" onclick="airSpeed()">风速</button></br>
+				<button id="air-wind" onclick="airWind()">扫风</button>
+				<button id="air-mode" onclick="airMode()" class="fr">模式</button></br>
+				<button id="air-down" onclick="airTem(0)"><img src="../../img/page4.png" width="30%"; class="btn-img"></button>
+				<button id="air-up" onclick="airTem(1)" class="fr"><img src="../../img/page4.png" width="30%"></button>
 			</div>
 	        <div id="selet" class="mui-content mui-content-padded">
 	        			<p class="mui-content-padded selet-text fl">品牌选择<p>
 	        			<button id='showUserPicker1' class="mui-btn mui-btn-block fr" type='button'>请选择</button>
-	        			<button class="text-1 fl">尝试匹配</button>
-						<button class="text-2 fr">匹配成功</button>
+	        			<button class="text-1 fl" onclick="airTry()">尝试匹配</button>
+						<button class="text-2 fr" onclick="airCon()">匹配成功</button>
 	        			
 	        			<!-- <div class="content" id="info"></div> -->
 	        		</div>
@@ -51,165 +53,11 @@
 	
 </body>  
 <script src="../../js/mui.min.js"></script>
-	<script src="../../js/jquery-3.4.1.js"></script>
 	<script src="../../js/mui.picker.all.js"></script>
 	<script src="../../js/mui.picker.js"></script>
     <script type="text/javascript">
     	mui.init();
 		showLevel1();
-		function showLevel1() {
-					var picker = new mui.PopPicker({
-						layer: 1,
-						buttons: ['取消', '确定']
-					});
-					picker.setData([{
-						value: "1",
-						text: "海尔"
-					}, {
-						value: "2",
-						text: "格力"
-					}, {
-						value: "3",
-						text: "美的"
-					}, {
-						value: "4",
-						text: "长虹"
-					}, {
-						value: "5",
-						text: "志高"
-					},{
-						value: "6",
-						text: "华宝"
-					},
-					{
-						value: "7",
-						text: "科龙"
-					},
-					{
-						value: "8",
-						text: "TCL"
-					},
-					{
-						value: "9",
-						text: "格兰仕"
-					},
-					{
-						value: "10",
-						text: "华凌"
-					},
-					{
-						value: "11",
-						text: "春兰"
-					},
-					
-					{
-						value: "12",
-						text: "奥克斯"
-					},
-					{
-						value: "13",
-						text: "新科"
-					},
-					{
-						value: "14",
-						text: "澳柯玛"
-					},
-					{
-						value: "15",
-						text: "海信"
-					},
-					{
-						value: "16",
-						text: "飞鹿"
-					},
-					{
-						value: "17",
-						text: "东宝（东新宝）"
-					},
-					{
-						value: "18",
-						text: "新飞"
-					},
-					{
-						value: "19",
-						text: "三洋"
-					},
-					{
-						value: "20",
-						text: "三菱"
-					},
-					{
-						value: "21",
-						text: "LG"
-					},
-					{
-						value: "22",
-						text: "东芝"
-					},
-					{
-						value: "23",
-						text: "日立"
-					},
-					{
-						value: "24",
-						text: "乐声"
-					},
-					{
-						value: "25",
-						text: "开利"
-					},
-					{
-						value: "26",
-						text: "富士通(珍宝)"
-					},
-					{
-						value: "27",
-						text: "声宝"
-					},
-					{
-						value: "28",
-						text: "大金"
-					},
-					{
-						value: "29",
-						text: "惠而浦"
-					},
-					{
-						value: "30",
-						text: "YORK"
-					},
-					{
-						value: "31",
-						text: "现代（大宇）"
-					},
-					{
-						value: "32",
-						text: "伊莱克斯"
-					},
-					{
-						value: "33",
-						text: "迎燕"
-					},
-					{
-						value: "34",
-						text: "玉兔"
-					},
-					{
-						value: "35",
-						text: "中意"
-					}
-					
-					
-					]);
-					document.getElementById("showUserPicker1").addEventListener('tap', function(event) {
-						$("#info").text("");
-						// 默认显示第4项
-						// picker.pickers[0].setSelectedIndex(3, 2000);
-						picker.show(function(selectItems) {
-							var text = selectItems[0].text;
-							$("#showUserPicker1").text(text);
-						});
-					});
-				}
+		Reset()	
     </script>
 </html>
