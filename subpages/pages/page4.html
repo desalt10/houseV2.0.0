@@ -9,7 +9,6 @@
 	<link href="../../css/mui.picker.all.css" rel="stylesheet"/>
 	<link href="../../css/mui.picker.css" rel="stylesheet"/>
 	<link href="../../css/pulic.css" rel="stylesheet"/>
-	
 	<!--<script src="../../js/Control.js"></script>-->
 	<!--<script src="../../js/websocket.js"></script>-->
 	
@@ -30,25 +29,7 @@
         		<p><span class="text-bule fl t-14" >制冷</span>
         		<span class="text-bule fr t-14">上下摆风</span></p>
         	</div>
-		  <!--<div class="outter-circle">
-		    <div class="inner-parts brown" bindtap="button" data-type="volAdd">
-		      <text class="rotate">+</text>
-		    </div>
-		    <div class="inner-parts silver" bindtap="button" data-type="chaAdd">
-		      <text class="rotate">+</text>
-		    </div>
-		    <div class="inner-parts blue" bindtap="button" data-type="chaDes">
-		      <text class="rotate">-</text>
-		    </div>
-		    <div class="inner-parts gold" bindtap="button" data-type="volDes">
-		      <text class="rotate">-</text>
-		    </div>
-		 
-		    <div class="inner-circle" bindtap="button" data-type="ok">
-		      <text class="ok rotate">ok</text>
-		    </div>
-		  </div>
-		-->
+		  
 			<div class="text-bottom">
 				<button>开/关</button>
 				<button class="fr">风速</button></br>
@@ -57,13 +38,13 @@
 				<button><img src="../../img/page4.png" width="30%"; class="btn-img"></button>
 				<button class="fr"><img src="../../img/page4.png" width="30%"></button>
 			</div>
-	        <div id="" class="mui-content mui-content-padded">
-	         
-	        			<h5 class="mui-content-padded">一级示例</h5>
-	        			<button id='showUserPicker1' class="mui-btn mui-btn-block" type='button'>一级选择示例 ...</button>
+	        <div id="selet" class="mui-content mui-content-padded">
+	        			<p class="mui-content-padded selet-text fl">品牌选择<p>
+	        			<button id='showUserPicker1' class="mui-btn mui-btn-block fr" type='button'>请选择</button>
+	        			<button class="text-1 fl">尝试匹配</button>
+						<button class="text-2 fr">匹配成功</button>
 	        			
-	        			
-	        			<div class="content" id="info"></div>
+	        			<!-- <div class="content" id="info"></div> -->
 	        		</div>
         </div>  
     </div> 
@@ -79,31 +60,154 @@
 		function showLevel1() {
 					var picker = new mui.PopPicker({
 						layer: 1,
-						buttons: ['cancle', 'ok']
+						buttons: ['取消', '确定']
 					});
 					picker.setData([{
-						value: "first",
-						text: "第一项"
+						value: "1",
+						text: "海尔"
 					}, {
-						value: "second",
-						text: "第一项"
+						value: "2",
+						text: "格力"
 					}, {
-						value: "third",
-						text: "第三项"
+						value: "3",
+						text: "美的"
 					}, {
-						value: "fourth",
-						text: "第四项"
+						value: "4",
+						text: "长虹"
 					}, {
-						value: "fifth",
-						text: "第五项"
-					}]);
+						value: "5",
+						text: "志高"
+					},{
+						value: "6",
+						text: "华宝"
+					},
+					{
+						value: "7",
+						text: "科龙"
+					},
+					{
+						value: "8",
+						text: "TCL"
+					},
+					{
+						value: "9",
+						text: "格兰仕"
+					},
+					{
+						value: "10",
+						text: "华凌"
+					},
+					{
+						value: "11",
+						text: "春兰"
+					},
+					
+					{
+						value: "12",
+						text: "奥克斯"
+					},
+					{
+						value: "13",
+						text: "新科"
+					},
+					{
+						value: "14",
+						text: "澳柯玛"
+					},
+					{
+						value: "15",
+						text: "海信"
+					},
+					{
+						value: "16",
+						text: "飞鹿"
+					},
+					{
+						value: "17",
+						text: "东宝（东新宝）"
+					},
+					{
+						value: "18",
+						text: "新飞"
+					},
+					{
+						value: "19",
+						text: "三洋"
+					},
+					{
+						value: "20",
+						text: "三菱"
+					},
+					{
+						value: "21",
+						text: "LG"
+					},
+					{
+						value: "22",
+						text: "东芝"
+					},
+					{
+						value: "23",
+						text: "日立"
+					},
+					{
+						value: "24",
+						text: "乐声"
+					},
+					{
+						value: "25",
+						text: "开利"
+					},
+					{
+						value: "26",
+						text: "富士通(珍宝)"
+					},
+					{
+						value: "27",
+						text: "声宝"
+					},
+					{
+						value: "28",
+						text: "大金"
+					},
+					{
+						value: "29",
+						text: "惠而浦"
+					},
+					{
+						value: "30",
+						text: "YORK"
+					},
+					{
+						value: "31",
+						text: "现代（大宇）"
+					},
+					{
+						value: "32",
+						text: "伊莱克斯"
+					},
+					{
+						value: "33",
+						text: "迎燕"
+					},
+					{
+						value: "34",
+						text: "玉兔"
+					},
+					{
+						value: "35",
+						text: "中意"
+					}
+					
+					
+					]);
 					document.getElementById("showUserPicker1").addEventListener('tap', function(event) {
 						$("#info").text("");
 						// 默认显示第4项
 						// picker.pickers[0].setSelectedIndex(3, 2000);
 						picker.show(function(selectItems) {
 							var text = selectItems[0].text;
-							$("#info").text("现在选择的是：" + text);
+							$("#showUserPicker1").text(text);
 						});
 					});
 				}

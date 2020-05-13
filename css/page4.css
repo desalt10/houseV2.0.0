@@ -10,7 +10,7 @@
   position: relative;
   padding-top: 10px;
   width: 60%;
-  height: 70%;
+  height: 80%;
   margin: 10% auto;
   border: 2px solid #CCCCCC;
   border-radius: 8%;
@@ -60,26 +60,30 @@ button:active {
 .btn-img{
 	transform:rotate(180deg);
 }
-.text-select{
+/* 功能选择 */
+#selet{
 	width: 80%;
-	margin: 0 auto;
-	/*color: blue;*/
-	font-size: 14px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 70%;
+	height: calc(100vw/10);
+	background: #FFFFFF;
 }
-select{
-	float: right;
-	width: 50%;
-	border: 1px solid #CCCCCC!important;
-	padding-top: 0;
-	padding-bottom: 0 ;
+#selet .selet-text{
 	margin: 0;
 }
-/*.btn-img1{
-	width: 30%;
-	height: 30%;
-	background-image: url(../img/page4.png);
-    background-repeat: no-repeat;
-}*/
+#selet #showUserPicker1{
+	width: 50%;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+}
+.text-1,.text-2{
+	margin-top: 0.6rem ;
+	padding-left: 0;
+	padding-right: 0;
+}
 /*文字颜色*/
 .text-bule{
 	color: blue;
@@ -100,60 +104,5 @@ select{
 .fr{
 	float: right;
 }
-/*方向控制上的外圆*/
-.outter-circle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 34%;
-  margin: auto;
-  /*margin: 10% auto;*/
-  /*margin-left: 5px;*/
-  width: 140px;
-  height: 140px;
-  background-color: lightcyan;
-  border-radius: 100%;
-  overflow: hidden;
-  transform-origin: center;
-  transform: rotate(45deg);
-}
 
-/*四个方向*/
-.outter-circle .inner-parts {
-  float: left;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-}
-/*方向颜色*/
-.silver {
-  background-color: silver;
-}
-.gold {
-  background-color: gold;
-}
-.blue {
-  background-color: blue;
-}
-.brown {
-  background-color: brown;
-}
-/*中间ok部分*/
-.inner-circle {
-  position: absolute;
-  margin-top: 35px;
-  margin-left: 35px;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-  border-radius: 100%;
-  background-color: lightblue;
-}
 
-/*所有的文字需要旋转*/
-.rotate {
-  display: inline-block;
-  transform: rotate(-45deg);
-}

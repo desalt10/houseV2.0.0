@@ -1,0 +1,56 @@
+/*方向控制上的外圆*/
+.outter-circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 34%;
+  margin: auto;
+  /*margin: 10% auto;*/
+  /*margin-left: 5px;*/
+  width: 140px;
+  height: 140px;
+  background-color: lightcyan;
+  border-radius: 100%;
+  overflow: hidden;
+  transform-origin: center;
+  transform: rotate(45deg);
+}
+/*四个方向*/
+.outter-circle .inner-parts {
+  float: left;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+/*方向颜色*/
+.silver {
+  background-color: silver;
+}
+.gold {
+  background-color: gold;
+}
+.blue {
+  background-color: blue;
+}
+.brown {
+  background-color: brown;
+}
+/*中间ok部分*/
+.inner-circle {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 35px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: lightblue;
+}
+
+/*所有的文字需要旋转*/
+.rotate {
+  display: inline-block;
+  transform: rotate(-45deg);
+}
