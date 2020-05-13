@@ -17,6 +17,33 @@ function btnClose_2(){
 	SendData('@0001:{"PowerSwitch_2":0}\r\n');
 }
 
+/** Page3 PLC控制  设备编号@0003
+*  功能说明:  btn( ) 按键开关 （0-关。1-开）    
+*  功能说明:  btuPower() 全开/关按键 (0全关。1全开）
+*/
+var btn_mask=[0,0,0,0,0];
+function btn(i){
+	if(btn_mask[i]){
+		btn_mask[i]=0;
+	}else{
+		btn_mask[i]=1;
+	}
+	SendData('@0003:{"control0'+i+'":'+btn_mask[i]+'}\r\n');
+}
+
+var btn_power_mask=true;
+function btnPower(){
+	if(btn_power_mask){
+		SendData('@0003:{"VWO":1}\r\n');
+	}else{
+		SendData('@0003:{"VWO":0}\r\n');
+	}
+	btn_power_mask=!btn_power_mask;
+}
+
+
+
+
 
 /** Page4 空调遥控控制  设备编号@0004
 *  功能说明: Reset() 电源开关 （0-关。1-开）    
