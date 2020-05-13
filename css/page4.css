@@ -1,0 +1,159 @@
+.mui-content{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: #314173;
+}
+.button-group {
+  position: relative;
+  padding-top: 10px;
+  width: 60%;
+  height: 70%;
+  margin: 10% auto;
+  border: 2px solid #CCCCCC;
+  border-radius: 8%;
+  box-shadow: 10px -10px 1px #888888;
+  background-color: #FFFFFF;
+}
+/*显示框*/
+.text-show{
+	/*position: absolute;
+	left: 0;
+	right: 0;
+	top: 6%;
+	margin: auto;*/
+	margin: 6% auto;
+	width: 80%;
+	padding: 3%;
+	line-height: 100%;
+	/*margin: 0 auto;*/
+	border: 2px solid #ccc;
+	border-radius: 8%;
+	background-color: #DDDDDD;
+}
+.text-show p{
+	padding: 10px;
+	padding-left: 0;
+	padding-right: 0;
+	color: #888888;
+
+}
+.text-bottom{
+	width: 80%;
+	/*height: 30%;*/
+	margin: 0 auto;
+	/*background-color: pink;*/
+}
+.text-bottom p{
+	display: block;
+}
+button{
+	display: inline-block;
+	margin-bottom: 5px ;
+	width: 40%;
+}
+button:active {
+	box-shadow: 3px 3px 2px #ccc;
+}
+.btn-img{
+	transform:rotate(180deg);
+}
+.text-select{
+	width: 80%;
+	margin: 0 auto;
+	/*color: blue;*/
+	font-size: 14px;
+}
+select{
+	float: right;
+	width: 50%;
+	border: 1px solid #CCCCCC!important;
+	padding-top: 0;
+	padding-bottom: 0 ;
+	margin: 0;
+}
+/*.btn-img1{
+	width: 30%;
+	height: 30%;
+	background-image: url(../img/page4.png);
+    background-repeat: no-repeat;
+}*/
+/*文字颜色*/
+.text-bule{
+	color: blue;
+}
+.t-40{
+	font-size: 40px;
+	
+}
+.t-align{
+	text-align: center;
+}
+.t-14{
+	font-size: 14px;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/*方向控制上的外圆*/
+.outter-circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 34%;
+  margin: auto;
+  /*margin: 10% auto;*/
+  /*margin-left: 5px;*/
+  width: 140px;
+  height: 140px;
+  background-color: lightcyan;
+  border-radius: 100%;
+  overflow: hidden;
+  transform-origin: center;
+  transform: rotate(45deg);
+}
+
+/*四个方向*/
+.outter-circle .inner-parts {
+  float: left;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+}
+/*方向颜色*/
+.silver {
+  background-color: silver;
+}
+.gold {
+  background-color: gold;
+}
+.blue {
+  background-color: blue;
+}
+.brown {
+  background-color: brown;
+}
+/*中间ok部分*/
+.inner-circle {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 35px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: lightblue;
+}
+
+/*所有的文字需要旋转*/
+.rotate {
+  display: inline-block;
+  transform: rotate(-45deg);
+}

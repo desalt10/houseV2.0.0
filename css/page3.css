@@ -1,0 +1,11 @@
+.mui-content{
+	height: 100vh;
+	width: 100%;
+	background-color: #314173;
+}
+.container{
+	width: 80%;
+	/* margin-top: calc(100vw/1); */
+	height:  calc(100vw/10);
+	margin: 0 auto;
+}

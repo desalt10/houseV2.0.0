@@ -1,0 +1,43 @@
+.mui-content{
+	background: #314173;
+	height: 100vh;
+	/* position: relative; */
+}
+.container .show{
+	width: 100%;
+}
+.show img{
+	position: relative;
+	width: 50%;
+	display: block;
+	margin: 10% auto;
+}
+.show span{
+	width: 15%;
+	display: inline-block;
+	line-height: 100%;
+	background: #ccc;
+}
+
+/* 表格 */
+.table {
+	border: 1px solid #cad9ea;
+	/* color: #666; */
+	color: #FFFFFF;
+	margin: 0 auto;
+}
+
+.table th {
+	background-repeat: repeat-x;
+	height: 30px;
+}
+
+.table td,
+.table th {
+	border: 1px solid #cad9ea;
+	padding: 0.5rem 2em;
+}
+
+table tr button{
+	padding: 3%;
+}
