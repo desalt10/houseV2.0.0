@@ -1,0 +1,67 @@
+/* @font-face {
+    font-family: "LCD-font";
+    src:
+	url('../font/LCD.woff'),  
+    url('../font/LCD.ttf'),
+    url('../font/LCD.eot'); 
+} */
+
+.mui-content{
+	height: 100vh;
+	width: 100%;
+	background-color: #314173;
+}
+.door,.dr-btnes{
+	width: 80%;
+	margin: 0 auto;
+	/* height: 100px; */
+	margin-top: 20px ;
+	background: red;
+}
+.dr-btnes{
+	border: calc(100vw/30) solid #7E7973;
+	background: #000;
+}
+input{
+	display: block;
+	border: 0;
+	height: calc(100vw/8);
+	width: 100%;
+	text-align: right;
+	/* font-family: LCD-font; */
+	background-image: radial-gradient(#DB7020 80%, #AF6D39);
+}
+.dr-btnes table{
+	width: 100%;
+	margin: 0 auto;
+}
+.dr-btnes td{
+	padding: 0;
+	margin: 0;
+	width: calc(100vw/10);
+	height: calc(100vw/10);
+	line-height: calc(100vw/10);
+	text-align: center;
+	border: calc(100vw/30) solid #000;
+	background: #646F71;
+}
+#clr{
+	background: #A5282D;
+	font-size: calc(100vw/20);
+}
+#clr:active{
+	background: #FF0000;
+	color: #C0C0C0;
+}
+#con{
+	background: #3A5E77;
+	font-size: calc(100vw/20);
+}
+#con:active{
+	background: #6495ED;
+	color: #C0C0C0;
+}
+td:active{
+	background: #C0C0C0;
+	color: #A5282D;
+}
