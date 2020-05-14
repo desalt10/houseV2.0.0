@@ -42,9 +42,6 @@ function btnPower(){
 }
 
 
-
-
-
 /** Page4 空调遥控控制  设备编号@0004
 *  功能说明: Reset() 电源开关 （0-关。1-开）    
 *  功能说明: airSpeed() 风速功能 (0-自动。1-3风速越来越快)
@@ -400,4 +397,16 @@ function Ele_read(){
 */
 function Th_read(){
 	SendData('@0011:{"Read":0}\r\n');
+}
+/** Page12 智能开关控制  设备编号@0012-0019
+*  功能说明: Socket() 插座开关 （0-关。1-开）
+*/
+var socket_mask = true;
+function Socket(i){
+	if(socket_mask){
+		SendData('@001'+(i+1)+':{"PowerSwitch_'+i+'":1}\r\n');
+	}else{
+		SendData('@001'+(i+1)+':{"PowerSwitch_'+i+'":0}\r\n');
+	}
+	socket_mask =!socket_mask;
 }

@@ -1,5 +1,5 @@
 /**
- * 功能: 处理接收函数Receive10() 电表@00010
+ * 功能: 处理接收函数Receive10() 电表@0010
  * @param str10  接收需要处理数据的对象
  * @param vol 电压
  * @param ele 电流
