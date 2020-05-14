@@ -1,28 +1,98 @@
+.mui-content{
+	height: 100vh;
+	width: 100%;
+	background-color: #314173;
+}
+.container {
+  padding-top: 10px;
+  width: 60%;
+  height: calc(100vw/0.8);
+  margin: 10% auto;
+  border: 2px solid #CCCCCC;
+  border-radius: 8%;
+  box-shadow: 8px -7px 1px #888888;
+  background-color: #000;
+  /* background: rgba(204,204,204,.5); */
+}
+/* 所有按键 */
+button{
+	padding: 0;
+	color: #FFFFFF;
+	font-size: calc(100vw/30);
+	background: rgba(204,204,204,.5);
+	/* padding: calc(100vw/65); */
+}
+.container .part1 button{
+	width: calc(100vw/10);
+	height: calc(100vw/10);
+	text-align: center;
+	line-height: calc(100vw/10);
+	border-radius: 50%;
+	border: 0;
+	/* margin-left: calc(100vw/30);
+	margin-right: ; */
+}
+.container .part2 button{
+	padding: calc(100vw/80);
+}
+
+/* 各模块 */
+.part1,.part2,.part3,.part4,.part5{
+	width: 90%;
+	margin: calc(100vw/30) auto ;
+	height: calc(100vw/10);
+}
+.container .part1{
+	height: calc(100vw/10);
+}
+
+
+.container .part3,.part4,.part5{
+	width: 100%;
+}
+.part3{
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
 /*方向控制上的外圆*/
 .outter-circle {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 34%;
-  margin: auto;
-  /*margin: 10% auto;*/
-  /*margin-left: 5px;*/
-  width: 140px;
-  height: 140px;
-  background-color: lightcyan;
-  border-radius: 100%;
-  overflow: hidden;
-  transform-origin: center;
-  transform: rotate(45deg);
+	margin: 0 auto;
+	width: calc(100vw/2.5);
+	height: calc(100vw/2.5);
+	background-color: lightcyan;
+	border-radius: 100%;
+	overflow: hidden;
+	transform-origin: center;
+	transform: rotate(45deg);
 }
 /*四个方向*/
 .outter-circle .inner-parts {
-  float: left;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
+	float: left;
+	width: calc(100vw/5);
+	height: calc(100vw/5);
+	line-height: calc(100vw/5);
+	text-align: center;
+	font-size: calc(100vw/10);
 }
+
+/*中间ok部分*/
+.inner-circle {
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+margin: auto;
+width: calc(100vw/5);
+height: calc(100vw/5);
+line-height: calc(100vw/5);
+text-align: center;
+border-radius: 100%;
+font-size: calc(100vw/15);
+background-color: lightblue;
+}
+
 /*方向颜色*/
 .silver {
   background-color: silver;
@@ -31,26 +101,58 @@
   background-color: gold;
 }
 .blue {
-  background-color: blue;
+  background-color: #4169E1;
 }
 .brown {
   background-color: brown;
 }
-/*中间ok部分*/
-.inner-circle {
-  position: absolute;
-  margin-top: 35px;
-  margin-left: 35px;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-  border-radius: 100%;
-  background-color: lightblue;
-}
-
 /*所有的文字需要旋转*/
 .rotate {
   display: inline-block;
   transform: rotate(-45deg);
+}
+/* 转成行内样式 */
+.in-block{
+	display: inline-block;
+}
+.container .part4{
+	/* background: yellow; */
+	margin-top: 0 ;
+}
+.container .part5{
+	height: calc(100vw/5);
+	margin-top: 0 ;
+	font-size: 0;
+}
+.part5 button{
+	margin-bottom: calc(100vw/30);
+}
+.part5-1,.part5-2,.part5-3{
+	height: 100%;
+	vertical-align: top;
+}
+.part5-1{
+	width: 30%;
+}
+.part5-2{
+	width: 40%;
+}
+.part5-3{
+	width: 30%;
+}
+.w-100{
+	width: 100%;
+}
+/* 点击后样式改变 */
+.part2 button:active{
+	box-shadow: 3px 3px 2px #C0C0C0;
+	background: #00FFFF;
+}
+.inner-parts:active{
+	color: #fff;
+	background: #00FFFF;
+}
+.inner-circle:active{
+	color: #fff;
+	background: #00FFFF;
 }
