@@ -350,6 +350,92 @@ function airCon(){
 }
 
 
+/** Page4 电视遥控  设备编号@0005
+*  功能说明: TvCon(s) 按键函数
+* s=0 菜单
+* s=1 首页
+* s=2 按键上
+* s=3 按键右边
+* s=4 按键左边
+* s=5 按键下
+* s=6 OK按键
+* s=7 退出按键
+* s=8 返回按键
+* s=9 音量-
+* s=10 音量+
+* s=11 静音
+* s=12 频道-
+* s=13 频道+
+* 
+*  
+*/
+function TvCon(s){
+	switch(s){
+		case 0:{
+			SendData('@0005:{"Menustrip":0}\r\n');
+			break
+		}
+		case 1:{
+			SendData('@0005:{"Homepage":0}\r\n');
+			break
+		}
+		case 2:{
+			SendData('@0005:{"UP":0}\r\n');
+			break
+		}
+		case 3:{
+			SendData('@0005:{"Right":0}\r\n');
+			break
+		}
+		case 4:{
+			SendData('@0005:{"left":0}\r\n');
+			break
+		}
+		case 5:{
+			SendData('@0005:{"down":0}\r\n');
+			break
+		}
+		case 6:{
+			SendData('@0005:{"ok":0}\r\n');
+			break
+		}
+		case 7:{
+			SendData('@0005:{"quit":0}\r\n');
+			break
+		}
+		case 8:{
+			SendData('@0005:{"Return":0}\r\n');
+			break
+		}
+		case 9:{
+			SendData('@0005:{"Volume":0}\r\n');
+			break
+		}
+		case 10:{
+			SendData('@0005:{"Volume":1}\r\n');
+			break
+		}
+		case 11:{
+			SendData('@0005:{"silence":0}\r\n');
+			break
+		}
+		case 12:{
+			SendData('@0005:{"Channel":0}\r\n');
+			break
+		}
+		case 13:{
+			SendData('@0005:{"Channel":1}\r\n');
+			break
+		}
+	}
+}
+
+
+
+
+
+
+
 /** Page6 窗帘控制
 *  功能说明: btnOpen_6() 窗帘开
 *  功能说明: btnClose_6() 窗帘关
