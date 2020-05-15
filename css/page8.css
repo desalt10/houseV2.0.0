@@ -1,10 +1,10 @@
-/* @font-face {
-    font-family: "LCD-font";
+@font-face {
+    font-family: LCD-font;
     src:
-	url('../font/LCD.woff'),  
-    url('../font/LCD.ttf'),
-    url('../font/LCD.eot'); 
-} */
+	url('../fonts/LCD.woff2'),  
+    url('../fonts/LCD.ttf'),
+    url('../fonts/LCD.eot'); 
+}
 
 .mui-content{
 	height: 100vh;
@@ -28,7 +28,8 @@ input{
 	height: calc(100vw/8);
 	width: 100%;
 	text-align: right;
-	/* font-family: LCD-font; */
+	font-family: LCD-font;
+	font-size: calc(100vw/12);
 	background-image: radial-gradient(#DB7020 80%, #AF6D39);
 }
 .dr-btnes table{
@@ -43,6 +44,7 @@ input{
 	line-height: calc(100vw/10);
 	text-align: center;
 	border: calc(100vw/30) solid #000;
+	font-size: calc(100vw/20);
 	background: #646F71;
 }
 #clr{
@@ -63,5 +65,5 @@ input{
 }
 td:active{
 	background: #C0C0C0;
-	color: #A5282D;
+	color: #DB7020;
 }

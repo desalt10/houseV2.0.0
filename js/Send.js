@@ -451,6 +451,30 @@ function btnClose_6(){
 function btnPause_6(){
 	SendData('@0006:{"CurtainOperation":2}\r\n');
 }
+
+/** Page8 门禁控制   @0008
+*  @param dr_bug 当前输入的字符串
+*  功能说明: Drclean() 清除输入字符串的最后一位
+*  功能说明: DrCon() 确定输入事件
+*  
+*/
+
+var dr_bug="";
+function Drpass(s){
+	dr_bug +=s;
+	$("#dr-text").val(dr_bug)
+}
+function Drclean(){
+	console.log(123)
+	dr_bug = dr_bug.substring(0,dr_bug.length - 1)
+	$("#dr-text").val(dr_bug)
+}
+function DrCon(){
+	SendData('@0008:{"password":"'+dr_bug+'"}\r\n');
+}
+
+
+
 /** Page9 水表控制
 *  功能说明: Status_on()控制阀门开
 *  功能说明: Status_off()控制阀门关
