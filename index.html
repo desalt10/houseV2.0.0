@@ -4,71 +4,83 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title></title>
-    <script src="./js/mui.min.js"></script>
-    <link href="./css/mui.min.css" rel="stylesheet"/>
-	
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
 </head>
 <body>
-	<!--底部导航条-->
-		<nav class="mui-bar mui-bar-tab" id="nav-tabbar"> 
-		    <a class="mui-tab-item mui-active" id="home">
-				<span class="mui-icon  mui-icon-home"></span>
-				<span class="mui-tab-label"  >智能家居</span>
-		    </a>
-		    <a class="mui-tab-item" id="smart">
-				<span class="mui-icon  mui-icon-gear"></span>
-				<span class="mui-tab-label"  >安防系统</span>
-		    </a>
-	   </nav>
-	   <script type="text/javascript" charset="utf-8">
-	       mui.init();
-	   </script>
-	   <script>
-		   mui.ready(function(){
-			   console.log(1)
-			//获取父web
-				var parentweb=plus.webview.currentWebview();
-				
-				
-				//创建四个Webview
-				var pagelist=[
-				{
-					url:"../subpages/home.html",
-					id:"home"
-				},
-				{
-					url:"../subpages/smart.html",
-					id:"smart"
-				}
-				];
-				for(var i=0,l=pagelist.length;i<l;i++){
-					var url=pagelist[i].url;
-					var id=pagelist[i].id;
-					//如果该web已经创建，则跳过本次循环
-					if(plus.webview.getWebviewById(id)){
-						//终止循环
-						continue;    
-					}
+	<header class="mui-bar mui-bar-nav">
+		<h1 class="mui-title">标题</h1>
+	</header>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item mui-active" href="home.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="message.html">
+			<span class="mui-icon mui-icon-phone"></span>
+			<span class="mui-tab-label">消息</span>
+		</a>
+		<a class="mui-tab-item" href="setting.html">
+			<span class="mui-icon mui-icon-gear"></span>
+			<span class="mui-tab-label">设置</span>
+		</a>
+	</nav>
+	<script type="text/javascript" charset="utf-8">
+			mui.init();
+			var index = 0;
+			var subpages = ['home.html','message.html','setting.html'];
 			
-					//开始创建web
-					var newweb=plus.webview.create(url,id,{
-						bottom:'50px',
-						top:'0px',
-						popGesture:'none'
-					});
-					//设置web的显示状态
-					//第一个web显示出来，其他的web隐藏
-					if(i===0){ 
-					
-						newweb.show();
-					}else{
-						newweb.hide();
+			mui.plusReady(function () {
+			    var self = plus.webview.currentWebview();
+					for (var i = 0; i < subpages.length; i++) {
+						var sub = plus.webview.create(
+						subpages[i], subpages[i], {
+							top: '45px',
+							bottom: '50px'
+						});
+						if(i > index){
+							sub.hide();
+						}
+						self.append(sub);
 					}
-					//把子web追加到父web
-					parentweb.append(newweb);
-				} 
-		    });
-		  
-	   </script>
+			});
+			var activeTab = subpages[index];
+			mui('.mui-bar-tab').on('tap', 'a', function (){
+				var targetTab = this.getAttribute('href');
+				if(activeTab == targetTab){
+					return;
+				}
+				if(mui.os.plus){
+					plus.webview.show(targetTab);
+					plus.webview.hide(activeTab);
+					activeTab = targetTab;
+				} else {
+					createIframe('.mui-content', {
+						url: targetTab,
+						style: {
+							top: '45px',
+							bottom: '50px'
+						}
+					})
+				}
+			});
+			function createIframe(el,opt) {
+				var elContainer = document.querySelector('mui-content');
+				var wrapper = document.querySelector('.mui-iframe-wrapper');
+				if(!wrapper){
+					wrapper = document.createElement('div');
+					wrapper.className = 'mui-iframe-wrapper';
+					for (var i in opt.style) {
+						wrapper[i] = opt.style[i];
+					}
+				}	
+				var iframe = document.createElement('iframe');
+				iframe.src = opt.url;
+				iframe.id = opt.id || opt.url;
+				iframe.name = opt.id;
+				wrapper.appendChild(iframe);
+				elContainer.appendChild(wrapper);
+			}
+	</script>
 </body>
 </html>

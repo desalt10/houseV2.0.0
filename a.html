@@ -1,0 +1,187 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/iconfont.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<style>
+			html{
+				height: 100%!important;
+				width:100%!important;
+				background: linear-gradient(to bottom , #4A62A4 10%,#4A62A4 100%);
+			}
+			/* 标题颜色 */
+			header{
+				background: linear-gradient(to right , #314173 10%,#393952 100%);
+			}
+			/* 9宫格的背景色及边框去除 */
+			.mui-table-view.mui-grid-9{  
+			      /*替换成自己的颜色*/  
+				background: linear-gradient(to bottom , #7B94CD 10%, #4A62A4 100%);
+				border-left: 0px;
+			}
+			/* 9宫格的边框去除 */
+			.mui-grid-view.mui-grid-9 .mui-table-view-cell{
+				border:0;
+			}
+			/* a标签的背景色及圆角 */
+			.mui-table-view-cell a{
+				background: linear-gradient(to bottom , #FFFFFF 0%,#6A73B4 100%)!important;
+				/* background-color:#5AF1F6 !important; */				border-radius: 20px;
+				
+			}
+			/* 字体颜色 */
+			.mui-media-body{
+				color: #FFFFFF!important;
+			}
+			/* 引入图标的尺寸 */
+			.icon {
+				width: 1em;
+				height: 1em;
+				vertical-align: -0.15em;
+				fill: currentColor;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+ 
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title" style="color: #FFFFFF">智能家居</h1>
+		</header>
+		<div class="mui-content" style="height: 100%;">
+			<ul class="mui-table-view mui-grid-view mui-grid-9" style="margin-top:0px;">
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"  style="border-color:transparent;">
+				<a href="./pages/page1.html">
+				<!-- <a href="./pages/page1.html"> -->
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-deng"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body">灯</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page2.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-iconlight02"></use>
+						</svg>
+					</span>
+					<!-- <span class="mui-badge mui-badge-red">5</span> -->
+					</span>
+					<div class="mui-media-body" >RGB</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page3.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-plc"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body" >PLC</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page4.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-kongtiao"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body">空调</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page5.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-dianshi"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body" >电视</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page6.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-chuanglian-copy"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body">窗帘</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page7.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-chuanghu"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body" >窗户</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page8.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-accessControl"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body" >门禁</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page9.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-shuibiao"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body" >水表</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page10.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-dianbiao"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body">电表</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page11.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-wenshidu"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body">温/湿度</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="./pages/page12.html">
+					<span class="mui-icon" >
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-wifizhinengchazuo"></use>
+						</svg>
+					</span>
+					<div class="mui-media-body">智能插座</div>
+				</a>
+			</li>
+			</ul>
+		</div>
+		<script></script>
+	</body>
