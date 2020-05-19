@@ -14,11 +14,12 @@
 .window-con{
 	width: 90%;
 	margin: 0 auto;
-	overflow: hidden;
 }
 .wind-position,.wind-pinch,.wind-buts{
 	width: 90%;
-	margin: 0 auto;
+	margin: calc(100vw/50) auto;
+	height:calc(100vw/7);
+	/* overflow: hidden; */
 }
 /* 滑块位置文字 将原始屏蔽 */
 .mui-tooltip{
@@ -35,9 +36,11 @@
 /* 滑块标题文字 */
 .wind-position p,.wind-pinch p,.wind-buts p{
 	color: #FFFFFF;
+	height: calc(100vw/20);
 	font-size: calc(100vw/25);
+	margin: calc(100vw/50) 0;
 	margin-right: calc(100vw/25) ;
-	margin-bottom: 0;
+	/* margin-bottom: 0; */
 }
 /* 滑块样式 */
 .wind-position input,.wind-pinch input{
@@ -58,7 +61,7 @@
 .wind-position span,.wind-pinch span{
 	position: absolute;
 	/* top:0; */
-	right: -5%;
+	right: -8%;
 	top: 50%;
 	font-size: calc(100vw/20);
 	font-weight: 600;
@@ -70,8 +73,10 @@
 /* 窗户控制|窗户速度|窗户状态 */
 .wind-contol,.wind-speed{
 	width: 100%;
-	margin: 0 auto calc(100vw/20);
-	overflow: hidden;
+	height:calc(100vw/15);
+	margin: calc(100vw/20);
+	margin-left: 0;
+	/* overflow: hidden; */
 }
 
 .wind-contol p,.wind-speed p{

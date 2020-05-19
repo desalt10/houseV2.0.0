@@ -36,7 +36,7 @@ header{
 	display:flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin: calc(100vw/30) 0 calc(100vw/30) 0;
+	margin: calc(100vw/30) 0 0 0;
 	padding-top:  calc(100vw/40);
 	justify-content:space-between;
 	background: transparent;
@@ -83,8 +83,6 @@ header{
 .sa-part2 ul>li{
 	position: relative;
 	width: 25%;
-	/* height: calc(100vw/5); */
-	/* margin:calc(100vw/30); */
 	text-align: center;
 	padding: calc(100vw/40);
 }
@@ -93,7 +91,7 @@ header{
 	margin: 0;
 }
 .sa-part2 ul>li img{
-	width: 80%;
+	width: 70%;
 	text-align: center;
 }
 /* 信息部分 */
@@ -151,11 +149,11 @@ header{
 	font-size: calc(100vw/8);
 }
 #popover td{
-	padding: calc(100vw/20);
+	padding: calc(100vw/22);
 	text-align: center;
 	background: #FFF4D3;
 	border: calc(100vw/30) solid #4A62A4;
-	margin: calc(100vw/20);
+	/* margin: calc(100vw/20); */
 	font-size: calc(100vw/20);
 	font-weight: 600;
 }

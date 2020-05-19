@@ -5,12 +5,13 @@
 }
 .container{
 	display: flex;
-	margin-top: 1rem;
+	margin-top: 0.5rem;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 }
+
 .lightbulb__container {
   position: relative;
   width: 15rem;
@@ -136,7 +137,7 @@
 /* RGB电源开关部分 */
 .switch .switch2{
 	position: absolute;
-	top: 16rem;
+	top: 14rem;
 	left: 1rem;
 	width: 3rem;
 	height: 1.8rem;
@@ -155,7 +156,7 @@
 /* RGB颜色开关 */
 .switch .switch3{
 	position: absolute;
-	top: 16rem;
+	top: 14rem;
 	right: 1rem;
 	width: 5rem;
 	height: 1.8rem;
@@ -171,7 +172,7 @@
 .slider{
 	position: absolute;
 	width: 100%;
-	top: 18rem;
+	top: 17rem;
 	/* background: red; */
 	z-index: 100;
 	color: #C8C7CC;
@@ -209,11 +210,14 @@
 	width: 50%;
 }
 .mui-input-row ul li{
+	padding:0;
+	/* margin:0; */
 	float: left;
-	width: 20px;
-	height: 20px;
+	width: calc(100vw/15);
+	height: calc(100vw/15);
 	border-radius: 50%;
-	margin: 3px;
+	margin: 1px;
+	margin-top:0;
 	border: 3px solid transparent;
 	cursor: pointer;
 }
