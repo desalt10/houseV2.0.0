@@ -3,33 +3,110 @@
 	width: 100%;
 	background-color: #314173;
 }
-.con-window{
+/* 窗户动态 */
+.window-show{
 	width: 90%;
-	/* height: calc(100vw/3); */
+	height: 200px;
 	margin: 0 auto;
-	/* background: red; */
+	/* background: salmon ; */
 }
-ul{
+/* 窗户控制 */
+.window-con{
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.wind-position,.wind-pinch,.wind-buts{
+	width: 90%;
+	margin: 0 auto;
+}
+/* 滑块位置文字 将原始屏蔽 */
+.mui-tooltip{
+	width: 0px!important;
+	height: 0px!important;
+	border: 0px!important;
+	text-align: center!important;
+	line-height: 100%;
+	top: 0%!important;
+	left: 100%!important;
+	color: #FFFFFF!important;
+	font-size: 0!important;
+}
+/* 滑块标题文字 */
+.wind-position p,.wind-pinch p,.wind-buts p{
+	color: #FFFFFF;
+	font-size: calc(100vw/25);
+	margin-right: calc(100vw/25) ;
+	margin-bottom: 0;
+}
+/* 滑块样式 */
+.wind-position input,.wind-pinch input{
+	background: #FFFFFF!important;
+	color: #FFFFFF!important;
+}
+/* 滑块大小和颜色 */
+.mui-input-range input[type='range']::-webkit-slider-thumb
+{
+	width: calc(100vw/25);
+	height: calc(100vw/20);
+	padding-right: 0!important;
+	border-radius: 20%!important;
+	/* background-color:#C8C7CC; */
+	background: yellow;
+}
+/* 滑块位置文字 自定义滑块提示 */
+.wind-position span,.wind-pinch span{
+	position: absolute;
+	/* top:0; */
+	right: -5%;
+	top: 50%;
+	font-size: calc(100vw/20);
+	font-weight: 600;
+	/* bottom: 0; */
+	/* color: #FFFFFF; */
+	color: yellow;
+	
+}
+/* 窗户控制|窗户速度|窗户状态 */
+.wind-contol,.wind-speed{
 	width: 100%;
+	margin: 0 auto calc(100vw/20);
+	overflow: hidden;
+}
+
+.wind-contol p,.wind-speed p{
+	/* width: 20%; */
+	font-size: calc(100vw/25);
+	margin: 0 auto;
+	margin-left: calc(100vw/25) ;
+	margin-right: calc(100vw/25) ;
+}
+
+.wind-title{
+	float: left;
+	color: #FFFFFF;
+	font-size: calc(100vw/25);
+	margin-right: calc(100vw/20);
+}
+
+ul{
+	float: left;
+	/* width: 70%; */
 	display: flex !important;
 	flex-direction: row;
 	justify-content:space-between;
-	margin: calc(100vw/15) auto!important;
-	/* background: pink !important; */
-}
-ul span{
-	/* width: 30%; */
-	color: #fff;
-	text-align:center;
-	font-size: calc(100vw/20);
+	margin: 0 auto!important;
 }
 ul>li{
-	width: calc(100vw/7);
+	/* width: calc(100vw/8); */
+	position: relative;
 	background: #fff!important;
-	padding: calc(100vw/50);
-	font-size: calc(100vw/20);
+	padding: calc(100vw/80);
+	margin: 0 calc(100vw/60);
+	font-size: calc(100vw/25);
 	text-align: center;
 }
-li:active{
-	background:red;
+
+.active{
+	background: yellow!important;
 }

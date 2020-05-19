@@ -6,81 +6,57 @@
     <title></title>
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
+	<style>
+		*{ touch-action: none;}
+	</style>
 </head>
 <body>
-	<header class="mui-bar mui-bar-nav">
-		<h1 class="mui-title">标题</h1>
-	</header>
-	<nav class="mui-bar mui-bar-tab">
-		<a class="mui-tab-item mui-active" href="home.html">
-			<span class="mui-icon mui-icon-home"></span>
-			<span class="mui-tab-label">首页</span>
+	<nav class="mui-bar mui-bar-tab" id="nav-tabbar"> 
+		<a class="mui-tab-item mui-active" id="home">
+			<span class="mui-icon  mui-icon-home"></span>
+			<span class="mui-tab-label"  >智能家居</span>
 		</a>
-		<a class="mui-tab-item" href="message.html">
-			<span class="mui-icon mui-icon-phone"></span>
-			<span class="mui-tab-label">消息</span>
+		<a class="mui-tab-item" id="smart">
+			<span class="mui-icon  mui-icon-gear"></span>
+			<span class="mui-tab-label"  >安防系统</span>
 		</a>
-		<a class="mui-tab-item" href="setting.html">
-			<span class="mui-icon mui-icon-gear"></span>
-			<span class="mui-tab-label">设置</span>
-		</a>
-	</nav>
-	<script type="text/javascript" charset="utf-8">
-			mui.init();
-			var index = 0;
-			var subpages = ['home.html','message.html','setting.html'];
-			
-			mui.plusReady(function () {
-			    var self = plus.webview.currentWebview();
-					for (var i = 0; i < subpages.length; i++) {
-						var sub = plus.webview.create(
-						subpages[i], subpages[i], {
-							top: '45px',
-							bottom: '50px'
-						});
-						if(i > index){
-							sub.hide();
-						}
-						self.append(sub);
-					}
-			});
-			var activeTab = subpages[index];
-			mui('.mui-bar-tab').on('tap', 'a', function (){
-				var targetTab = this.getAttribute('href');
-				if(activeTab == targetTab){
-					return;
-				}
-				if(mui.os.plus){
-					plus.webview.show(targetTab);
-					plus.webview.hide(activeTab);
-					activeTab = targetTab;
-				} else {
-					createIframe('.mui-content', {
-						url: targetTab,
-						style: {
-							top: '45px',
-							bottom: '50px'
-						}
-					})
-				}
-			});
-			function createIframe(el,opt) {
-				var elContainer = document.querySelector('mui-content');
-				var wrapper = document.querySelector('.mui-iframe-wrapper');
-				if(!wrapper){
-					wrapper = document.createElement('div');
-					wrapper.className = 'mui-iframe-wrapper';
-					for (var i in opt.style) {
-						wrapper[i] = opt.style[i];
-					}
-				}	
-				var iframe = document.createElement('iframe');
-				iframe.src = opt.url;
-				iframe.id = opt.id || opt.url;
-				iframe.name = opt.id;
-				wrapper.appendChild(iframe);
-				elContainer.appendChild(wrapper);
-			}
-	</script>
+   </nav>
+	
 </body>
+<script type="text/javascript" charset="UTF-8">
+		function changeView(id){
+			var view = plus.webview.getWebviewById(id);
+			view.show();
+		}
+		
+		mui.init({
+			subpages:[{
+				url:'subpages/home.html',
+				id:'home.html',
+				style:{top:'0px',bottom:'44px'}
+			},{
+				url:'subpages/smart.html',
+				id:'smart.html',
+				style:{top:'0px',bottom:'44px'}
+			}]
+			
+		});
+		mui.plusReady(function () {
+			console.log("qiehuan");
+		    var index = plus.webview.getWebviewById('home.html');
+			index.show();
+			
+			document.getElementById("home").addEventListener('click',function(){
+				console.log("qiehuan")
+				changeView('home.html');
+			});
+			document.getElementById("smart").addEventListener('singleTap',function(){
+				console.log("123")
+				changeView('smart.html');
+			});
+			
+			
+		});
+		
+	</script>
 </html>

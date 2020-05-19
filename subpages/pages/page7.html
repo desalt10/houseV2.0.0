@@ -8,8 +8,8 @@
     <link href="../../css/page7.css" rel="stylesheet"/>
     <link href="../../css/pulic.css" rel="stylesheet"/>
     <script src="../../js/jquery-3.4.1.js"></script>
-    <script src="../../js/Control.js"></script>
-    <script src="../../js/websocket.js"></script>
+    <!-- <script src="../../js/Control.js"></script> -->
+    <!-- <script src="../../js/websocket.js"></script> -->
     <script src="../../js/mui.min.js"></script>
     <script type="text/javascript">
     	mui.init();
@@ -25,44 +25,67 @@
  </header>
     <div class="mui-content">
        <div class="container">
-		   <div class="window"></div>
-		   <div class="con-window">
-			   <ul>
-				   <span>窗户控制</span>
-					<li>开窗</li>
-					<li>关窗</li>
-					<li>暂停</li>
-			   </ul>
-			   <ul>
-				   <span>窗户速度</span>
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-			   </ul>
-			   <ul>
-				   <span>窗户防夹力</span>
-					<li>0</li>
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-			   </ul>
-			   <div class="mui-input-row mui-input-range">
-			       <input type="range" id="slider" value="1" min="0" max="6" onchange="getSliderValue();">
+		   <div class="window-show"></div>
+		   <div class="window-con">
+			   <div class="mui-input-row mui-input-range wind-position">
+			   		<p>窗户位置</p>
+			        <input type="range" id="slider1" value="1" min="0" max="100" onchange="getSliderValue1();">
+					<span id="slider_pos"></span>
+			    </div>
+			   <div class="mui-input-row mui-input-range wind-pinch">
+			   		<p>窗户防夹力</p>
+			        <input type="range" id="slider2" value="1" min="0" max="6" onchange="getSliderValue2();">
+					<span id="slider_pin"></span>
+			    </div>
+			   <div class="wind-contol">
+					<p class="wind-title">窗户控制</p>
+					<ul class="wind-contol-ul">
+						<li id="get1" onclick="Getli()">开窗</li>
+						<li id="get2">关窗</li>
+						<li id="get3">暂停</li>
+					</ul>
 			   </div>
-		   </div>
+			   <div class="wind-speed">
+				   <p class="wind-title">窗户速度</p>
+				   <ul>
+					   <li id="get4">速度1</li>
+					   <li id="get5">速度2</li>
+					   <li id="get6">速度3</li>
+					   <li id="get7">速度4</li>
+				   </ul>
+			   </div>
+			   <div class="wind-buts">
+				   <p class="wind-title">查询窗户状态</p>
+				   <ul>
+					   <li style="margin-right: calc(100vw/20) ;" id="get8">查询</li>
+				   </ul>
+				   <p class="wind-title">窗户换向</p>
+				   <ul>
+				   		<li id="get9">正向</li>
+				   </ul>
+			   </div>
 	   </div>
-    </div>  
-	
+		</div>  
+	</div>
 </body>  
 <script>
-	const sliderElement = document.getElementById('slider');
-	function getSliderValue()
+	const sliderElement1 = document.getElementById('slider1');
+	const sliderElement2 = document.getElementById('slider2');
+	var slider_bug;
+	function getSliderValue1()
+	
 	{
-	    alert("value = " + sliderElement.value);
+		$("#slider_pos").text(sliderElement1.value)
+		
 	}
+	function getSliderValue2()
+	
+	{
+		$("#slider_pin").text(sliderElement2.value)
+	}
+	
+	
+	
+	
 </script>
 </html>
