@@ -10,11 +10,11 @@
   position: relative;
   padding-top: calc(100vw/30);
   width: 60%;
-  height: calc(100vw/0.8);
+  height: 68vh;
   margin: calc(100vw/10) auto;
-  border: 2px solid #CCCCCC;
+  /* border: 2px solid #CCCCCC; */
   border-radius: 8%;
-  box-shadow: 10px -10px 1px #888888;
+  box-shadow: calc(100vw/40) calc(-100vw/30) 1px #888888;
   background-color: #FFFFFF;
 }
 /*显示框*/
@@ -23,17 +23,26 @@
 	width: 80%;
 	padding: 3%;
 	line-height: 100%;
-	/*margin: 0 auto;*/
 	border: 2px solid #ccc;
 	border-radius: 8%;
+	padding-bottom: 0 ;
 	background-color: #DDDDDD;
 }
 .text-show p{
-	padding: 10px;
+	padding: calc(100vw/40);
+	height: 6vh;
 	padding-left: 0;
 	padding-right: 0;
 	color: #888888;
+	margin-bottom: 0 ;
+	font-size:calc(100vw/25);
 
+}
+.text-show span{
+	font-size:calc(100vw/25);
+}
+#text-tem{
+	font-size:calc(100vw/10);
 }
 .text-bottom{
 	width: 80%;
@@ -46,8 +55,9 @@
 }
 button{
 	display: inline-block;
-	margin-bottom: 5px ;
+	margin-bottom: calc(100vw/50) ;
 	width: 40%;
+	font-size: calc(100vw/25);
 }
 button:active {
 	box-shadow: 3px 3px 2px #ccc;
@@ -68,12 +78,18 @@ button:active {
 }
 #selet .selet-text{
 	margin: 0;
+	height: calc(100vw/10);
+	line-height: calc(100vw/10);
+	font-size: calc(100vw/25);
+	color: #999;
+	padding-left: calc(100vw/60);
 }
 #selet #showUserPicker1{
 	width: 40%;
 	padding: 0;
 	margin: 0;
-	font-size: 14px;
+	height: calc(100vw/10);
+	font-size: calc(100vw/25);
 }
 .text-1,.text-2{
 	margin-top: 0.6rem ;
@@ -85,20 +101,13 @@ button:active {
 	color: blue;
 }
 .t-40{
-	font-size: 40px;
+	font-size: calc(100vw/10);
 	
 }
 .t-align{
 	text-align: center;
 }
-.t-14{
-	font-size: 14px;
-}
-.fl{
-	float: left;
-}
-.fr{
-	float: right;
-}
+
+
 
 

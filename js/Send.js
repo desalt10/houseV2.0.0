@@ -56,10 +56,10 @@ var air_power_mask = false;
 function airPower(){
 	if(air_power_mask){
 		Reset()
-		SendData('@0004: {"PowerSwitch":0}\r\n');
+		SendData('@0004: {"powerswitch":0}\r\n');
 	}else{
 		Open()
-		SendData('@0004: {"PowerSwitch":1}\r\n');
+		SendData('@0004: {"powerswitch":1}\r\n');
 	}
 	air_power_mask =!air_power_mask;
 	
@@ -81,25 +81,25 @@ function airSpeed(){
 	switch(speed_buf){
 		case 0:{
 			$("#text-speed").text("自动");
-			SendData('@0004: {"WindSpeed":0}\r\n');
+			SendData('@0004: {"windspeed":0}\r\n');
 			speed_buf = 1;
 			break;
 		}
 		case 1:{
 			$("#text-speed").text("风速1");
-			SendData('@0004: {"WindSpeed":1}\r\n');
+			SendData('@0004: {"windspeed":1}\r\n');
 			speed_buf = 2;
 			break;
 		}
 		case 2:{
 			$("#text-speed").text("风速2");
-			SendData('@0004: {"WindSpeed":2}\r\n');
+			SendData('@0004: {"windspeed":2}\r\n');
 			speed_buf = 3;
 			break;
 		}
 		case 3:{
 			$("#text-speed").text("风速3");
-			SendData('@0004: {"WindSpeed":3}\r\n');
+			SendData('@0004: {"windspeed":3}\r\n');
 			speed_buf = 0;
 			break;
 		}
@@ -112,31 +112,31 @@ function airMode(){
 	switch(mode_buf){
 		case 0:{
 			$("#text-mode").text("自动");
-			SendData('@0004: {"WindSpeed":0}\r\n');
+			SendData('@0004: {"workmode":0}\r\n');
 			mode_buf = 1;
 			break;
 		}
 		case 1:{
 			$("#text-mode").text("制冷");
-			SendData('@0004: {"WindSpeed":1}\r\n');
+			SendData('@0004: {"workmode":1}\r\n');
 			mode_buf = 2;
 			break;
 		}
 		case 2:{
 			$("#text-mode").text("制热");
-			SendData('@0004: {"WindSpeed":2}\r\n');
+			SendData('@0004: {"workmode":2}\r\n');
 			mode_buf = 3;
 			break;
 		}
 		case 3:{
 			$("#text-mode").text("通风");
-			SendData('@0004: {"WindSpeed":3}\r\n');
+			SendData('@0004: {"workmode":3}\r\n');
 			mode_buf = 4;
 			break;
 		}
 		case 4:{
 			$("#text-mode").text("除湿");
-			SendData('@0004: {"WindSpeed":3}\r\n');
+			SendData('@0004: {"workmode":4}\r\n');
 			mode_buf = 0;
 			break;
 		}
@@ -147,10 +147,10 @@ var wind_mask= true;
 function airWind(){
 	if(wind_mask){
 		$("#text-wind").text("上下摆风");
-		SendData('@0004: {"VerticalSwitch":1}\r\n');
+		SendData('@0004: {"verticalswitch":1}\r\n');
 	}else{
 		$("#text-wind").text("");
-		SendData('@0004: {"VerticalSwitch":0}\r\n');
+		SendData('@0004: {"verticalswitch":0}\r\n');
 	}
 	wind_mask =!wind_mask;
 }
@@ -172,7 +172,7 @@ function airTem(i){
 		}
 	}
 	$("#text-tem").text(tem_bug+"℃");
-	SendData('@0004: {"TargetTemperature":'+tem_bug+'}\r\n');
+	SendData('@0004: {"targettemperature":'+tem_bug+'}\r\n');
 }
 // 品牌选择
 function showLevel1() {
@@ -327,14 +327,14 @@ function showLevel1() {
 							var text = selectItems[0].text;
 							var value = selectItems[0].value;
 							$("#showUserPicker1").text(text);
-							SendData('@0004: {"SelectModel":'+value+'}\r\n');
+							SendData('@0004: {"selectmodel":'+value+'}\r\n');
 						});
 					});
 				}
 		
 // 尝试匹配
 function airTry(){
-	SendData('@0004:  {"OK":2}\r\n');
+	SendData('@0004:  {"ok":2}\r\n');
 }
 //匹配成功
 var aircon_mask = true;
@@ -350,7 +350,7 @@ function airCon(){
 }
 
 
-/** Page4 电视遥控  设备编号@0005
+/** Page5 电视遥控  设备编号@0005
 *  功能说明: TvCon(s) 按键函数
 * s=0 菜单
 * s=1 首页
@@ -366,25 +366,25 @@ function airCon(){
 * s=11 静音
 * s=12 频道-
 * s=13 频道+
-* 
-*  
+* 功能说明: TVstudy()学习按键
+* 功能说明: TVpower()电源按键
 */
 function TvCon(s){
 	switch(s){
 		case 0:{
-			SendData('@0005:{"Menustrip":0}\r\n');
+			SendData('@0005:{"menustrip":0}\r\n');
 			break
 		}
 		case 1:{
-			SendData('@0005:{"Homepage":0}\r\n');
+			SendData('@0005:{"homepage":0}\r\n');
 			break
 		}
 		case 2:{
-			SendData('@0005:{"UP":0}\r\n');
+			SendData('@0005:{"up":0}\r\n');
 			break
 		}
 		case 3:{
-			SendData('@0005:{"Right":0}\r\n');
+			SendData('@0005:{"right":0}\r\n');
 			break
 		}
 		case 4:{
@@ -404,15 +404,15 @@ function TvCon(s){
 			break
 		}
 		case 8:{
-			SendData('@0005:{"Return":0}\r\n');
+			SendData('@0005:{"return":0}\r\n');
 			break
 		}
 		case 9:{
-			SendData('@0005:{"Volume":0}\r\n');
+			SendData('@0005:{"volume":0}\r\n');
 			break
 		}
 		case 10:{
-			SendData('@0005:{"Volume":1}\r\n');
+			SendData('@0005:{"volume":1}\r\n');
 			break
 		}
 		case 11:{
@@ -420,16 +420,21 @@ function TvCon(s){
 			break
 		}
 		case 12:{
-			SendData('@0005:{"Channel":0}\r\n');
+			SendData('@0005:{"channel":0}\r\n');
 			break
 		}
 		case 13:{
-			SendData('@0005:{"Channel":1}\r\n');
+			SendData('@0005:{"channel":1}\r\n');
 			break
 		}
 	}
 }
-
+function TVstudy(){
+	
+}
+function TVstudy(){
+	SendData('@0005:{"powerswitch":0}\r\n');
+}
 
 
 
