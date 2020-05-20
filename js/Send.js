@@ -34,9 +34,9 @@ function btn(i){
 var btn_power_mask=true;
 function btnPower(){
 	if(btn_power_mask){
-		SendData('@0003:{"VWO":1}\r\n');
+		SendData('@0003:{"vwo":1}\r\n');
 	}else{
-		SendData('@0003:{"VWO":0}\r\n');
+		SendData('@0003:{"vwo":0}\r\n');
 	}
 	btn_power_mask=!btn_power_mask;
 }
@@ -476,21 +476,22 @@ function DrCon(){
 
 
 /** Page9 水表控制
-*  功能说明: Status_on()控制阀门开
-*  功能说明: Status_off()控制阀门关
-*  功能说明: Status_read()读阀门状态
+*  功能说明:  Status()控制阀门
 *  状态值: 0:打开  1:关闭  2:读阀门状态
 *  功能说明: Water_read() 读用水量
 */
-function Status_on(){
-	SendData('@0009:{"Status":0}\r\n');
+function Status(i){
+	if(i==0){
+		SendData('@0009:{"status":0}\r\n');
+	}
+	if(i==1){
+		SendData('@0009:{"status":1}\r\n');
+	}
+	if(i==2){
+		SendData('@0009:{"status":2}\r\n');
+	}
 }
-function Status_off(){
-	SendData('@0009:{"Status":1}\r\n');
-}
-function Status_read(){
-	SendData('@0009:{"Status":2}\r\n');
-}
+
 function Water_read(){
 	SendData('@0009:{"tunnage":0}\r\n');
 }
@@ -506,7 +507,7 @@ function Ele_read(){
 *  功能说明: Th_read() 读温湿度
 */
 function Th_read(){
-	SendData('@0011:{"Read":0}\r\n');
+	SendData('@0011:{"read":0}\r\n');
 }
 /** Page12 智能开关控制  设备编号@0012-0019
 *  功能说明: Socket() 插座开关 （0-关。1-开）

@@ -93,10 +93,10 @@
 .buttons .btnes div{
 	width: calc(100vw/12);
 	height: calc(100vw/17);
-	border-top: 0.3rem solid rgba(0,0,0,.4) ;
-	border-left: 0.3rem solid rgba(0,0,0,.2) ;
-	border-right: 0.3rem solid rgba(0,0,0,.5) ;
-	border-bottom: 0.3rem solid rgba(0,0,0,.3) ;
+	border-top: calc(100vw/70) solid rgba(0,0,0,.4) ;
+	border-left: calc(100vw/70) solid rgba(0,0,0,.2) ;
+	border-right: calc(100vw/70) solid rgba(0,0,0,.5) ;
+	border-bottom: calc(100vw/70) solid rgba(0,0,0,.3) ;
 	text-align: center;
 	background:brown;
 }
@@ -110,6 +110,7 @@
 	text-align: center;
 	color: brown;
 }
+/* 全开全关 */
 .but-text{
 	margin-left: calc(100vw/2);
 	width:50%;
@@ -122,7 +123,7 @@
 	padding: 0;
 	width: calc(100vw/15);
 	height: calc(100vw/15);
-	border:  0.2rem solid rgba(0,0,0,.5);
+	border:  calc(100vw/100) solid rgba(0,0,0,.5);
 	border-radius: 50%;
 	background:#006926;
 }
@@ -131,6 +132,7 @@
 	height: calc(100vw/15);
 	line-height: calc(100vw/15);
 }
+/* 底部文字 */
 .buttom{
 	height: 20%;
 	margin-top: calc(100vw/20);

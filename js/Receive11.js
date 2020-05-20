@@ -11,8 +11,8 @@ function Receive11(obj11){
 	Get11(obj11)
 }
 function Get11(s){
-	tem = s.CurrentTemperature;
-	hum = s.CurrentHumidity;
+	tem = s.currenttemperature;
+	hum = s.currenthumidity;
 	$("#tem").text(tem+"(℃)");
 	$("#hum").text(hum+"(%)");
 }

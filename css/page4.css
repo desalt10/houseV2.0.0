@@ -8,10 +8,10 @@
 }
 .button-group {
   position: relative;
-  padding-top: 10px;
+  padding-top: calc(100vw/30);
   width: 60%;
-  height: 80%;
-  margin: 10% auto;
+  height: calc(100vw/0.8);
+  margin: calc(100vw/10) auto;
   border: 2px solid #CCCCCC;
   border-radius: 8%;
   box-shadow: 10px -10px 1px #888888;
@@ -19,11 +19,6 @@
 }
 /*显示框*/
 .text-show{
-	/*position: absolute;
-	left: 0;
-	right: 0;
-	top: 6%;
-	margin: auto;*/
 	margin: 6% auto;
 	width: 80%;
 	padding: 3%;

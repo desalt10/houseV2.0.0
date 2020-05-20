@@ -24,7 +24,7 @@ function Get10(s){
 	ele = s.electricity;
 	pow = s.power;
 	fre = s.frequency;
-	con = s.PowerConsumption;
+	con = s.powerconsumption;
 	$("#text1").text(vol+"(V)");
 	$("#text2").text(ele+"(A)");
 	$("#text3").text(pow+"(W)");

@@ -1,14 +1,24 @@
 .mui-content{
-	height: 100vh;
+	/* height: 100vh; */
 	width: 100%;
 	background-color: #314173;
 }
 /* 窗户动态 */
 .window-show{
-	width: 90%;
-	height: 200px;
+	position: relative;
+	width: 50%;
 	margin: 0 auto;
-	/* background: salmon ; */
+	margin-top: calc(100vw/50);
+}
+.window-show #wind-1{
+	position: relative;
+	width: 90%;
+}
+.window-show #wind-2{
+	width: 90%;
+	top:0;
+	left: 0;
+	position: absolute;
 }
 /* 窗户控制 */
 .window-con{

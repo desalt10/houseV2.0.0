@@ -26,21 +26,20 @@
         <div class="container">
 			<div class="show">
 				<img src="../../img/page9.png">
-				<!-- <span>123.56</span> -->
 			</div>
 			<div class="form">
 				<div> 
 					<table width="100%" class="table" id="tablevalue">
-						<tr><th width=50%>用水量</th><th id="text1"width=30%></th></tr>
-						<tr><th width=50%>阀门状态</th><th id="text2" width=50%></th></tr>
-						<tr><th width=50%>控制阀门</th>
-						<th>
-							<button style="margin-right:10% ;padding-left:10%;padding-right:10%;" onClick="Status_on()">开</button>
-							<button style="padding-left:10%;padding-right:10%;" onClick="Status_off()">关</button>
-						</th>
+						<tr><td width=50%>用水量</td><td id="text1"width=30%></td></tr>
+						<tr><td width=50%>阀门状态</td><td id="text2" width=50%></td></tr>
+						<tr><td width=50%>控制阀门</td>
+						<td>
+							<button style="margin-right:10% ;padding-left:10%;padding-right:10%;" onClick="Status(0)">开</button>
+							<button style="padding-left:10%;padding-right:10%;" onClick="Status(1)">关</button>
+						</td>
 						</tr>
-						<tr><th>读阀门状态</th><th><button onClick="Status_read()">点击读取</button></th></tr>
-						<tr><th>读用水量</th><th><button onClick="Water_read()">点击读取</button></th></tr>
+						<tr><td>读阀门状态</td><td><button onClick="Status(2)">点击读取</button></td></tr>
+						<tr><td>读用水量</td><td><button onClick="Water_read()">点击读取</button></td></tr>
 					</table>
 				</div>
 			</div>

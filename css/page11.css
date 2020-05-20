@@ -4,7 +4,8 @@
 	background-color: #314173;
 }
 .container .show{
-	width: 100%;
+	width: 60%;
+	margin: 0 auto;
 }
 .show img{
 	position: relative;
@@ -20,24 +21,18 @@
 }
 
 /* 表格 */
-.table {
-	border: 1px solid #cad9ea;
-	/* color: #666; */
+.table td{
+	border: calc(100vw/100) solid #cad9ea;
+	/* padding: calc(100vw/50) ; */
+	height: calc(100vw/8);
+	line-height: 100%;
+	font-size: calc(100vw/20) ;
+	font-weight: 600;
+	text-align: center;
 	color: #FFFFFF;
-	margin: 0 auto;
 }
-
-.table th {
-	background-repeat: repeat-x;
-	height: 30px;
-}
-
-.table td,
-.table th {
-	border: 1px solid #cad9ea;
-	padding: 0.5rem 2em;
-}
-
 table tr button{
-	padding: 3%;
+	text-align: center;
+	font-size: calc(100vw/30) ;
+	font-weight: 600;
 }

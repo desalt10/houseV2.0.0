@@ -16,8 +16,8 @@ function Receive9(obj9){
  * 对象.WaterConsumption  用水量
  */
 function Get_water(obj9){
-	if(obj9.hasOwnProperty("WaterConsumption")){
-		Water = obj9.WaterConsumption;
+	if(obj9.hasOwnProperty("waterconsumption")){
+		Water = obj9.waterconsumption;
 			$("#text1").text(Water+'(m³)');
 	}
 }
@@ -27,9 +27,9 @@ function Get_water(obj9){
  * 对象.Status  阀门控制  0:开 1:关 2:读阀门状态
  */
 function Get_status(obj9){
-	if(obj9.hasOwnProperty("Status")){
-		Sta = obj9.Status;
-		if(Sta){
+	if(obj9.hasOwnProperty("status")){
+		Sta = obj9.status;
+		if(Sta=="1"){
 			$("#text2").text("关");
 			
 		}else{
