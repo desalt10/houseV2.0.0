@@ -1,5 +1,5 @@
 .mui-content{
-	/* height: 100vh; */
+	height: 100vh;
 	width: 100%;
 	background-color: #314173;
 }
@@ -17,7 +17,7 @@
 .window-show #wind-2{
 	width: 90%;
 	top:0;
-	left: 0;
+	left: 0%;
 	position: absolute;
 }
 /* 窗户控制 */
@@ -25,11 +25,10 @@
 	width: 90%;
 	margin: 0 auto;
 }
-.wind-position,.wind-pinch,.wind-buts{
+.wind-position,.wind-pinch{
 	width: 90%;
 	margin: calc(100vw/50) auto;
-	height:calc(100vw/7);
-	/* overflow: hidden; */
+	height: 8vh;
 }
 /* 滑块位置文字 将原始屏蔽 */
 .mui-tooltip{
@@ -44,13 +43,13 @@
 	font-size: 0!important;
 }
 /* 滑块标题文字 */
-.wind-position p,.wind-pinch p,.wind-buts p{
+.wind-position p,.wind-pinch p{
 	color: #FFFFFF;
 	height: calc(100vw/20);
 	font-size: calc(100vw/25);
 	margin: calc(100vw/50) 0;
 	margin-right: calc(100vw/25) ;
-	/* margin-bottom: 0; */
+	margin-bottom: 0;
 }
 /* 滑块样式 */
 .wind-position input,.wind-pinch input{
@@ -81,22 +80,31 @@
 	
 }
 /* 窗户控制|窗户速度|窗户状态 */
-.wind-contol,.wind-speed{
+.wind-contol,.wind-speed,.wind-buts{
 	width: 100%;
-	height:calc(100vw/15);
+	height: 3.5vh;
 	margin: calc(100vw/20);
+	margin-top:calc(100vw/15);
 	margin-left: 0;
 	/* overflow: hidden; */
 }
-
-.wind-contol p,.wind-speed p{
+.wind-contol{
+	margin-top: 0;
+}
+.wind-contol p,.wind-speed p,.wind-buts p{
 	/* width: 20%; */
 	font-size: calc(100vw/25);
+	text-align: center;
 	margin: 0 auto;
+	/* width: 18%; */
+	height: calc(100vw/16);
+	line-height: calc(100vw/16);
 	margin-left: calc(100vw/25) ;
 	margin-right: calc(100vw/25) ;
 }
-
+.wind-buts{
+	margin-bottom: 0 ;
+}
 .wind-title{
 	float: left;
 	color: #FFFFFF;
@@ -115,13 +123,19 @@ ul{
 ul>li{
 	/* width: calc(100vw/8); */
 	position: relative;
-	background: #fff!important;
+	height: calc(100vw/16);
+	line-height: 100%;
+	background: #fff;
 	padding: calc(100vw/80);
 	margin: 0 calc(100vw/60);
 	font-size: calc(100vw/25);
 	text-align: center;
+	
 }
 
-.active{
-	background: yellow!important;
+ul>li:active{
+	/* background: yellow!important; */
+	box-shadow: calc(100vw/150) calc(100vw/150) 1px #797979;
+	/* font-size: calc(100vw/23); */
+	font-weight: 600;
 }

@@ -429,33 +429,106 @@ function TvCon(s){
 		}
 	}
 }
+// 电视学习按键
+var study_mask = true;
 function TVstudy(){
+	if(study_mask){
+		SendData('@0005:{"study":1}\r\n');
+	}else{
+		SendData('@0005:{"study":0}\r\n');
+	}
+	study_mask =!study_mask;
 	
 }
-function TVstudy(){
+// 电视电源按键
+function TVpower(){
 	SendData('@0005:{"powerswitch":0}\r\n');
 }
 
 
 
 
-
-
 /** Page6 窗帘控制
-*  功能说明: btnOpen_6() 窗帘开
-*  功能说明: btnClose_6() 窗帘关
-*  功能说明: btnPause_6() 窗帘暂停
+*  功能说明: CurtainsBtn() 窗帘控制按钮
 *  状态值: 0:打开   1:关闭  2:暂停
 */
-function btnOpen_6(){
-	SendData('@0006:{"CurtainOperation":0}\r\n');
-};
-function btnClose_6(){
-	SendData('@0006:{"CurtainOperation":1}\r\n');
+function CurtainsBtn(i){
+	if(i==0){
+		SendData('@0006:{"curtainoperation":0}\r\n');
+	}
+	if(i==1){
+		SendData('@0006:{"curtainoperation":1}\r\n');
+	}
+	if(i==2){
+		SendData('@0006:{"curtainoperation":2}\r\n');
+	}
 }
-function btnPause_6(){
-	SendData('@0006:{"CurtainOperation":2}\r\n');
+
+/** Page7 窗户控制   @0007
+*  
+*  功能说明: getSliderValue1() 窗户位置(滑块1)函数
+*  功能说明: getSliderValue2() 窗户防夹力度调节(滑块2)函数
+*  功能说明: Getli(s) 按键函数
+* s=1 开窗; s=2 关窗; s=3暂停;
+* s=4 速度1; s=5速度2;s=6速度3;s=7速度4;
+* s=8 查询; s=9 换向
+*/
+var sliderElement1 = document.getElementById('slider1');
+var sliderElement2 = document.getElementById('slider2');
+var slider1_bug,slider2_bug;
+function getSliderValue1(){
+	// console.log()
+	$("#slider_pos").text(sliderElement1.value)
+	slider1_bug = sliderElement1.value
+	SendData('@0007:{"actuatorposition":'+slider1_bug+'}\r\n');
 }
+function getSliderValue2(){
+	$("#slider_pin").text(sliderElement2.value)
+	slider2_bug = sliderElement2.value
+	SendData('@0007:{"clampwindow":'+slider2_bug+'}\r\n');
+}
+function Getli(s){
+	switch(s){
+		case 1:{
+			SendData('@0007:{"actuatoroperationmode":0}\r\n');
+			break;
+		}
+		case 2:{
+			SendData('@0007:{"actuatoroperationmode":1}\r\n');
+			break;
+		}
+		case 3:{
+			SendData('@0007:{"actuatoroperationmode":2}\r\n');
+			break;
+		}
+		case 4:{
+			SendData('@0007:{"speedwindow":1}\r\n');
+			break;
+		}
+		case 5:{
+			SendData('@0007:{"speedwindow":2}\r\n');
+			break;
+		}
+		case 6:{
+			SendData('@0007:{"speedwindow":3}\r\n');
+			break;
+		}
+		case 7:{
+			SendData('@0007:{"speedwindow":4}\r\n');
+			break;
+		}
+		case 8:{
+			SendData('@0007:{"automanual":0}\r\n');
+			break;
+		}
+		case 9:{
+			SendData('@0007:{"reversewindow":0}\r\n');
+			break;
+		}
+	}
+}
+
+
 
 /** Page8 门禁控制   @0008
 *  @param dr_bug 当前输入的字符串

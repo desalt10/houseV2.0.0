@@ -128,12 +128,7 @@
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.3);
   z-index: 8;
 }
-/* .btns{
-	position: absolute;
-	width: 20%;
-	height: 100%;
-	display:inline-block;
-} */
+
 /* btn1 btn2 btn3底部按键 */
 .btn1,.btn2,.btn3 {
   position: absolute;
@@ -144,8 +139,8 @@
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 99px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-  font-weight: bold;
+  font-size: calc(100vw/40);
+  font-weight: 600;
   text-transform: uppercase;
   transition: background-color 125ms linear;
   cursor: pointer;
@@ -157,4 +152,26 @@
 .btn3{
 	left: 72%;
 }
+/* 窗帘动画 */
+.animate1{
+	-webkit-animation: wopen 5s ease;
+	animation-fill-mode: forwards;
+}
 
+@-webkit-keyframes wopen{
+	0%{width: 50%;}
+	40%{width: 30%;}
+	80%{width: 10%;}
+	100%{width: 0%;}
+}
+
+.animate2{
+	-webkit-animation: wclose 5s ease;
+	animation-fill-mode: forwards;
+}
+@-webkit-keyframes wclose{
+	0%{width: 0%;}
+	40%{width: 20%;}
+	80%{width: 40%;}
+	100%{width: 50%;}
+}

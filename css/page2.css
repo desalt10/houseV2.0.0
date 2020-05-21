@@ -108,7 +108,7 @@
 }
 
 /* 动画效果结合灯泡背景使用 */
-@keyframes glow {
+@keyframes glow{
   0% {
     transform: translateX(-50%) translateY(-15%) scale(0.5);
   }
