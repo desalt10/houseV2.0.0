@@ -119,8 +119,8 @@ function Data_Dispose(str,hex){//数据处理函数
 	   		Receive19(obj);
 	   		break;
 	   }
-	   case "@00020:":{//安防
-	   		   Receive9(obj);
+	   case "@0020:":{//安防
+	   		   Receive20(obj);
 	   		   break;
 	   }
 	}

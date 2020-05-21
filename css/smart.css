@@ -69,7 +69,7 @@ header{
 	width: calc(100vw/15);
 	height: calc(100vw/15);
 	top: 0;
-	left: 0;
+	left: 0%;
 	right: 0;
 	margin: auto;
 	text-align: center;

@@ -21,6 +21,7 @@ button{
 	color: #FFFFFF;
 	font-size: calc(100vw/30);
 	background: rgba(204,204,204,.5);
+	text-align: center;
 	/* padding: calc(100vw/65); */
 }
 .container .part1 button{

@@ -14,8 +14,8 @@
 
 .lightbulb__container {
   position: relative;
-  width: 15rem;
-  height: 19rem;
+  width: calc(75vw);
+  /* height: 19rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,8 +24,8 @@
 /* 灯泡上部 */
 .lightbulb__container .lightbulb__bulb {
   position: relative;
-  width: 10rem;
-  height: 10rem;
+  width: calc(100vw/2);
+  height: calc(100vw/2);
   background: #FEFFBE;
   border-radius: 50%;
   background: #000;
@@ -44,12 +44,12 @@
 /* 接连灯泡的下部 */
 .lightbulb__container .lightbulb__bulb_bottom {
   position: absolute;
-  width: 10rem;
-  height: 2.5rem;
-  bottom: -1rem;
-  left: calc(50% - 5rem);
+  width: calc(100vw/2);
+  height: calc(100vw/8);
+  bottom: 0;
+  left: calc(50% - calc(25vw));
   background: #FEFFBE;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 calc(5vw) calc(5vw);
   background: #000;
 }
 /* 制作伪类 下部形成弧度 */
@@ -58,144 +58,160 @@
   display: block;
   position: absolute;
   top: 70%;
-  width: 6.5rem;
-  height: 10rem;
+  width: calc(32.5vw);
+  height: calc(100vw/2);
   background: #314173;
   z-index: 5;
 }
 .lightbulb__container .lightbulb__bulb::before {
-  left: -41%;
+  left: -40%;
   border-top-right-radius: 50%;
 }
 .lightbulb__container .lightbulb__bulb::after {
-  right: -41%;
+  right: -40%;
   border-top-left-radius: 50%;
 }
 /* 接触灯泡底部灰色部分*/
 .lightbulb__container .lightbulb__base {
-  position: absolute;
-  bottom: 6.2rem;
-  width: 5rem;
-  height: 1.5rem;
+  /* position: absolute; */
+  /* bottom: calc(31vw); */
+  width: calc(25vw);
+  height: calc(7.5vw);
   background: #888F98;
-  border-radius: 0.3rem;
+  margin-top:calc(1vw);
+  border-radius: calc(1.5vw);
   z-index: 10;
 }
 /* 灯泡螺旋部分 */
 .lightbulb__container .lightbulb__spiral {
-  position: absolute;
-  bottom: 5rem;
-  width: 3.5rem;
-  height: 1rem;
+  /* position: absolute; */
+  /* bottom: calc(25vw); */
+  width: calc(17.5vw);
+  height: calc(5vw);
   background: #7a828c;
-  border-radius: 0.2rem;
+  border-radius: calc(1vw);
+  margin-top:calc(1vw);
   background-image: linear-gradient(180deg, transparent 45%, #565c64 10%);
   background-size: 50% 30%;
 }
 /* 灯泡背景 */
 .lightbulb__container .lightbulb__glow {
   position: absolute;
-  top: 10%;
+  top: 0%;
   left: 50%;
-  transform: translateX(-50%) translateY(-15%) scale(0.5);
-  filter: blur(5rem);
-  width: 16rem;
-  height: 16rem;
+  transform: translateX(-50%) translateY(-15%) scale(0.4);
+  filter: blur(calc(25vw));
+  width: calc(80vw);
+  height: calc(80vw);
   border-radius: 50%;
   background: radial-gradient(#FEFFBE 25%, transparent 80%);
-  /* animation: glow 5s ease infinite; */
   z-index: 8;
 }
 
-/* 动画效果结合灯泡背景使用 */
-@keyframes glow {
-  0% {
-    transform: translateX(-50%) translateY(-15%) scale(0.5);
-  }
-  50% {
-    transform: translateX(-50%) translateY(-15%) scale(1.15);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-15%) scale(0.5);
-  }
-}
 
-/* 电源开关部分 switch1*/
-.switch .switch1{
+/* 电源部分 */
+.switch{
 	position: absolute;
-	right: 1.5rem;
-	/* width: 2.5rem;
-	height: 2.5rem; */
-	top: 4rem;
-	z-index: 10;
-	/* background: red; */
+	width: 100%;
+	height: 95%;
+	margin: 0 auto;
+	
 }
-.switch1 img{
-	width: 2.5rem;
+/* 电源开关部分 */
+#img{
+	position: absolute;
+	width: 13%;
+	right: -10%;
 	z-index: 3;
 }
+
 /* RGB电源开关部分 */
 .switch .switch2{
 	position: absolute;
-	top: 14rem;
-	left: 1rem;
-	width: 3rem;
-	height: 1.8rem;
-	line-height: 1.8rem;
-	color: #FFFFFF;
+	left: -10%;
+	bottom: 0;
+	width: calc(15vw);
+	height: calc(9vw);
+	font-size: calc(5vw);
+	line-height: calc(9vw);
 	text-align: center;
+	color: #FFFFFF;
+	display: none;
 	background: #CDCDCD;
 	z-index: 22;
-	display: none;
 }
-/* .mui-input-row .mui-input-range input{
-	position: absolute;
-	z-index: 20;
-} */
+
 
 /* RGB颜色开关 */
 .switch .switch3{
 	position: absolute;
-	top: 14rem;
-	right: 1rem;
-	width: 5rem;
-	height: 1.8rem;
-	line-height: 1.8rem;
+	right: -10%;
+	bottom: 0;
+	font-size: calc(5vw);
+	width: calc(25vw);
+	height: calc(9vw);
+	line-height: calc(9vw);
 	color: #009F3C;
 	text-align: center;
 	background: #FCFCF7;
-	z-index: 22;
 	display: none;
+	z-index: 22;
 }
 
-/* 滑块区域 slider */
+/* 下面控制部分 slider */
 .slider{
-	position: absolute;
-	width: 100%;
-	top: 17rem;
-	/* background: red; */
-	z-index: 100;
+	width: 90%;
 	color: #C8C7CC;
 	opacity: 0.5;
 	pointer-events: none;
+	z-index: 100;
+	margin: 0 auto;
 }
-
+.mui-input-range{
+	position: relative;
+	padding-right: 0!important;
+	height: calc(15vw);
+	overflow: hidden!important;
+}
+#rangel,#range2,#range3{
+	margin-top: calc(5vw);
+}
+/* 标题label样式 */
+.slider label{
+	font-size: calc(5vw);
+	height: calc(9vw);
+}
+/* 内容说明样式 */
+.slider p{
+	position: absolute;
+	font-size: calc(4vw);
+	height: calc(5vw);
+	width: 80%;
+	bottom: 0;
+	left: 40%;
+	margin: auto;
+}
 /* 改变数字提示框样式 */
 .mui-input-range .mui-tooltip{
-	font-size: 1rem;
-	line-height:  30px;
-	width: 30px;
-	height: 30px;
+	font-size: calc(6vw);
+	line-height:  calc(8vw);
+	width: calc(8vw);
+	height: calc(8vw);
 	font-weight: border;
-	top: -30px;
+	text-align: center;
+	font-weight: 600;
+	top: 0%;
+	z-index: 100;
 }
 /* 改变滑块的颜色 */
 .mui-input-range input[type='range']::-webkit-slider-thumb
 {
-	width: 20px;
-	height: 20px;
+	width: calc(5vw);
+	height: calc(5vw);
 	background-color:#C8C7CC; 
+	background: #009F3C;
 }
+
 
 /* 颜色模块选择 */
 .mui-input-row ul{
@@ -205,9 +221,9 @@
 	list-style: none;
 	justify-content: space-between;
 	align-content: space-between;
-	margin: 0;
+	margin-top: calc(3vw);
 	padding: 0;
-	width: 50%;
+	width: 60%;
 }
 .mui-input-row ul li{
 	padding:0;
@@ -216,7 +232,7 @@
 	width: calc(100vw/15);
 	height: calc(100vw/15);
 	border-radius: 50%;
-	margin: 1px;
+	margin: calc(1vw);
 	margin-top:0;
 	border: 3px solid transparent;
 	cursor: pointer;
@@ -272,4 +288,41 @@
 /* 初始灯泡亮度 */
 .lightbulb__bulb{
 	filter: opacity(35%);
+}
+/* 动画效果结合灯泡背景使用 */
+@keyframes glow{
+  /* 0% {
+    transform: translateX(-50%) translateY(-15%) scale(0.5);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-15%) scale(0.8);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-15%) scale(0.5);
+  } */
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+   opacity: 0.4;
+  }
+  100% {
+   opacity: 1.0;
+  }
+}
+.glow_animation1{
+	animation: glow 2s ease infinite;
+	/* animation-timing-function: 1s; */
+}
+.glow_animation2{
+	animation: glow 1.5s ease infinite;
+	/* animation-timing-function: 1s; */
+}
+.glow_animation3{
+	animation: glow 1s ease infinite;
+	/* animation-timing-function: 1s; */
+}
+.glow_animation4{
+	animation: glow 0.5s ease infinite;
+	/* animation-timing-function: 1s; */
 }

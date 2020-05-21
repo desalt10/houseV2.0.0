@@ -11,14 +11,31 @@
 	width: 100%;
 	background-color: #314173;
 }
-.door,.dr-btnes{
-	width: 80%;
-	margin: 0 auto;
-	/* height: 100px; */
-	margin-top: 20px ;
-	background: red;
+.door{
+	position: relative;
+	width: 70%;
+	margin: calc(100vw/55) auto 0;
+	/* margin: 0 auto ; */
+}
+.door img{
+	width: 100%;
+}
+.door-img1{
+	position: relative;
+	z-index: 5;
+}
+.door-img2{
+	position: absolute;
+	top: 0;
+	right: 0%;
+	z-index: 1;
 }
 .dr-btnes{
+	width: 70%;
+	margin: 0 auto;
+	/* height: 100px; */
+	/* margin-top: 20px ; */
+	background: red;
 	border: calc(100vw/30) solid #7E7973;
 	background: #000;
 }

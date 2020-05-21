@@ -1,5 +1,6 @@
 header{
 	background: linear-gradient(to right , #314173 10%,#393952 100%);
+	/* font-size: calc(10vw)!important ; */
 	
 }
 header h1,a{
@@ -15,4 +16,8 @@ ul{
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+html{
+	height:100%;
+	background-color: #314173;
 }

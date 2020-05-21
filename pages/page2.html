@@ -4,17 +4,17 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />  
     <title>RGB灯</title>  
-    <link href="../../css/mui.min.css" rel="stylesheet"/>
-	<link href="../../css/page2.css" rel="stylesheet"/>
-	<link href="../../css/pulic.css" rel="stylesheet"/>
-	<script src="../../js/jquery-3.4.1.js"></script>
-	<script src="../../js/Control.js"></script>
-	<script src="../../js/websocket.js"></script>
-	<script src="../../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+	<link href="../css/page2.css" rel="stylesheet"/>
+	<link href="../css/pulic.css" rel="stylesheet"/>
+	<script src="../js/jquery-3.4.1.js"></script>
+	<script src="../js/Control.js"></script>
+	<script src="../js/websocket.js"></script>
+	<script src="../js/mui.min.js"></script>
 	<script type="text/javascript">
 		mui.init();
 	</script>
-	<script src="../../js/control2.js"></script>
+	<script src="../../js/Send.js"></script>
 </head>  
 <body> 
 <header class="mui-bar mui-bar-nav">
@@ -24,38 +24,40 @@
     <div class="mui-content">  
 		<div class="container">
 			<div class="lightbulb__container">
-				<div class="lightbulb__bulb">
-					<div class="lightbulb__bulb_inside"></div>
+				<div class="lightbulb__bulb ">
+					<!-- <div class="lightbulb__bulb_inside"></div> -->
 					<div class="lightbulb__bulb_bottom"></div>
 				</div>
+				<div class="lightbulb__glow "></div>
 				<div class="lightbulb__base"></div>
-				<div class="lightbulb__glow"></div>
 				<div class="lightbulb__spiral"></div>
+				<div class="switch">
+					<img src="../../img/p2-off.png" id="img" onclick="Power()">
+					<!-- <div class="switch1" onclick="Power()">
+						<img src="../../img/p2-off.png" id="img">
+					</div> -->
+					<div class="switch2" onclick="RGBpower()">开启
+					</div>
+					<div class="switch3" onclick="RGBColor()">正白\黄白</div>
+				</div>
+				
 			</div>
 		</div>
-        <div class="switch">
-        	<div class="switch1" onclick="Power()">
-				<img src="../../img/p2-off.png" id="img">
-			</div>
-			<div class="switch2" onclick="RGBpower()">开启
-			</div>
-			<div class="switch3" onclick="RGBColor()">正白\黄白</div>
-        </div>
 		<div class="slider">
 			<div class="mui-input-row mui-input-range">
 				<label>闪烁模式</label>
 				<input type="range" min="1" max="4" id="rangel" value="1" onchange="getVal1();">
-				<p class="text1">共有4种模式，当前为模式1</p>
+				<p class="text1">共有4种模式,当前为模式1</p>
 			</div>
 			<div class="mui-input-row mui-input-range">
 				<label>音乐模式</label>
 				<input type="range" min="1" max="4" id="range2" value="1"  onchange="getVal2();" >
-				<p class="text2">共有4种模式，当前为模式1</p>
+				<p class="text2">共有4种模式,当前为模式1</p>
 			</div>
 			<div class="mui-input-row mui-input-range">
 				<label>亮度模式</label>
 				<input type="range" min="1" max="8" id="range3" value="1" onchange="getVal3();">
-				<p class="text3">共有8种模式，当前为亮度1</p>
+				<p class="text3">共有8种模式,当前为亮度1</p>
 			</div>
 			<div class="mui-input-row">
 				<label>颜色选择</label>
@@ -77,13 +79,6 @@
 			</div>
 		</div>      
     </div>
-	<script type="text/javascript"> 
-	    /*获取滑块值*/ 
-	    $("#range1").bind('input porpertychange',function(){
-				//逻辑部分
-			// console.log('rangel:'+$(this).val());
-			console.log(123)
-	    });
-	</script>
+	
 </body>  
 </html>

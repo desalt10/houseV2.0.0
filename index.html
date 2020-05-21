@@ -4,53 +4,284 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title></title>
-    <script src="js/mui.min.js"></script>
-    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script src="./js/mui.min.js"></script>
+    <link href="./css/mui.min.css" rel="stylesheet"/>
+	<link href="./css/home.css" rel="stylesheet"/>
+	<link href="./css/smart.css" rel="stylesheet"/>
+	<script src="./js/iconfont.js"></script>
 	<script src="./js/jquery-3.4.1.js"></script>
-	<!-- <script src="html5plus://ready"></script> -->
+	<script src="./js/Control.js"></script>
+	<script src="./js/websocket.js"></script>
+	<script src="./js/Receivesmart.js"></script>
+	<script src="./js/Send.js"></script>
 	<style>
-		*{ touch-action: none;}
-		#contain{
+		#contain1,#contain2{
 			position: absolute;
 			width: 100%;
 			top:0px;
 			bottom: 50px;
-			/* height: 100vh; */
-			/* background:red; */
-		}
-		iframe{
-			width: 100%;
-			height: 100%;
-			border: 0;
-			
 		}
 		
 	</style>
 </head>
 <body>
-	<div id="contain">
-		<iframe src="./subpages/home.html"></iframe>
+	<div id="contain1" class="mui-control-content mui-active">
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title" style="color: #FFFFFF">智能家居</h1>
+	</header>
+	<div class="mui-content" style="height: 100%;">
+		<ul class="mui-table-view mui-grid-view mui-grid-9" style="margin-top:0px;">
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"  style="border-color:transparent;">
+			<a href="./pages/page1.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-deng"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body">灯</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page2.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-iconlight02"></use>
+					</svg>
+				</span>
+				<!-- <span class="mui-badge mui-badge-red">5</span> -->
+				</span>
+				<div class="mui-media-body" >RGB</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page3.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-plc"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body" >PLC</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page4.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-kongtiao"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body">空调</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page5.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-dianshi"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body" >电视</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page6.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-chuanglian-copy"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body">窗帘</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page7.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-chuanghu"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body" >窗户</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page8.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-accessControl"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body" >门禁</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page9.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-shuibiao"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body" >水表</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page10.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-dianbiao"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body">电表</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page11.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-wenshidu"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body">温/湿度</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+			<a href="./pages/page12.html">
+				<span class="mui-icon" >
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-wifizhinengchazuo"></use>
+					</svg>
+				</span>
+				<div class="mui-media-body">智能插座</div>
+			</a>
+		</li>
+		</ul>
 	</div>
-	<nav class="mui-bar mui-bar-tab" id="nav-tabbar"> 
-		<a class="mui-tab-item mui-active" id="home">
+		
+	</div>
+	<div id="contain2" class="mui-control-content">
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title" style="color: #FFFFFF">安防系统</h1>
+		</header>
+		<div class="mui-content">  
+			<div class="container">
+				<div class="sa-part1">防区
+					<ul class="sa-ul">
+						<li>
+							<img id="smimg1" src="./img/smart-1.png">
+							<p>1</p>
+						</li>
+						<li>
+							<img id="smimg2" src="./img/smart-1.png">
+							<p>2</p>
+						</li>
+						<li>
+							<img  id="smimg3"src="./img/smart-1.png">
+							<p>3</p>
+						</li>
+						<li>
+							<img id="smimg4" src="./img/smart-1.png">
+							<p>4</p>
+						</li>
+						<li>
+							<img id="smimg5" src="./img/smart-1.png">
+							<p>5</p>
+						</li>
+						<li>
+							<img id="smimg6" src="./img/smart-1.png">
+							<p>6</p>
+						</li>
+						<li>
+							<img  id="smimg7" src="./img/smart-1.png">
+							<p>7</p>
+						</li>
+						<li>
+							<img id="smimg8" src="./img/smart-1.png">
+							<p>8</p>
+						</li>
+					</ul>
+				</div>
+				<div class="sa-part2">报警状态
+					<ul>
+						<li>
+							<img id="smimg9" src="./img/smart-2.png">
+							<p>紧急报警</p>
+						</li>
+						<li>
+							<img id="smimg10" src="./img/smart-4.png">
+							<p>火警报警</p>
+						</li>
+						<li>
+							<img id="smimg11" src="./img/smart-6.png">
+							<p>盗警报警</p>
+						</li>
+					</ul>
+				</div>
+				<div class="sa-part3">信息
+					<ul>
+						<div>
+							<label>报警状态</label>
+							<input value="无" disabled ="disabled" id="sm-pol">
+							<label>通讯故障</label>
+							<input value="无" disabled ="disabled" id="sm-fault">
+						</div>
+						
+						<div>
+							<label>撤布防</label>
+							<button id="sm-detest" >布防</button>
+							<label>服务灯</label>
+							<button disabled ="disabled" class="serve-power"></button>
+						</div>
+					</ul>
+				</div>
+				<div id="popover" class="mui-popover">
+					<div class="sa-popver">
+						<table>
+							<input value="" id="smtext"/>
+							<tr>
+								<td onclick="Smpass(1)">1</td>
+								<td onclick="Smpass(2)">2</td>
+								<td onclick="Smpass(3)">3</td>
+								<td rowspan="2" id="clr" onclick="Smclean()">清除</td>
+							</tr>
+							<tr>
+								<td onclick="Smpass(4)">4</td>
+								<td onclick="Smpass(5)">5</td>
+								<td onclick="Smpass(6)">6</td>
+							</tr>
+							<tr>
+								<td onclick="Smpass(7)">7</td>
+								<td onclick="Smpass(8)">8</td>
+								<td onclick="Smpass(9)">9</td>
+								<td rowspan="2" id="con" onclick="SmCon()">确定</td>
+							</tr>
+							<tr>
+								<td onclick="Smpass('*')">*</td>
+								<td onclick="Smpass(0)">0</td>
+								<td onclick="Smpass('#')">#</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<nav class="mui-bar mui-bar-tab" id="nav-tabbar" > 
+		<a class="mui-tab-item mui-active" id="home" href="#contain1">
 			<span class="mui-icon  mui-icon-home"></span>
 			<span class="mui-tab-label"  >智能家居</span>
 		</a>
-		<a class="mui-tab-item" id="smart">
+		<a class="mui-tab-item" id="smart" href="#contain2">
 			<span class="mui-icon  mui-icon-gear"></span>
 			<span class="mui-tab-label"  >安防系统</span>
 		</a>
    </nav>
-	
+   <script type="text/javascript">
+   	mui.init()
+   	document.getElementById("sm-detest").addEventListener("tap", function() {
+   		// Smcontol()
+   	//调用隐藏/显示弹出层
+   	mui("#popover").popover('toggle', document.getElementById("div"));
+   	})
+   </script>
 </body>
-<script>
-	$("#smart").click(function(){
-		$("iframe").attr("src","./subpages/smart.html")
-	})
-	$("#home").click(function(){
-		$("iframe").attr("src","./subpages/home.html")
-	})
-	
-</script>
-
 </html>

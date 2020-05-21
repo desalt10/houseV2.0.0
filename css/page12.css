@@ -28,6 +28,20 @@
 .container ul li img{
 	width: 100%;
 }
+.container ul li span{
+	position: absolute;
+	display: block;
+	width: calc(100vw/20);
+	height: calc(100vw/20);
+	line-height: calc(100vw/20);
+	font-weight: 600;
+	border-radius: 50%;
+	left: 40%;
+	font-size: calc(100vw/25);
+	background: burlywood;
+	top:0%;
+	text-align: center;
+}
 .container ul li div{
 	position: absolute;
 	top: 0;
