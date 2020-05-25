@@ -23,6 +23,10 @@ html{
 	width: 90%;
 	top:0;
 	left: 0%;
+<<<<<<< HEAD
+=======
+	position: absolute;
+>>>>>>> 8d2940bd5134fdc847077e0359e212c275c05f89
 }
 /* 窗户控制 */
 .window-con{

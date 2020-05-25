@@ -108,6 +108,21 @@
   z-index: 8;
 }
 
+<<<<<<< HEAD
+=======
+/* 动画效果结合灯泡背景使用 */
+@keyframes glow{
+  0% {
+    transform: translateX(-50%) translateY(-15%) scale(0.5);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-15%) scale(1.15);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-15%) scale(0.5);
+  }
+}
+>>>>>>> 8d2940bd5134fdc847077e0359e212c275c05f89
 
 /* 电源部分 */
 .switch{

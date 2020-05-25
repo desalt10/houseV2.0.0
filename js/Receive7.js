@@ -4,6 +4,7 @@
  * @param pos_buf1 窗户计算后的位置(需要在界面上显示的位置)
  * 不做开关窗 窗户暂停指令.
  * 窗户效果全由底部上传的位置数据控制
+<<<<<<< HEAD
  * 对象.actuatorposition 窗户位置
  * 对象.actuatoroperationmode 窗户控制(0-开窗 1-关窗 2-暂停)
  * 对象.clampwindow 窗户防夹力(1-6)
@@ -24,6 +25,19 @@ function Receive7(obj7){
 	}
 	
 	//窗户控制
+=======
+ */
+var pos_buf,pos_buf1;
+function Receive7(obj7){
+	// pos_buf = (obj7.actuatorposition)*1;
+	// pos_buf1 = pos_buf/2.5;
+	// $("#wind-2").animate({left:'-'+pos_buf1+'%'},6000);
+	
+	// 初始样式
+	for( var i=1;i<10;i++){
+		$("#get"+i).css("background","");
+	}
+>>>>>>> 8d2940bd5134fdc847077e0359e212c275c05f89
 	switch(obj7.actuatoroperationmode){
 		case "0":{
 			$("#get1").css("background","yellow");
@@ -41,6 +55,7 @@ function Receive7(obj7){
 			break;
 		}
 	}
+<<<<<<< HEAD
 	//窗户防夹力度
 	pin_buf = (obj7.clampwindow)*1;
 	$("#slider_pin").text(pin_buf)
@@ -67,4 +82,25 @@ function Receive7(obj7){
 			break;
 		}
 	}
+=======
+	
+	// switch(obj7.speedwindow){
+	// 	case "1":{
+	// 		$("#get4").css("background","yellow");
+	// 		break;
+	// 	}
+	// 	case "2":{
+	// 		$("#get5").css("background","yellow");
+	// 		break;
+	// 	}
+	// 	case "3":{
+	// 		$("#get6").css("background","yellow");
+	// 		break;
+	// 	}
+	// 	case "4":{
+	// 		$("#get7").css("background","yellow");
+	// 		break;
+	// 	}
+	// }
+>>>>>>> 8d2940bd5134fdc847077e0359e212c275c05f89
 }

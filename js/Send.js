@@ -657,6 +657,7 @@ var sliderElement1 = document.getElementById('slider1');
 var sliderElement2 = document.getElementById('slider2');
 var slider1_bug,slider2_bug;
 function getSliderValue1(){
+<<<<<<< HEAD
 	// $("#slider_pos").text(sliderElement1.value);
 	slider1_bug = sliderElement1.value
 	SendData('@0007:{"actuatorposition":'+slider1_bug+'}\r\n');
@@ -705,7 +706,60 @@ function Getli(s){
 			break;
 		}
 	}
+=======
+	// console.log()
+	$("#slider_pos").text(sliderElement1.value)
+	slider1_bug = sliderElement1.value
+	SendData('@0007:{"actuatorposition":'+slider1_bug+'}\r\n');
 }
+function getSliderValue2(){
+	$("#slider_pin").text(sliderElement2.value)
+	slider2_bug = sliderElement2.value
+	SendData('@0007:{"clampwindow":'+slider2_bug+'}\r\n');
+>>>>>>> 8d2940bd5134fdc847077e0359e212c275c05f89
+}
+function Getli(s){
+	switch(s){
+		case 1:{
+			SendData('@0007:{"actuatoroperationmode":0}\r\n');
+			break;
+		}
+		case 2:{
+			SendData('@0007:{"actuatoroperationmode":1}\r\n');
+			break;
+		}
+		case 3:{
+			SendData('@0007:{"actuatoroperationmode":2}\r\n');
+			break;
+		}
+		case 4:{
+			SendData('@0007:{"speedwindow":1}\r\n');
+			break;
+		}
+		case 5:{
+			SendData('@0007:{"speedwindow":2}\r\n');
+			break;
+		}
+		case 6:{
+			SendData('@0007:{"speedwindow":3}\r\n');
+			break;
+		}
+		case 7:{
+			SendData('@0007:{"speedwindow":4}\r\n');
+			break;
+		}
+		case 8:{
+			SendData('@0007:{"automanual":0}\r\n');
+			break;
+		}
+		case 9:{
+			SendData('@0007:{"reversewindow":0}\r\n');
+			break;
+		}
+	}
+}
+
+
 
 
 /** Page8 门禁控制   @0008
