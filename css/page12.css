@@ -20,10 +20,9 @@
 }
 .container ul li{
 	position: relative;
-	width: calc(100vw/3.5);
-	height: calc(100vw/3.5);
-	margin:calc(100vw/50);
-	/* background: #2AC845; */
+	width: 2.8rem;
+	height: 2.8rem;
+	margin: 0.2rem;
 }
 .container ul li img{
 	width: 100%;
@@ -31,13 +30,13 @@
 .container ul li span{
 	position: absolute;
 	display: block;
-	width: calc(100vw/20);
-	height: calc(100vw/20);
-	line-height: calc(100vw/20);
+	width: 0.8rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
 	font-weight: 600;
 	border-radius: 50%;
 	left: 40%;
-	font-size: calc(100vw/25);
+	font-size: 0.8rem;
 	background: burlywood;
 	top:0%;
 	text-align: center;
@@ -46,7 +45,8 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: calc(100vw/8);
-	height: calc(100vw/8);
+	width: 1rem;
+	height: 1rem;/* 
+	background: red; */
 	z-index: 999;
 }

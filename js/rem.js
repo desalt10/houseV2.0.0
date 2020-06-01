@@ -46,13 +46,8 @@
     // viewport 或 flexible
     // meta 均未设置
     if (!dpr && !scale) {
-        // QST
-        // 这里的 第一句有什么用 ?
-        // 和 Android 有毛关系 ?
         var u = (win.navigator.appVersion.match(/android/gi), win.navigator.appVersion.match(/iphone/gi)),
             _dpr = win.devicePixelRatio;
- 
-        // 所以这里似乎是将所有 Android 设备都设置为 1 了
         dpr = u ? ( (_dpr >= 3 && (!dpr || dpr >= 3))
                         ? 3
                         : (_dpr >= 2 && (!dpr || dpr >= 2))
@@ -103,8 +98,6 @@
         timer = setTimeout(setFontSize, 300);
     }, false);
  
-     
-    // 这一段是我自己加的
     // orientationchange 时也需要重算下吧
     win.addEventListener("orientationchange", function() {
         clearTimeout(timer);
@@ -112,7 +105,6 @@
     }, false);
  
  
-    // pageshow
     // keyword: 倒退 缓存相关
     win.addEventListener("pageshow", function(e) {
         if (e.persisted) {

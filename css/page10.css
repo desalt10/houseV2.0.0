@@ -12,7 +12,7 @@
 	position: relative;
 	width: 50%;
 	display: block;
-	margin: 10% auto;
+	margin: 0.5rem auto;
 }
 .show span{
 	width: 15%;
@@ -23,18 +23,16 @@
 
 /* 表格 */
 .table td{
-	border: calc(100vw/100) solid #cad9ea;
-	/* padding: calc(100vw/50) ; */
-	height: calc(100vw/8);
+	border: 0.1rem solid #cad9ea;
+	height: 1.5rem;
 	line-height: 100%;
-	font-size: calc(100vw/20) ;
+	font-size: 0.5rem;
 	font-weight: 600;
 	text-align: center;
 	color: #FFFFFF;
 }
 table tr button{
-	/* padding: calc(100vw/80) ; */
 	text-align: center;
-	font-size: calc(100vw/30) ;
+	font-size: 0.4rem;
 	font-weight: 600;
 }

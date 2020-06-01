@@ -29,11 +29,11 @@
   left: 0;
   width: 100%;
   height: 84.25%;
-  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.2);
   transition: height 1000ms ease;
-  border-top: calc(9vw) solid #3E2723;
-  border-right: calc(9vw) solid #3E2723;
-  border-left: calc(9vw) solid #3E2723;
+  border-top: 1rem solid #3E2723;
+  border-right: 1rem solid #3E2723;
+  border-left: 1rem solid #3E2723;
   z-index: 5;
 }
 /* 窗帘样式 */
@@ -52,7 +52,7 @@
   left: 0;
   width: 100%;
   height: 84.45%;
-  padding: calc(6vw) calc(6vw) calc(51vw) calc(6vw);
+  padding: 0.6rem 0.6rem 5.6rem 0.6rem;
   z-index: 3;
 }
 .glares .glare {
@@ -74,34 +74,34 @@
 .glares .glare:nth-of-type(1) {
   top: 0;
   left: 0;
-  border-top: calc(9vw) solid #3E2723;
-  border-bottom: calc(4.5vw) solid #3E2723;
-  border-right: calc(4.5vw) solid #3E2723;
-  border-left: calc(9vw) solid #3E2723;
+  border-top: 1rem solid #3E2723;
+  border-bottom: 0.5rem solid #3E2723;
+  border-right: 0.5rem solid #3E2723;
+  border-left: 1rem solid #3E2723;
 }
 .glares .glare:nth-of-type(2) {
   top: 50%;
   left: 0;
-  border-top: calc(4.5vw) solid #3E2723;
-  border-bottom: calc(9vw) solid #3E2723;
-  border-right: calc(4.5vw) solid #3E2723;
-  border-left: calc(9vw) solid #3E2723;
+  border-top: 0.5rem solid #3E2723;
+  border-bottom: 1rem solid #3E2723;
+  border-right: 0.5rem solid #3E2723;
+  border-left: 1rem solid #3E2723;
 }
 .glares .glare:nth-of-type(3) {
   top: 0;
   right: 0;
-  border-top: calc(9vw) solid #3E2723;
-  border-bottom: calc(4.5vw) solid #3E2723;
-  border-right: calc(9vw) solid #3E2723;
-  border-left: calc(4.5vw) solid #3E2723;
+  border-top: 1rem solid #3E2723;
+  border-bottom: 0.5rem solid #3E2723;
+  border-right: 1rem solid #3E2723;
+  border-left: 0.5rem solid #3E2723;
 }
 .glares .glare:nth-of-type(4) {
   top: 50%;
   right: 0;
-  border-top: calc(4.5vw) solid #3E2723;
-  border-bottom: calc(9vw) solid #3E2723;
-  border-right: calc(9vw) solid #3E2723;
-  border-left: calc(4.5vw) solid #3E2723;
+  border-top: 0.5rem solid #3E2723;
+  border-bottom: 1rem solid #3E2723;
+  border-right: 1rem solid #3E2723;
+  border-left: 0.5rem solid #3E2723;
 }
 
 /* 底部窗体 */
@@ -110,7 +110,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: calc(26vh);
+  height: 5rem;
   background: #A1887F;
   background: -webkit-linear-gradient(to bottom, #3E2723 5%, #795548 100%);
   background: linear-gradient(to bottom, #3E2723, #795548);
@@ -123,7 +123,7 @@
   top: -50px;
   left: -50px;
   width: calc(100% + 100px);
-  height: calc(20vh);
+  height: 3rem;
   /* background: rgba(255, 255, 255, 0.1); */
   background: -webkit-linear-gradient(-90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.85) 10%, rgba(255, 255, 255, 0) 50%);
   box-shadow: 0 0 calc(6vw) calc(6vw) rgba(0, 0, 0, 0.3);
@@ -131,19 +131,18 @@
 }
 
 /* btn1 btn2 btn3底部按键 */
+
 .btn1,.btn2,.btn3 {
   position: absolute;
-  height: calc(12vw);
-  width: calc(20vw);
-  font-size: calc(4vw);
-  bottom: calc(5vh);
+  height: 1.3rem;
+  width: 2.2rem;
+  font-size: 0.4rem;
+  bottom: 1rem;
   left: 12%;
-  margin-right: 10%;
-  /* padding: 10px 20px; */
+  /* margin-right: 10%; */
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 99px;
+  border-radius: 0.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  /* font-size: calc(100vw/40); */
   font-weight: 600;
   text-transform: uppercase;
   transition: background-color 125ms linear;
