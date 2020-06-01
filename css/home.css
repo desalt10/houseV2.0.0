@@ -1,13 +1,11 @@
 html{
-	height: 100%!important;
-	width:100%!important;
-	/* background: linear-gradient(to bottom , #4A62A4 10%,#4A62A4 100%); */
+	width: 100%!important;
+	height:100%!important;
 }
 .mui-content{
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	overflow: hidden;
-	/* background: linear-gradient(to bottom , #7B94CD 10%, #4A62A4 100%); */
 }
 /* 标题颜色 */
 header{
@@ -15,38 +13,39 @@ header{
 }
 /* 9宫格的背景色及边框去除 */
 .mui-table-view.mui-grid-9{  
-	  /*替换成自己的颜色*/
-	height: 100vh;
+	/*替换成自己的颜色*/
+	width: 100%!important;
+	height: 100%!important;
+	margin: 0 auto;
 	background: linear-gradient(to bottom , #7B94CD 10%, #4A62A4 100%);
 	border-left: 0px;
 }
 .mui-grid-9{
-	width: calc(100vw)!important;
+	width: 10rem!important;
 }
 /* 9宫格的边框去除 */
-.mui-grid-view.mui-grid-9 .mui-table-view-cell{
-	/* width: calc(25vw)!important; */
-	border:0;
+ul li{
+	border:0!important;
+	margin: 0!important;
+	/* margin-bottom: 0!important; */
 }
 /* a标签的背景色及圆角 */
 .mui-table-view-cell a{
-	background: linear-gradient(to bottom , #FFFFFF 0%,#6A73B4 100%)!important;	border-radius: calc(5vw);
-	/* width: calc(25vw);
-	height: calc(25vw); */
+	background: linear-gradient(to bottom , #FFFFFF 0%,#6A73B4 100%)!important;	border-radius: 0.4rem;
 }
 
 /* 9宫格底部字体大小 */
 .mui-media-body{
 	margin-top: 0px!important;
-	height: calc(5vw)!important;
-	font-size: calc(4vw)!important;
-	line-height: calc(5vw)!important;
+	height: 0.6rem!important;
+	font-size: 0.5rem!important;
+	line-height: 0.6rem!important;
 	color: #FFFFFF!important;
 }
 /* 引入图标的尺寸 */
 .icon {
-	width: calc(16vw);
-	height: calc(7vh);
+	width: 1.2rem;
+	height: 1.2rem;
 	fill: currentColor;
 	overflow: hidden;
 }
