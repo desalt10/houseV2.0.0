@@ -7,35 +7,46 @@
  * "password successfully changed" 密码更改成功
  * "password recovery successful" 密码已恢复默认
  */
+function Receive(s,a){
+	if(a=="0007"){
+		Receive8(s)
+	}else{
+		return;
+	}
+}
 function Receive8(obj8){
 	switch(obj8.state){
-		case "password is correct":{
+		case "Password Is Correct":{
 			$("#dr-text").val("密码正确")
 			$("#dr-text").css("font-size","calc(100vw/20)");
 			$("#dr-text").css("font-weight","bold");
 			$(".door-img2").animate({right:'20%'},2000);
-			break
+			dr_bug="";
+			break;
 		}
-		case "wrong password":{
+		case "Wrong Password":{
 			$("#dr-text").val("密码错误,请重新输入")
 			$("#dr-text").css("font-size","calc(100vw/20)");
 			$("#dr-text").css("font-weight","bold");
 			$(".door-img2").animate({right:'0%'},2000);
-			break
+			dr_bug="";
+			break;
 		}
-		case "password successfully changed":{
+		case "Password Successfully Changed":{
 			$("#dr-text").val("密码更改成功")
 			$("#dr-text").css("font-size","calc(100vw/20)");
 			$("#dr-text").css("font-weight","bold");
 			$(".door-img2").animate({right:'0%'},2000);
-			break
+			dr_bug="";
+			break;
 		}
-		case "password recovery successful":{
+		case "Password Recovery Successful":{
 			$("#dr-text").val("密码已恢复默认")
 			$("#dr-text").css("font-size","calc(100vw/20)");
 			$("#dr-text").css("font-weight","bold");
 			$(".door-img2").animate({right:'0%'},2000);
-			break
+			dr_bug="";
+			break;
 		}
 	}
 	

@@ -143,7 +143,8 @@ function GetIP(){//获取IP地址和端口号
 
 	/************/
 	//使用固定的IP及端口号（网页开发调试阶段）
-    FrunWeb_IP="192.168.1.231";
+    FrunWeb_IP="192.168.1.223";
+	// FrunWeb_IP="192.168.1.231";
    	FrunWeb_PORT="5000";
 	}
 
@@ -153,6 +154,6 @@ window.onload=function(){//当网页加载完成之后执行匿名函数
 	/************************************************/
 	//络连接
 	SocketConnect(1,"str");
-	//document.getElementById("Camera").src=CamUri;//使用该指令前需在网页插入id名为‘Camera’的标签--<iframe></iframe>
-	/************************************************/
+// 	//document.getElementById("Camera").src=CamUri;//使用该指令前需在网页插入id名为‘Camera’的标签--<iframe></iframe>
+// 	/************************************************/
 }

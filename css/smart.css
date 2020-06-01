@@ -88,7 +88,9 @@ header{
 }
 .sa-part2 ul>li p{
 	color: #fff;
-	margin: 0;
+	margin-top: 1vh;
+	margin-bottom: 0 ;
+	font-size: calc(3vw);
 }
 .sa-part2 ul>li img{
 	width: 70%;
@@ -96,26 +98,32 @@ header{
 }
 /* 信息部分 */
 .sa-part3 ul >div{
+	position: relative;
 	width: 90%;
 	margin: 0 auto;
 	margin-bottom: calc(100vw/25);
 }
 .sa-part3 label{
+	/* position: absolute; */
 	display: inline-block;
+	line-height: 3.5vh;
 	width: 25%;
+	font-size: calc(4vw);
 	text-align: center;
 }
 .sa-part3 ul input{
 	width: 20%;
 	color: #000000;
 	text-align: center;
-	font-size: calc(100vw/20);
+	font-size: calc(4vw);
 	/* disabled: true ; */
 }
 .sa-part3 ul button{
-	padding-top: 0;
-	padding-bottom: 0;
-	font-size: calc(100vw/20);
+	width: 20%;
+	padding: 0;
+	/* padding-top: 0; */
+	/* padding-bottom: 0; */
+	font-size: calc(4vw);
 }
 .sa-part3 .serve-power{
 	padding: 0;

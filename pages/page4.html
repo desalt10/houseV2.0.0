@@ -25,7 +25,7 @@
         <div class="button-group">
         	<div class="text-show">
         		<p class="t-14">当前风速：<span id="text-speed" class="text-bule t-14"></span></p>
-        		<p id="text-tem" class=" t-align ">26℃</p>
+        		<p id="text-tem" class="t-align">26℃</p>
         		<p>
 					<span id="text-wind"class="text-bule fl "></span>
 					<span id="text-mode" class="text-bule fr "></span>
@@ -37,15 +37,15 @@
 				<button id="air-speed"class="fr" onclick="airSpeed()">风速</button></br>
 				<button id="air-wind" onclick="airWind()">扫风</button>
 				<button id="air-mode" onclick="airMode()" class="fr">模式</button></br>
-				<button id="air-down" onclick="airTem(0)"><img src="../../img/page4.png" width="30%"; class="btn-img"></button>
-				<button id="air-up" onclick="airTem(1)" class="fr"><img src="../../img/page4.png" width="30%"></button>
+				<button id="air-down" onclick="airTem(0)"><img src="../img/page4.png" width="30%"; class="btn-img"></button>
+				<button id="air-up" onclick="airTem(1)" class="fr"><img src="../img/page4.png" width="30%"></button>
 			</div>
 	        <div id="selet" class="mui-content mui-content-padded">
-	        			<span class="mui-content-padded selet-text fl">品牌选择</span>
-	        			<button id='showUserPicker1' class="mui-btn mui-btn-block fr" type='button'>请选择</button>
-	        			<button class="text-1 fl" onclick="airTry()">尝试匹配</button>
-						<button class="text-2 fr" onclick="airCon()">匹配成功</button>
-	        		</div>
+				<span class="mui-content-padded selet-text fl">品牌选择</span>
+				<button id='showUserPicker1' class="mui-btn mui-btn-block fr" type='button'>请选择</button>
+				<button class="text-1 fl" onclick="airTry()">尝试匹配</button>
+				<button class="text-2 fr" onclick="airCon()">匹配成功</button>
+	        </div>
         </div>  
     </div> 
 	
@@ -57,5 +57,86 @@
     	mui.init();
 		showLevel1();
 		Reset()	
+		//dt 空调品牌  tem 温度 wind扫风  mode模式 speed风速
+		var dt = localStorage.getItem("airtext");
+		var tem = localStorage.getItem("airtem");
+		var wind = localStorage.getItem("airwind");
+		var mode = localStorage.getItem("airmode");
+		var speed = localStorage.getItem("airspeed");
+		//空调品牌
+		if(dt == null){
+			$("#showUserPicker1").text("请选择");
+		}else{
+			$("#showUserPicker1").text(dt);
+		}
+		//空调温度
+		if(tem == null){
+			tem_bug = 25;
+			$("#text-tem").text(tem_bug+"℃");
+		}else{
+			tem_bug = tem;
+			$("#text-tem").text(tem_bug+"℃");
+		}
+		//空调摆风
+		if(wind != null){
+			if(wind){
+				$("#text-wind").text("上下摆风");
+				wind_mask= false;
+			}else{
+				$("#text-wind").text("无摆风");
+				wind_mask= true;
+			}
+		}else{
+			$("#text-wind").text("上下摆风");
+			wind_mask= false;
+		}
+		//空调模式
+		if(mode != null){
+			if(mode==0){
+				$("#text-mode").text("自动");
+				mode_buf = 1;
+			}
+			if(mode==1){
+				$("#text-mode").text("制冷");
+				mode_buf = 2;
+			}
+			if(mode==2){
+				$("#text-mode").text("制热");
+				mode_buf = 3;
+			}
+			if(mode==3){
+				$("#text-mode").text("通风");
+				mode_buf = 4;
+			}
+			if(mode==4){
+				$("#text-mode").text("除湿");
+				mode_buf = 5;
+			}
+		}else{
+			$("#text-mode").text("自动");
+			mode_buf = 1;
+		}
+		//风速
+		if(speed != null){
+			if(speed==0){
+				$("#text-speed").text("自动");
+				speed_buf = 1;
+			}
+			if(speed==1){
+				$("#text-speed").text("风速1");
+				speed_buf = 2;
+			}
+			if(speed==2){
+				$("#text-speed").text("风速2");
+				speed_buf = 3;
+			}
+			if(speed==3){
+				$("#text-speed").text("风速3");
+				speed_buf = 0;
+			}
+		}else{
+			$("#text-speed").text("自动");
+			speed_buf = 1;
+		}
     </script>
 </html>

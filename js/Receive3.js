@@ -7,17 +7,62 @@
  * 对象.CurtainPosition  窗帘位置 0:全开 100:全关
  * 对象.CurtainOperation 窗帘操作模式 0:开 1:关 2:暂停
  */
-function Receive3(obj3){
-	for(var i=1; i<6;i++){
-		if(obj3["control0"+i]=="1"){
-			$("#btn"+i).css("background","red");
-		}else{
-			$("#btn"+i).css("background","brown");
-		}
+function Receive(s,a){
+	if(a=="0002"){
+		Receive3(s)
+	}else{
+		return;
 	}
-	if(obj3.vwo =="1"){
+}
+function Receive3(obj3){
+	if(obj3.control01==1){
+		$("#btn1").css("background","red");
+		btn_mask[0] = 1;
+		
+	}else{
+		$("#btn1").css("background","brown");
+		btn_mask[0] = 0;
+	}
+	if(obj3.control02==1){
+		$("#btn2").css("background","red");
+		btn_mask[1] = 1;
+	}else{
+		$("#btn2").css("background","brown");
+		btn_mask[1] = 0;
+	}
+	if(obj3.control03==1){
+		$("#btn3").css("background","red");
+		btn_mask[2] = 1;
+	}else{
+		$("#btn3").css("background","brown");
+		btn_mask[2] = 0;
+	}
+	if(obj3.control04==1){
+		$("#btn4").css("background","red");
+		btn_mask[3] = 1;
+	}else{
+		$("#btn4").css("background","brown");
+		btn_mask[3] = 0;
+	}
+	if(obj3.control05==1){
+		$("#btn5").css("background","red");
+		btn_mask[4] = 1;
+	}else{
+		$("#btn5").css("background","brown");
+		btn_mask[4] = 0;
+	}
+	// for(var i=1; i<6;i++){
+	// 	if(obj3["control0"+i]==1){
+	// 		$("#btn"+i).css("background","red");
+	// 	}else{
+	// 		$("#btn"+i).css("background","brown");
+	// 	}
+	// }
+	if(obj3.vwo ==1){
 		$("#btn-power").css("background","#2FB472");
+		btn_power_mask = true;
 	}else{
 		$("#btn-power").css("background","#006926");
+		btn_power_mask = false;
 	}
 }

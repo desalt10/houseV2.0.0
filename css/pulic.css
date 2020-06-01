@@ -21,3 +21,6 @@ html{
 	height:100%;
 	background-color: #314173;
 }
+*{
+	touch-action: none; 
+}

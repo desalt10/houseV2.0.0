@@ -30,19 +30,18 @@ header{
 }
 /* a标签的背景色及圆角 */
 .mui-table-view-cell a{
-	background: linear-gradient(to bottom , #FFFFFF 0%,#6A73B4 100%)!important;
-	/* background-color:#5AF1F6 !important; */	border-radius: calc(5vw);
-	
+	background: linear-gradient(to bottom , #FFFFFF 0%,#6A73B4 100%)!important;	border-radius: calc(5vw);
+	/* width: calc(25vw);
+	height: calc(25vw); */
 }
-/* 字体颜色 */
-.mui-media-body{
-	color: #FFFFFF!important;
-}
+
 /* 9宫格底部字体大小 */
 .mui-media-body{
+	margin-top: 0px!important;
 	height: calc(5vw)!important;
-	font-size: calc(4.5vw)!important;
+	font-size: calc(4vw)!important;
 	line-height: calc(5vw)!important;
+	color: #FFFFFF!important;
 }
 /* 引入图标的尺寸 */
 .icon {

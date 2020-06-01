@@ -2,6 +2,7 @@
 	background: #314173;
 	height: 100vh;
 	position: relative;
+	overflow: hidden;
 }
 .container{
 	display: flex;
@@ -23,7 +24,7 @@
 }
 /* 灯泡上部 */
 .lightbulb__container .lightbulb__bulb {
-  position: relative;
+  /* position: relative; */
   width: calc(100vw/2);
   height: calc(100vw/2);
   background: #FEFFBE;
@@ -108,8 +109,7 @@
   z-index: 8;
 }
 
-<<<<<<< HEAD
-=======
+
 /* 动画效果结合灯泡背景使用 */
 @keyframes glow{
   0% {
@@ -122,7 +122,7 @@
     transform: translateX(-50%) translateY(-15%) scale(0.5);
   }
 }
->>>>>>> 8d2940bd5134fdc847077e0359e212c275c05f89
+
 
 /* 电源部分 */
 .switch{

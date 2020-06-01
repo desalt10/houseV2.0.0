@@ -13,6 +13,13 @@
  * 对象.PowerSwitch_2  灯光2  0:关 1:开
  */
 var led1,led2,led1_buf,led2_buf;
+function Receive(s,a){
+	if(a=="0006"){
+		Receive1(s)
+	}else{
+		return;
+	}
+}
 function Receive1(obj1){
 	led1_buf = obj1.powerswitch_1;
 	led2_buf = obj1.powerswitch_2;

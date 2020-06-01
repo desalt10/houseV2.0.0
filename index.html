@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title></title>
+    <title>首页</title>
     <script src="./js/mui.min.js"></script>
     <link href="./css/mui.min.css" rel="stylesheet"/>
 	<link href="./css/home.css" rel="stylesheet"/>
@@ -15,13 +15,15 @@
 	<script src="./js/Receivesmart.js"></script>
 	<script src="./js/Send.js"></script>
 	<style>
+		*{
+			touch-action: none; 
+		}
 		#contain1,#contain2{
 			position: absolute;
 			width: 100%;
 			top:0px;
 			bottom: 50px;
 		}
-		
 	</style>
 </head>
 <body>
@@ -266,22 +268,29 @@
 	</div>
 	
 	<nav class="mui-bar mui-bar-tab" id="nav-tabbar" > 
-		<a class="mui-tab-item mui-active" id="home" href="#contain1">
+		<a class="mui-tab-item mui-active" id="home" href="#contain1" onclick="GetId(this.id)">
 			<span class="mui-icon  mui-icon-home"></span>
 			<span class="mui-tab-label"  >智能家居</span>
 		</a>
-		<a class="mui-tab-item" id="smart" href="#contain2">
+		<a class="mui-tab-item" id="smart" href="#contain2" onclick="GetId(this.id)">
 			<span class="mui-icon  mui-icon-gear"></span>
-			<span class="mui-tab-label"  >安防系统</span>
+			<span class="mui-tab-label">安防系统</span>
 		</a>
    </nav>
    <script type="text/javascript">
    	mui.init()
+	// 安防界面调用隐藏/显示弹出层
    	document.getElementById("sm-detest").addEventListener("tap", function() {
-   		// Smcontol()
-   	//调用隐藏/显示弹出层
-   	mui("#popover").popover('toggle', document.getElementById("div"));
+		mui("#popover").popover('toggle', document.getElementById("div"));
    	})
+	var a_mask;
+	window.onload = function(){
+		function GetId(id){
+			console.log(id)
+		}
+		a_mask = 0;
+		SocketConnect(1,"str");
+	}
    </script>
 </body>
 </html>

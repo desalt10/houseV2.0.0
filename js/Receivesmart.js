@@ -9,8 +9,14 @@
  * 对象.da14 服务灯状态
  * 对象.da15 模块通讯故障
  */
+function Receive(s,a){
+	if(a =="0012"){
+		Receive20(s)
+	}else{
+		return;
+	}
+}
 function Receive20(obj20){
-	console.log(123)
 	for(var i = 1;i< 9;i++){
 		if(obj20["da"+i] =="1"){
 			$("#smimg"+i).attr("src","./img/smart-8.png");
@@ -39,26 +45,30 @@ function Receive20(obj20){
 		$("#sm-pol").val("无")
 	}
 	if(obj20.da13=="1"){
-		$("#sm-detest").text("撤防")
+		mui.toast("布防成功");
+		$("#sm-detest").text("撤防");
 		$(".sa-ul").css("border-color","red");
-		sm_bug = ""
-		$("#smtext").val(sm_bug)
+		sm_bug = "";
+		$("#smtext").val(sm_bug);
+		// $("#smtext").val("布防成功")
 		sm_mask = false;
 	}else{
-		$("#sm-detest").text("布防")
+		mui.toast("撤防成功");
+		$("#sm-detest").text("布防");
 		$(".sa-ul").css("border-color","#FFF4D3");
-		sm_bug = ""
-		$("#smtext").val(sm_bug)
+		sm_bug = "";
+		$("#smtext").val(sm_bug);
+		// $("#smtext").val("撤防成功")
 		sm_mask = true;
 	}
 	if(obj20.da14=="1"){
-		$("#sm-fault").val("异常")
-	}else{
-		$("#sm-fault").val("无")
-	}
-	if(obj20.da15=="1"){
 		$(".serve-power").css("background","red")
 	}else{
 		$(".serve-power").css("background","#0000FF")
+	}
+	if(obj20.da15=="1"){
+		$("#sm-fault").val("异常")
+	}else{
+		$("#sm-fault").val("无")
 	}
 }

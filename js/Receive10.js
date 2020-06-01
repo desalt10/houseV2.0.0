@@ -15,9 +15,16 @@
  */
 
 var str10,vol,ele,pow,fre,con;
+function Receive(s,a){
+	if(a=="0001"){
+		Receive10(s)
+	}else{
+		return;
+	}
+}
 function Receive10(obj10){
-	str10 = obj10.params;
-	Get10(str10);
+	// str10 = obj10.params;
+	Get10(obj10);
 }
 function Get10(s){
 	vol = s.voltage;

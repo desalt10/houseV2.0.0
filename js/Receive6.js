@@ -9,14 +9,21 @@
  * 不对位置进行判断
  */
 var Position_buf,Position
+function Receive(s,a){
+	if(a=="0005"){
+		Receive6(s)
+	}else{
+		return;
+	}
+}
 function Receive6(obj6){
 	// Position_buf = obj6.curtainposition;
 	// Position = Position_buf/2;
 	$(".btn1,.btn2,.btn3").css("color","");
 	$(".btn1,.btn2,.btn3").css("background","rgba(255, 255, 255, 0.5)"); 
 	
-	switch(obj6.curtainoperation){
-		case "0":{
+	switch(obj6.CurtainOperation){
+		case 0:{
 			mui.toast('正在开启');
 			$(".Page6_1,.Page6_2").removeClass("animate2");
 			$(".Page6_1,.Page6_2").addClass("animate1");
@@ -24,7 +31,7 @@ function Receive6(obj6){
 			$(".btn1").css({"background":"#ffffff","color":"red"});
 			break;
 		}
-		case "1":{
+		case 1:{
 			mui.toast('正在关闭');
 			$(".Page6_1,.Page6_2").removeClass("animate1");
 			$(".Page6_1,.Page6_2").addClass("animate2");
@@ -32,7 +39,7 @@ function Receive6(obj6){
 			$(".btn2").css({"background":"#ffffff","color":"red"});
 			break;
 		}
-		case "2":{
+		case 2:{
 			mui.toast('正在暂停');
 			$(".Page6_1").css("animation-play-state","paused");
 			$(".Page6_2").css("animation-play-state","paused");

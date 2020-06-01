@@ -2,6 +2,33 @@
  * 功能: 处理接收函数Receive12()-Receive19() 智能插座 @0012-0019
  * 
  */
+function Receive(s,a){
+	if(a=="0014"){
+		Receive12(s)
+	}
+	if(a=="0015"){
+		Receive13(s)
+	}
+	if(a=="0016"){
+		Receive14(s)
+	}
+	if(a=="0017"){
+		Receive15(s)
+	}
+	if(a=="0018"){
+		Receive16(s)
+	}
+	if(a=="0019"){
+		Receive17(s)
+	}
+	if(a=="0020"){
+		Receive18(s)
+	}
+	if(a=="0021"){
+		Receive19(s)
+	}
+}
+
 function Receive12(obj12){
 	ChangeImg(obj12,1)
 }
@@ -29,7 +56,9 @@ function Receive19(obj19){
 function ChangeImg(s,i){
 	if(s.powerswitch_1=="1"){
 		$("#img"+i).attr("src", "../../img/page12-on.png");
+		socket_mask = true;
 	}else{
 		$("#img"+i).attr("src", "../../img/page12-off.png");
+		socket_mask = false;
 	}
 }
