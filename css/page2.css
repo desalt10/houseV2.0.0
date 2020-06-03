@@ -6,7 +6,7 @@
 }
 .container{
 	display: flex;
-	margin-top: 0.5rem;
+	/* margin-top: 1rem; */
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
@@ -15,18 +15,19 @@
 
 .lightbulb__container {
   position: relative;
-  width: calc(75vw);
+  width: 7.5rem;
   /* height: 19rem; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 /* 灯泡上部 */
 .lightbulb__container .lightbulb__bulb {
   /* position: relative; */
-  width: calc(100vw/2);
-  height: calc(100vw/2);
+  width: 5rem;
+  height: 5rem;
   background: #FEFFBE;
   border-radius: 50%;
   background: #000;
@@ -45,12 +46,11 @@
 /* 接连灯泡的下部 */
 .lightbulb__container .lightbulb__bulb_bottom {
   position: absolute;
-  width: calc(100vw/2);
-  height: calc(100vw/8);
+  width: 5rem;
+  height: 1.25rem;
   bottom: 0;
-  left: calc(50% - calc(25vw));
-  background: #FEFFBE;
-  border-radius: 0 0 calc(5vw) calc(5vw);
+  left: calc(50% - 2.5rem);
+  border-radius: 0 0 0.5rem 0.5rem;
   background: #000;
 }
 /* 制作伪类 下部形成弧度 */
@@ -59,8 +59,8 @@
   display: block;
   position: absolute;
   top: 70%;
-  width: calc(32.5vw);
-  height: calc(100vw/2);
+  width: 3.25rem;
+  height: 5rem;
   background: #314173;
   z-index: 5;
 }
@@ -76,22 +76,22 @@
 .lightbulb__container .lightbulb__base {
   /* position: absolute; */
   /* bottom: calc(31vw); */
-  width: calc(25vw);
-  height: calc(7.5vw);
+  width: 2.5rem;
+  height: 0.75rem;
   background: #888F98;
-  margin-top:calc(1vw);
-  border-radius: calc(1.5vw);
+  margin-top:0.1rem;
+  border-radius: 0.15rem;
   z-index: 10;
 }
 /* 灯泡螺旋部分 */
 .lightbulb__container .lightbulb__spiral {
   /* position: absolute; */
   /* bottom: calc(25vw); */
-  width: calc(17.5vw);
-  height: calc(5vw);
+  width: 1.75rem;
+  height: 0.5rem;
   background: #7a828c;
-  border-radius: calc(1vw);
-  margin-top:calc(1vw);
+  border-radius: 0.1rem;
+  margin-top: 0.1rem;
   background-image: linear-gradient(180deg, transparent 45%, #565c64 10%);
   background-size: 50% 30%;
 }
@@ -101,9 +101,9 @@
   top: 0%;
   left: 50%;
   transform: translateX(-50%) translateY(-15%) scale(0.4);
-  filter: blur(calc(25vw));
-  width: calc(80vw);
-  height: calc(80vw);
+  filter: blur(2.5rem);
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   background: radial-gradient(#FEFFBE 25%, transparent 80%);
   z-index: 8;
@@ -124,54 +124,59 @@
 }
 
 
-/* 电源部分 */
-.switch{
+/* 电源开关部分 */
+/* .switch{
 	position: absolute;
 	width: 100%;
-	height: 95%;
+	height: 38%;
+	top: 60px;
 	margin: 0 auto;
-	
+	z-index: 999;
+} */
+.switch-1{
+	margin-top: 0.3rem;
+	width: 85%;
+	/* background: red; */
 }
 /* 电源开关部分 */
 #img{
-	position: absolute;
-	width: 13%;
-	right: -10%;
+	width: 10%;
+	float: right;
 	z-index: 3;
 }
-
+/* RGB电源开关·RGB颜色开关 */
+.switch-2{
+	width: 80%;
+	margin: 0 auto;
+	/* background: red; */
+}
 /* RGB电源开关部分 */
-.switch .switch2{
-	position: absolute;
-	left: -10%;
-	bottom: 0;
-	width: calc(15vw);
-	height: calc(9vw);
-	font-size: calc(5vw);
-	line-height: calc(9vw);
+.switch-2 .switch2{
+	float: left;
+	width: 1.5rem;
+	height: 0.9rem;
+	font-size: 0.5rem;
+	line-height: 0.9rem;
 	text-align: center;
 	color: #FFFFFF;
-	display: none;
+	visibility:hidden;
 	background: #CDCDCD;
-	z-index: 22;
+	z-index: 9999;
 }
-
-
 /* RGB颜色开关 */
-.switch .switch3{
-	position: absolute;
-	right: -10%;
-	bottom: 0;
-	font-size: calc(5vw);
-	width: calc(25vw);
-	height: calc(9vw);
-	line-height: calc(9vw);
+.switch-2 .switch3{
+	float: right;
+	font-size: 0.5rem;
+	width: 2.5rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
 	color: #009F3C;
 	text-align: center;
 	background: #FCFCF7;
-	display: none;
-	z-index: 22;
+	visibility: hidden;
+	z-index: 9999;
 }
+
 
 /* 下面控制部分 slider */
 .slider{
@@ -185,22 +190,23 @@
 .mui-input-range{
 	position: relative;
 	padding-right: 0!important;
-	height: calc(15vw);
+	height: 1.5rem;
 	overflow: hidden!important;
 }
 #rangel,#range2,#range3{
-	margin-top: calc(5vw);
+	margin-top: 0.5rem;
 }
 /* 标题label样式 */
 .slider label{
-	font-size: calc(5vw);
-	height: calc(9vw);
+	font-size: 0.5rem;
+	height: 0.9rem;
+	text-align: center;
 }
 /* 内容说明样式 */
 .slider p{
 	position: absolute;
-	font-size: calc(4vw);
-	height: calc(5vw);
+	font-size: 0.4rem;
+	height: 0.5rem;
 	width: 80%;
 	bottom: 0;
 	left: 40%;
@@ -208,10 +214,10 @@
 }
 /* 改变数字提示框样式 */
 .mui-input-range .mui-tooltip{
-	font-size: calc(6vw);
-	line-height:  calc(8vw);
-	width: calc(8vw);
-	height: calc(8vw);
+	font-size: 0.6rem;
+	line-height:   0.8rem;
+	width: 0.8rem;
+	height:  0.8rem;
 	font-weight: border;
 	text-align: center;
 	font-weight: 600;
@@ -221,8 +227,8 @@
 /* 改变滑块的颜色 */
 .mui-input-range input[type='range']::-webkit-slider-thumb
 {
-	width: calc(5vw);
-	height: calc(5vw);
+	width: 0.5rem;
+	height: 0.5rem;
 	background-color:#C8C7CC; 
 	background: #009F3C;
 }
@@ -236,7 +242,7 @@
 	list-style: none;
 	justify-content: space-between;
 	align-content: space-between;
-	margin-top: calc(3vw);
+	margin-top: 0.3rem;
 	padding: 0;
 	width: 60%;
 }
@@ -244,10 +250,10 @@
 	padding:0;
 	/* margin:0; */
 	float: left;
-	width: calc(100vw/15);
-	height: calc(100vw/15);
+	width: 0.6rem;
+	height: 0.6rem;
 	border-radius: 50%;
-	margin: calc(1vw);
+	margin: 0.1rem;
 	margin-top:0;
 	border: 3px solid transparent;
 	cursor: pointer;

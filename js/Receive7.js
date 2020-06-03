@@ -41,15 +41,15 @@ var pos_buf,pos_buf1;
 		$("#get"+i).css("background","");
 	}
 	switch(obj7.actuatoroperationmode){
-		case "0":{
+		case 0:{
 			$("#get1").css("background","yellow");
 			break;
 		}
-		case "1":{
+		case 1:{
 			$("#get2").css("background","yellow");
 			break;
 		}
-		case "2":{
+		case 2:{
 			$("#get3").css("background","yellow");
 			break;
 		}
@@ -58,22 +58,22 @@ var pos_buf,pos_buf1;
 	
 //窗户速度
 	switch(obj7.speedwindow){
-		case "1":{
+		case 1:{
 			$("#get4").css("background","yellow");
 			speed_buf = 2000;
 			break;
 		}
-		case "2":{
+		case 2:{
 			$("#get5").css("background","yellow");
 			speed_buf = 1600;
 			break;
 		}
-		case "3":{
+		case 3:{
 			$("#get6").css("background","yellow");
 			speed_buf = 1300;
 			break;
 		}
-		case "4":{
+		case 4:{
 			$("#get7").css("background","yellow");
 			speed_buf = 1000;
 			break;

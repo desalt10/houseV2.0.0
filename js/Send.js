@@ -39,18 +39,18 @@ function btnClose_2(){
  */
 
 var Powermask=true;
+var RGBmask;
 function Power(){
 	if(Powermask){
 		$("#img").attr("src", "../img/p2-on.png");
-		$(".switch2").show();
-		// RGBmask = true;
+		$(".switch2").css("visibility","visible");
+		RGBmask = true;
 		SendData('{"add":"0013","lightswitch":1}\r\n');
-		
 	}else{
 		$(".lightbulb__bulb").removeClass("glow_animation1 glow_animation2 glow_animation3 glow_animation4");
 		$("#img").attr("src", "../img/p2-off.png");
-		$(".switch2").hide();
-		switch2_off();
+		$(".switch2").css("visibility","hidden");
+		switch2_off()
 		SendData('{"add":"0013","lightswitch":0}\r\n');
 	}
 	Powermask = !Powermask;
@@ -60,7 +60,7 @@ function Power(){
  * 功能介绍:RGB灯控制开关并发送指令  设备编号@0013
  * @param  Rgbmask 开关状态(初始状态关闭)
  */
-var RGBmask = true;
+// var RGBmask = true;
 function RGBpower(){
 	if(RGBmask){
 		switch2_on();
@@ -76,7 +76,7 @@ function RGBpower(){
  * @param  
  */
 function switch2_on(){
-	$(".switch3").show();
+	$(".switch3").css("visibility","visible");
 	$(".slider").css("opacity","1");
 	$(".slider").css("pointer-events","auto");
 	$(".switch2").css("background","#009F3C");
@@ -88,7 +88,7 @@ function switch2_on(){
  * @param  
  */
 function switch2_off(){
-	$(".switch3").hide();
+	$(".switch3").css("visibility","hidden");
 	$(".slider").css("opacity","0.5");
 	$(".slider").css("pointer-events","none");
 	$(".switch2").css("background","#CDCDCD");
@@ -605,7 +605,7 @@ function TvCon(s){
 			break
 		}
 		case 3:{
-			SendData('{"add":"0010","Rght":0}\r\n');
+			SendData('{"add":"0010","Right":0}\r\n');
 			break
 		}
 		case 4:{
@@ -662,8 +662,14 @@ function TVstudy(){
 	
 }
 // 电视电源按键
+var tv_power = true;
 function TVpower(){
-	SendData('{"add":"0010","PowerSwitch":0}\r\n');
+	if(tv_power){
+		SendData('{"add":"0010","PowerSwitch":0}\r\n');
+	}else{
+		SendData('{"add":"0010","PowerSwitch":0}\r\n');
+	}
+	tv_power =!tv_power;
 }
 
 

@@ -2,66 +2,65 @@
 	height: 100vh;
 	width: 100%;
 	background-color: #314173;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 .container {
-  padding-top: 10px;
+  padding-top: 0.3rem;
+  padding-bottom: 0.6rem;
   width: 60%;
-  height: calc(100vw/0.85);
-  margin: 10% auto;
+  margin: 20% auto;
   border: 2px solid #CCCCCC;
   border-radius: 8%;
-  box-shadow: calc(100vw/50) calc(-100vw/40) 1px #888888;
+  box-shadow: 0.3rem -0.3rem 1px #888888;
   background-color: #000;
-  /* background: rgba(204,204,204,.5); */
 }
 /* 所有按键 */
 button{
 	padding: 0;
 	color: #FFFFFF;
-	font-size: calc(100vw/30);
+	font-size: 0.4rem;
 	background: rgba(204,204,204,.5);
 	text-align: center;
 	/* padding: calc(100vw/65); */
 }
 .container .part1 button{
-	width: calc(100vw/10);
-	height: calc(100vw/10);
+	width: 1rem;
+	height: 1rem;
 	text-align: center;
-	line-height: calc(100vw/10);
+	line-height: 1rem;
 	border-radius: 50%;
 	border: 0;
-	/* margin-left: calc(100vw/30);
-	margin-right: ; */
 }
 .container .part2 button{
-	padding: calc(100vw/80);
+	padding: 0.125rem;
 }
 
 /* 各模块 */
 .part1,.part2,.part3,.part4,.part5{
 	width: 90%;
-	margin: calc(100vw/30) auto ;
-	height: calc(100vw/10);
+	margin: 0.34rem auto ;
+	/* height: 1rem; */
 }
 .container .part1{
-	height: calc(100vw/10);
+	height: 1rem;
 }
-
+.part4,.part5{
+	height: 1rem;
+}
 
 .container .part3,.part4,.part5{
 	width: 100%;
 }
 .part3{
-	overflow: hidden;
+	/* overflow: hidden; */
 	margin-bottom: 0;
 }
 
 /*方向控制上的外圆*/
 .outter-circle {
 	margin: 0 auto;
-	width: calc(100vw/2.5);
-	height: calc(100vw/2.5);
+	width: 4rem;
+	height: 4rem;
 	background-color: lightcyan;
 	border-radius: 100%;
 	overflow: hidden;
@@ -71,11 +70,11 @@ button{
 /*四个方向*/
 .outter-circle .inner-parts {
 	float: left;
-	width: calc(100vw/5);
-	height: calc(100vw/5);
-	line-height: calc(100vw/5);
+	width: 2rem;
+	height: 2rem;
+	line-height: 2rem;
 	text-align: center;
-	font-size: calc(100vw/10);
+	font-size: 1rem;
 }
 
 /*中间ok部分*/
@@ -86,12 +85,12 @@ right: 0;
 top: 0;
 bottom: 0;
 margin: auto;
-width: calc(100vw/5);
-height: calc(100vw/5);
-line-height: calc(100vw/5);
+width: 2rem;
+height: 2rem;
+line-height: 2rem;
 text-align: center;
 border-radius: 100%;
-font-size: calc(100vw/15);
+font-size: 0.5rem;
 background-color: lightblue;
 }
 
@@ -122,12 +121,12 @@ background-color: lightblue;
 	margin-top: 0 ;
 }
 .container .part5{
-	height: calc(100vw/5);
+	height: 2rem;
 	margin-top: 0 ;
 	font-size: 0;
 }
 .part5 button{
-	margin-bottom: calc(100vw/30);
+	margin-bottom: 0.34rem;
 }
 .part5-1,.part5-2,.part5-3{
 	height: 100%;
@@ -158,4 +157,10 @@ background-color: lightblue;
 .inner-circle:active{
 	color: #fff;
 	background: #00FFFF;
+}
+.clr{
+	clear: both;
+	height: 1rem;
+	width: 100%;
+	background: red;
 }
