@@ -46,7 +46,7 @@ input{
 	width: 100%;
 	text-align: right;
 	font-family: LCD-font;
-	font-size: 1.2rem!important;
+	/* font-size: 1.2rem; */
 	background-image: radial-gradient(#DB7020 80%, #AF6D39);
 }
 .dr-btnes table{

@@ -1,48 +1,44 @@
 .mui-content{
-	position: absolute;
 	height: 100%;
 	width: 100%;
-	top: 0;
-	left: 0;
 	background-color: #314173;
 }
 .button-group {
   position: relative;
-  padding-top: calc(100vw/30);
+  padding-top: 0.3rem;
+  padding-bottom: 0.6rem;
   width: 60%;
-  height: 68vh;
-  margin: calc(100vw/10) auto;
-  /* border: 2px solid #CCCCCC; */
+  margin: 20% auto;
   border-radius: 8%;
-  box-shadow: calc(100vw/40) calc(-100vw/30) 1px #888888;
+  box-shadow: 0.3rem -0.3rem 1px #888888;
   background-color: #FFFFFF;
 }
 /*显示框*/
 .text-show{
-	margin: 6% auto;
+	margin: 6% auto ;
 	width: 80%;
 	padding: 3%;
 	line-height: 100%;
-	border: 2px solid #ccc;
+	border: 1px solid #ccc;
 	border-radius: 8%;
 	padding-bottom: 0 ;
 	background-color: #DDDDDD;
 }
 .text-show p{
-	padding: calc(100vw/40);
+	padding: 0.3rem;
 	height: 6vh;
 	padding-left: 0;
 	padding-right: 0;
 	color: #888888;
 	margin-bottom: 0 ;
-	font-size:calc(100vw/25);
+	font-size:0.4rem;
 
 }
 .text-show span{
-	font-size:calc(100vw/25);
+	font-size: 0.4rem;
 }
 #text-tem{
-	font-size:calc(100vw/10);
+	font-size: 1.2rem;
 }
 .text-bottom{
 	width: 80%;
@@ -50,49 +46,44 @@
 	margin: 0 auto;
 	/*background-color: pink;*/
 }
-.text-bottom p{
-	display: block;
+#selet{
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	background: #FFFFFF;
 }
-button{
-	display: inline-block;
-	margin-bottom: calc(100vw/50) ;
+.air-btn1, .air-btn2 ,.air-btn3,.air-btn4{
+	margin-bottom: 0.2rem ;
+}
+.air-btn1>button,.air-btn2 button,.air-btn3 button,#selet button,.air-btn4 button{
 	width: 40%;
-	font-size: calc(100vw/25);
+	font-size: 0.4rem;
 }
-button:active {
-	box-shadow: 3px 3px 2px #ccc;
+.btn-img2,.btn-img1{
+	width: 0.4rem;
 }
-.btn-img{
+.btn-img2{
 	transform:rotate(180deg);
 }
-/* 功能选择 */
-#selet{
-	position: relative;
-	width: 80%;
-	left: 0;
-	right: 0;
-	margin: auto;
-	height: calc(100vw/10);
-	background: #FFFFFF;
-	
-}
-#selet .selet-text{
-	margin: 0;
-	height: calc(100vw/10);
-	line-height: calc(100vw/10);
-	font-size: calc(100vw/25);
+/* 品牌选择 */
+.selet-text{
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+	border: 0;
 	color: #999;
-	padding-left: calc(100vw/60);
 }
 #selet #showUserPicker1{
 	width: 40%;
 	padding: 0;
 	margin: 0;
-	height: calc(100vw/10);
-	font-size: calc(100vw/25);
+	height: 1rem;
+	font-size: 0.4rem;
+}
+.air-btn4{
+	width: 100%;
 }
 .text-1,.text-2{
-	margin-top: 0.6rem ;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -101,13 +92,15 @@ button:active {
 	color: blue;
 }
 .t-40{
-	font-size: calc(100vw/10);
+	font-size: 0.4rem;
 	
 }
 .t-align{
 	text-align: center;
 }
-
+.clr{
+	clear: both;
+}
 
 
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />  
     <title>空调</title>
+	<script src="../js/rem.js"></script>
 	<link href="../css/mui.min.css" rel="stylesheet"/>
 	<link href="../css/page4.css" rel="stylesheet"/>
 	<link href="../css/mui.picker.all.css" rel="stylesheet"/>
@@ -33,19 +34,33 @@
         	</div>
 		  
 			<div class="text-bottom">
-				<button onclick="airPower()">开/关</button>
-				<button id="air-speed"class="fr" onclick="airSpeed()">风速</button></br>
-				<button id="air-wind" onclick="airWind()">扫风</button>
-				<button id="air-mode" onclick="airMode()" class="fr">模式</button></br>
-				<button id="air-down" onclick="airTem(0)"><img src="../img/page4.png" width="30%"; class="btn-img"></button>
-				<button id="air-up" onclick="airTem(1)" class="fr"><img src="../img/page4.png" width="30%"></button>
-			</div>
+				<div class="air-btn1">
+					<button onclick="airPower()" class="fl">开/关</button>
+					<button id="air-speed"class="fr" onclick="airSpeed()">风速</button>
+					<div class="clr"></div>
+				</div>
+				<div class="air-btn2">
+					<button id="air-wind" onclick="airWind()" class="fl">扫风</button>
+					<button id="air-mode" onclick="airMode()" class="fr">模式</button>
+					<div class="clr"></div>
+				</div>
+				<div class="air-btn3">
+					<button id="air-down" onclick="airTem(0)"><img src="../img/page4.png"  class="btn-img2"></button>
+					<button id="air-up" onclick="airTem(1)" class="fr"><img src="../img/page4.png" class="btn-img1"></button>
+				</div>
 	        <div id="selet" class="mui-content mui-content-padded">
-				<span class="mui-content-padded selet-text fl">品牌选择</span>
+				<button class="selet-text fl">品牌选择</button>
+				<!-- <span class="mui-content-padded selet-text fl">品牌选择</span> -->
 				<button id='showUserPicker1' class="mui-btn mui-btn-block fr" type='button'>请选择</button>
-				<button class="text-1 fl" onclick="airTry()">尝试匹配</button>
-				<button class="text-2 fr" onclick="airCon()">匹配成功</button>
-	        </div>
+				<div class="clr"></div>
+			</div>
+				<div class="air-btn4">
+					<button class="text-1 fl" onclick="airTry()">尝试匹配</button>
+					<button class="text-2 fr" onclick="airCon()">匹配成功</button>
+					<div class="clr"></div>
+				</div>
+			<!-- <div class="clr"></div> -->
+			</div>
         </div>  
     </div> 
 	

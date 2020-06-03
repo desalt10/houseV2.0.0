@@ -22,7 +22,7 @@ html{
 	position: absolute;
 	width: 90%;
 	top:0;
-	left: 0%;
+	left: -40%;
 }
 /* 窗户控制 */
 .window-con{
@@ -75,7 +75,7 @@ html{
 .wind-position span,.wind-pinch span{
 	position: absolute;
 	/* top:0; */
-	right: -8%;
+	right: -2.5%;
 	top: 50%;
 	font-size: 0.5rem;
 	font-weight: 600;

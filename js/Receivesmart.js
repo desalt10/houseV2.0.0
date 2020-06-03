@@ -46,19 +46,17 @@ function Receive20(obj20){
 	}
 	if(obj20.da13=="1"){
 		mui.toast("布防成功");
-		$("#sm-detest").text("撤防");
+		$("#sm-detest").text("布防");
 		$(".sa-ul").css("border-color","red");
 		sm_bug = "";
 		$("#smtext").val(sm_bug);
-		// $("#smtext").val("布防成功")
 		sm_mask = false;
 	}else{
 		mui.toast("撤防成功");
-		$("#sm-detest").text("布防");
+		$("#sm-detest").text("撤防");
 		$(".sa-ul").css("border-color","#FFF4D3");
 		sm_bug = "";
 		$("#smtext").val(sm_bug);
-		// $("#smtext").val("撤防成功")
 		sm_mask = true;
 	}
 	if(obj20.da14=="1"){

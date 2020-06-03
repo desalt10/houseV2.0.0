@@ -229,7 +229,7 @@
 						
 						<div>
 							<label>撤布防</label>
-							<button id="sm-detest" >布防</button>
+							<button id="sm-detest" >撤防</button>
 							<label>服务灯</label>
 							<button disabled ="disabled" class="serve-power"></button>
 						</div>
@@ -269,11 +269,11 @@
 	</div>
 	
 	<nav class="mui-bar mui-bar-tab" id="nav-tabbar" > 
-		<a class="mui-tab-item mui-active" id="home" href="#contain1" onclick="GetId(this.id)">
+		<a class="mui-tab-item mui-active" id="home" href="#contain1">
 			<span class="mui-icon  mui-icon-home"></span>
 			<span class="mui-tab-label"  >智能家居</span>
 		</a>
-		<a class="mui-tab-item" id="smart" href="#contain2" onclick="GetId(this.id)">
+		<a class="mui-tab-item" id="smart" href="#contain2">
 			<span class="mui-icon  mui-icon-gear"></span>
 			<span class="mui-tab-label">安防系统</span>
 		</a>
@@ -286,9 +286,9 @@
    	})
 	var a_mask;
 	window.onload = function(){
-		function GetId(id){
-			console.log(id)
-		}
+		// function GetId(id){
+		// 	console.log(id)
+		// }
 		a_mask = 0;
 		SocketConnect(1,"str");
 	}

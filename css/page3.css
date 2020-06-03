@@ -7,11 +7,11 @@
 	position: relative;
 	width: 85%;
 	/* margin-top: calc(100vw/1); */
-	border-top: 0.5rem solid rgba(255,255,255,.4);
-	border-right: 0.5rem solid rgba(255,255,255,.3);
-	border-bottom: 0.5rem solid rgba(255,255,255,.2);
-	border-left: 0.5rem solid rgba(255,255,255,.2);
-	height:  calc(100vw/1.5);
+	border-top: 0.3rem solid rgba(255,255,255,.4);
+	border-right: 0.3rem solid rgba(255,255,255,.3);
+	border-bottom: 0.3rem solid rgba(255,255,255,.2);
+	border-left: 0.3rem solid rgba(255,255,255,.2);
+	/* height:  6.5rem; */
 	top: 10%;
 	margin: 0 auto;
     background: #CCCCCC;
@@ -19,35 +19,35 @@
 	
 }
 .tx-head{
-	height: 30%;
-	margin-top: calc(100vw/30);
+	/* height: 30%; */
+	margin-top: 0.3rem;
+	/* margin-bottom: 0.3rem ; */
 	/* margin-bottom: calc(100vw/30); */
 }
 .head1{
-	width: 30%;
+	width: 28%;
 }
 .head1 img{
 	width: 100%;
-	/* padding: 0.2rem; */
 	padding-left: 0.2rem;
 	margin:0 auto;
 	display: block; 
 }
 .head2{
-	width: 16%;
-	/* height: calc(100vw/30); */
-	/* height: 100%; */
-	/* background: green; */
+	width: 18%; 
+	height: 0.6rem;
+	line-height: 0.6rem;
 }
 .head2 p{
 	margin: 0;
-	height: calc(100vw/15);
+	height: 0.6rem;
 	text-align: center;
 	color: #000000;
-	font-size: calc(100vw/25);
+	font-size: 0.4rem;
 }
 .head3{
-	width: 47%;
+	width: 48%;
+	/* width: 50%; */
 }
 .head3 p{
 	top:0;
@@ -55,16 +55,16 @@
 	left: 0;
 	right: 0;
 	margin: auto;
-	height: calc(100vw/15);
+	height: 0.6rem;
 	text-align: center;
 	color: #000000;
 }
 .head3-1{
 	text-decoration: underline;
-	font-size: calc(100vw/25);
+	font-size: 0.5rem;
 }
 .head3-2{
-	font-size: calc(100vw/28);
+	font-size: 0.35rem;
 }
 .inlink{
 	display: inline-block;
@@ -72,7 +72,7 @@
 /* 按键全开全关 */
 .buttons{
 	/* height: 30%; */
-	width: 80%;
+	width: 82%;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -83,7 +83,7 @@
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	margin: 0 auto;
+	margin: 0.3rem auto 0;
 	display:flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -91,12 +91,12 @@
 }
 
 .buttons .btnes div{
-	width: calc(100vw/12);
-	height: calc(100vw/17);
-	border-top: calc(100vw/70) solid rgba(0,0,0,.4) ;
-	border-left: calc(100vw/70) solid rgba(0,0,0,.2) ;
-	border-right: calc(100vw/70) solid rgba(0,0,0,.5) ;
-	border-bottom: calc(100vw/70) solid rgba(0,0,0,.3) ;
+	width: 0.9rem;
+	height: 0.6rem;
+	border-top: 0.15rem solid rgba(0,0,0,.4) ;
+	border-left: 0.15rem solid rgba(0,0,0,.2) ;
+	border-right: 0.15rem solid rgba(0,0,0,.5) ;
+	border-bottom: 0.15rem solid rgba(0,0,0,.3) ;
 	text-align: center;
 	background:brown;
 }
@@ -105,45 +105,42 @@
 	/* position: absolute; */
 	bottom: 0;
 	font-weight: bold;
-	font-size: calc(100vw/20);
-	margin: calc(100vw/50);
+	font-size: 0.65rem;
+	margin: 0.2rem;
 	text-align: center;
 	color: brown;
 }
 /* 全开全关 */
 .but-text{
-	margin-left: calc(100vw/2);
 	width:50%;
-	right: 0;
-	/* float: right; */
-	/* background:red; */
+	margin-left: 65%;
+	margin-bottom: 0.3rem ;
 }
  .but-text button{
 	margin: 0;
 	padding: 0;
-	width: calc(100vw/15);
-	height: calc(100vw/15);
-	border:  calc(100vw/100) solid rgba(0,0,0,.5);
+	width: 0.6rem;
+	height: 0.6rem;
+	border:  0.05rem solid rgba(0,0,0,.5);
 	border-radius: 50%;
 	background:#006926;
 }
 .but-text span{
-	font-size: calc(100vw/28);
-	height: calc(100vw/15);
-	line-height: calc(100vw/15);
+	font-size: 0.4rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
 }
 /* 底部文字 */
 .buttom{
 	height: 20%;
-	margin-top: calc(100vw/20);
+	/* margin-top: calc(100vw/20); */
 	width: 100%;
-	/* background: yellow; */
 }
 
 .buttom p{
 	margin: 0;
 	padding: 0;
-	font-size: calc(100vw/28);
+	font-size: 0.4rem;
 	line-height: 150%;
 	text-align: center;
 	color:#000;
