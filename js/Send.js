@@ -20,16 +20,16 @@ function Read_state(){
 *  功能说明: btnClose_2() 灯2 关
 */
 function btnOpen_1(){
-	SendData('{"add":"0006","PowerSwitch_1":1}\r\n');
+	SendData('{"add":"0006","params":{"PowerSwitch_1":1}}\r\n');
 }
 function btnClose_1(){
-	SendData('{"add":"0006","PowerSwitch_1":0}\r\n');
+	SendData('{"add":"0006","params":{"PowerSwitch_1":0}}\r\n');
 }
 function btnOpen_2(){
-	SendData('{"add":"0006","PowerSwitch_2":1}\r\n');
+	SendData('{"add":"0006","params":{"PowerSwitch_3":1}}\r\n');
 }
 function btnClose_2(){
-	SendData('{"add":"0006","PowerSwitch_2":0}\r\n');
+	SendData('{"add":"0006","params":{"PowerSwitch_3":0}}\r\n');
 }
 
 /** Page2 RGB控制  设备编号@0013
@@ -814,15 +814,16 @@ function Th_read(){
 *  功能说明: Socket() 插座开关 （0-关。1-开）
 */
 // var socket_mask = true;
-var socket_mask;
+var socket_mask=[0,0,0,0,0,0,0,0];
 function Socket(i){
-	if(socket_mask){
-		SendData('{"add":"00'+(i+13)+'":{"PowerSwitch_'+i+'":0}\r\n');
+	// SendData('{"add":"00'+(i+13)+'":{"PowerSwitch_1":0/1}}\r\n');
+	if(socket_mask[i-1]){
+		SendData('{"add":"00'+(i+13)+'","params":{"PowerSwitch_1":0}}\r\n');
 	}else{
-		SendData('{"add":"00'+(i+13)+'":{"PowerSwitch_'+i+'":1}\r\n');
+		SendData('{"add":"00'+(i+13)+'","params":{"PowerSwitch_1":1}}\r\n');
 	}
-	socket_mask =!socket_mask;
 }
+
 
 /** Page13 安防系统  设备编号0012
 *  功能说明: Smpass(s)密码盘按键

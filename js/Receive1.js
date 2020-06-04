@@ -20,13 +20,13 @@ function Receive(s,a){
 		return;
 	}
 }
-function Receive1(obj1){
-	led1_buf = obj1.powerswitch_1;
-	led2_buf = obj1.powerswitch_2;
-	// led1 = led1_buf.toString();
-	// led2 = led2_buf.toString();
+function Receive1(s){
+	led1_buf = s.PowerSwitch_1;
+	led2_buf = s.PowerSwitch_3;
+	led1 = led1_buf.toString();
+	led2 = led2_buf.toString();
 	
-	switch(led1_buf+led2_buf){
+	switch(led1+led2){
 		case "10":{
 			$(".switch-on").addClass("btn-on");
 			$(".switch-off").addClass("btn-off");

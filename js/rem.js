@@ -14,7 +14,7 @@
     // 设置了 viewport meta
     if (vpMeta) {
  
-        console.warn("将根据已有的meta标签来设置缩放比例");
+        // console.warn("将根据已有的meta标签来设置缩放比例");
         var initial = vpMeta.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
  
         if (initial) {
