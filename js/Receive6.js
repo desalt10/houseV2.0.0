@@ -17,8 +17,6 @@ function Receive(s,a){
 	}
 }
 function Receive6(obj6){
-	// Position_buf = obj6.curtainposition;
-	// Position = Position_buf/2;
 	$(".btn1,.btn2,.btn3").css("color","");
 	$(".btn1,.btn2,.btn3").css("background","rgba(255, 255, 255, 0.5)"); 
 	

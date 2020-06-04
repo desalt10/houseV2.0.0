@@ -3,8 +3,8 @@
     "id" : "H50000", /*应用的标识，创建应用时自动生成，勿手动修改*/
     "name" : "多啦A", /*应用名称，程序桌面图标名称*/
     "version" : {
-        "name" : "2.0.2", /*应用版本名称*/
-        "code" : 89
+        "name" : "2.0.3", /*应用版本名称*/
+        "code" : 90
     },
     "description" : "", /*应用描述信息*/
     "icons" : {
@@ -145,9 +145,9 @@
                 "android" : {
                     "mdpi" : "", /*普通屏启动图片，分辨率：240x282*/
                     "ldpi" : "", /*大屏启动图片，分辨率：320x442*/
-                    "hdpi" : "C:/Users/Administrator/Desktop/1.png", /*高分屏启动图片，分辨率：480x762*/
-                    "xhdpi" : "C:/Users/Administrator/Desktop/1.png", /*720P高分屏启动图片，分辨率：720x1242*/
-                    "xxhdpi" : "C:/Users/Administrator/Desktop/1.png"
+                    "hdpi" : "", /*高分屏启动图片，分辨率：480x762*/
+                    "xhdpi" : "", /*720P高分屏启动图片，分辨率：720x1242*/
+                    "xxhdpi" : ""
                 }
             },
             "plugins" : {

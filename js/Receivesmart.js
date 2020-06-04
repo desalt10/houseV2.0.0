@@ -1,3 +1,4 @@
+
 /**
  * 功能: 处理接收函数Receive20() 安防控制@0020
  * 对象.da1-8 防区报警
@@ -45,18 +46,20 @@ function Receive20(obj20){
 		$("#sm-pol").val("无")
 	}
 	if(obj20.da13=="1"){
-		mui.toast("布防成功");
+		// mui.toast("当前为布防状态");
 		$("#sm-detest").text("布防");
 		$(".sa-ul").css("border-color","red");
 		sm_bug = "";
-		$("#smtext").val(sm_bug);
+		$("#smtext").val("布防成功");
+		$("#smtext").css("font-size","0.8rem");
 		sm_mask = false;
 	}else{
-		mui.toast("撤防成功");
+		// mui.toast("当前为撤防状态");
 		$("#sm-detest").text("撤防");
 		$(".sa-ul").css("border-color","#FFF4D3");
 		sm_bug = "";
-		$("#smtext").val(sm_bug);
+		$("#smtext").val("撤防成功");
+		$("#smtext").css("font-size","0.8rem");
 		sm_mask = true;
 	}
 	if(obj20.da14=="1"){

@@ -51,13 +51,6 @@ function Receive3(obj3){
 		$("#btn5").css("background","brown");
 		btn_mask[4] = 0;
 	}
-	// for(var i=1; i<6;i++){
-	// 	if(obj3["control0"+i]==1){
-	// 		$("#btn"+i).css("background","red");
-	// 	}else{
-	// 		$("#btn"+i).css("background","brown");
-	// 	}
-	// }
 	if(obj3.vwo ==1){
 		$("#btn-power").css("background","#2FB472");
 		btn_power_mask = true;

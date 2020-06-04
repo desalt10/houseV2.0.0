@@ -1,14 +1,57 @@
-/** 加载页面时 主动读取指令
-*/
-function Read_state(){
-	for(var i=2;i<22;i++){
-		if(i<10){
-			j ='0'+i; 
-		}
-		else{
-			j = i;
-		}
-		SendData('{"add":"00'+j+'","read":0}\r\n');
+// 每个页面加载时 主动发读指令
+function StateRead(i){
+	if(i==1){
+		SendData('{"add":"0006","params":{"PowerSwitch_?":1}}\r\n');
+	}
+	if(i==3){
+		SendData('{"add":"0002","read":0}\r\n');
+	}
+	if(i=5){
+		SendData('{"add":"0010","read":0}\r\n');
+	}
+	if(i=6){
+		SendData('{"add":"0005","read":0}\r\n');
+	}
+	if(i=7){
+		SendData('{"add":"0004","read":0}\r\n');
+	}
+	if(i=9){
+		SendData('{"add":"0008","read":0}\r\n');
+	}
+	if(i=10){
+		SendData('{"add":"0001","read":0}\r\n');
+	}
+	if(i=11){
+		SendData('{"add":"0009","read":0}\r\n');
+	}
+	if(i=12){
+		setTimeout(function(){
+			SendData('{"add":"0014","params":{"PowerSwitch_?":1}}\r\n');
+		setTimeout(function(){
+			SendData('{"add":"0015","params":{"PowerSwitch_?":1}}\r\n');
+		setTimeout(function(){
+			SendData('{"add":"0016","params":{"PowerSwitch_?":1}}\r\n');
+		setTimeout(function(){
+			SendData('{"add":"0017","params":{"PowerSwitch_?":1}}\r\n');
+		setTimeout(function(){
+			SendData('{"add":"0018","params":{"PowerSwitch_?":1}}\r\n');
+		setTimeout(function(){
+			SendData('{"add":"0019","params":{"PowerSwitch_?":1}}\r\n');
+		setTimeout(function(){
+			SendData('{"add":"0020","params":{"PowerSwitch_?":1}}\r\n');
+		setTimeout(function(){
+			SendData('{"add":"0021","params":{"PowerSwitch_?":1}}\r\n');
+		},1000)
+		},1000)
+		},1000)
+		},1000)
+		},1000)
+		},1000)
+		},1000)
+		},1000)
+	}
+	if(i=14){
+		SendData('{"add":"0012","read":0}\r\n');
 	}
 }
 
@@ -218,12 +261,8 @@ function btn(i){
 		SendData('{"add":"0002","control0'+i+'":0}\r\n');
 		// btn_mask[i-1]=0;
 	}else{
-		// SendData('{"add":"0002","control01":1}\r\n');
 		SendData('{"add":"0002","control0'+i+'":1}\r\n');
-		// btn_mask[i-1]=1;
 	}
-	// btn_mask[i-1] = !btn_mask[i-1];
-	// SendData('{"add":"0002","control0'+i+'":'+btn_mask[i-1]+'}\r\n');
 }
 
 var btn_power_mask;
@@ -651,14 +690,14 @@ function TvCon(s){
 	}
 }
 // 电视学习按键
-var study_mask = true;
+var study_mask = false;
 function TVstudy(){
 	if(study_mask){
 		SendData('{"add":"0010","study":1}\r\n');
 	}else{
 		SendData('{"add":"0010","study":0}\r\n');
 	}
-	study_mask =!study_mask;
+	// study_mask =!study_mask;
 	
 }
 // 电视电源按键
@@ -810,6 +849,7 @@ function Ele_read(){
 function Th_read(){
 	SendData('{"add":"0009","read":0}\r\n');
 }
+
 /** Page12 智能开关控制  设备编号0014-0021
 *  功能说明: Socket() 插座开关 （0-关。1-开）
 */
@@ -831,6 +871,11 @@ function Socket(i){
 *  功能说明: SmCon()密码盘确定
 */
 var sm_bug="";
+function Smdetest(){
+	mui("#popover").popover('show', document.getElementById("div"));
+	$("#smtext").val(sm_bug);
+}
+// var sm_bug="";
 function Smpass(s){
 	sm_bug +=s;
 	$("#smtext").val(sm_bug);
@@ -841,11 +886,10 @@ function Smclean(){
 }
 var sm_mask;
 function SmCon(){
+	// mui("#popover").popover('hidden', document.getElementById("div"));
 	if(sm_mask){
 		SendData('{"add":"0012","Arming":"'+sm_bug+'"}\r\n');
 	}else{
 		SendData('{"add":"0012","Disarming":"'+sm_bug+'"}\r\n');
 	}
-	
-	
 }

@@ -13,10 +13,12 @@ function Receive5(obj5){
 		$("#tv-study").css("background","#00FFFF");
 		$("#tv-study").text("取消");
 		$("#tv-study").css("color","#000");
+		study_mask = false;
 		
 	}else{
 		$("#tv-study").css("background","brown");
 		$("#tv-study").text("学习");
 		$("#tv-study").css("color","#fff");
+		study_mask = true;
 	}
 }

@@ -2,6 +2,7 @@
  * 功能: 处理接收函数Receive12()-Receive19() 智能插座 @0012-0019
  * 
  */
+// var socket_mask[];
 function Receive(s,a){
 	if(a=="0014"){
 		if(s.PowerSwitch_1){
