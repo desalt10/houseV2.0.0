@@ -6,25 +6,25 @@ function StateRead(i){
 	if(i==3){
 		SendData('{"add":"0002","read":0}\r\n');
 	}
-	if(i=5){
+	if(i==5){
 		SendData('{"add":"0010","read":0}\r\n');
 	}
-	if(i=6){
+	if(i==6){
 		SendData('{"add":"0005","read":0}\r\n');
 	}
-	if(i=7){
+	if(i==7){
 		SendData('{"add":"0004","read":0}\r\n');
 	}
-	if(i=9){
+	if(i==9){
 		SendData('{"add":"0008","read":0}\r\n');
 	}
-	if(i=10){
+	if(i==10){
 		SendData('{"add":"0001","read":0}\r\n');
 	}
-	if(i=11){
+	if(i==11){
 		SendData('{"add":"0009","read":0}\r\n');
 	}
-	if(i=12){
+	if(i==12){
 		setTimeout(function(){
 			SendData('{"add":"0014","params":{"PowerSwitch_?":1}}\r\n');
 		setTimeout(function(){
@@ -41,16 +41,16 @@ function StateRead(i){
 			SendData('{"add":"0020","params":{"PowerSwitch_?":1}}\r\n');
 		setTimeout(function(){
 			SendData('{"add":"0021","params":{"PowerSwitch_?":1}}\r\n');
-		},1000)
-		},1000)
-		},1000)
-		},1000)
-		},1000)
-		},1000)
-		},1000)
-		},1000)
+		},200)
+		},200)
+		},200)
+		},200)
+		},200)
+		},200)
+		},200)
+		},200)
 	}
-	if(i=14){
+	if(i==14){
 		SendData('{"add":"0012","read":0}\r\n');
 	}
 }

@@ -4,9 +4,18 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />  
     <title>灯</title>  
-	<link href="../css/pulic.css" rel="stylesheet" />
-    <link href="../css/mui.min.css" rel="stylesheet"/>
-	<link href="../css/page1.css" rel="stylesheet" />
+	<link href="../css/mui.min.css" rel="stylesheet"/>
+	<link href="../css/page1.css" rel="stylesheet"/>
+	<link href="../css/pulic.css" rel="stylesheet"/>
+	<script src="../js/jquery-3.4.1.js"></script>
+	<script src="../js/Control.js"></script>
+	<script src="../js/websocket.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+	</script>
+	<script src="../js/Receive1.js" type="text/javascript"></script>
+	<script src="../js/Send.js"></script>
 </head>  
 <body> 
 	<header class="mui-bar mui-bar-nav">
@@ -17,24 +26,17 @@
         <div class="light-switch-label">
 			<div class="screw" ></div>
 			<div class="switch">
-				<div class="switch-on" onclick="btnOpen_1();" >ON</div>
-				<div class="switch-off" onclick="btnClose_1();">OFF</div>
+				<div class="switch-on" onclick="btnOpen_1()" >ON</div>
+				<div class="switch-off" onclick="btnClose_1()">OFF</div>
 			</div>
 			<div class="switch1">
-				<div class="switch-on1" onclick="btnOpen_2();" >ON</div>
-				<div class="switch-off1" onclick="btnClose_2();">OFF</div>
+				<div class="switch-on1" onclick="btnOpen_2()" >ON</div>
+				<div class="switch-off1" onclick="btnClose_2()">OFF</div>
 			</div>
 			<div class="screw"></div>
         </div> 
     </div>
-	<script src="../js/Control.js"></script>
-	<script src="../js/websocket.js"></script>
-	<script src="../js/Receive1.js"></script>
-	<script src="../js/send.js"></script>
-	<script src="../js/mui.min.js"></script>
-	<script src="../js/jquery-3.4.1.js"></script>
 	<script type="text/javascript">
-		mui.init();
 		var state_bug = 1;
 	</script>
 </body>  
