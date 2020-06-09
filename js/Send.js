@@ -1,3 +1,4 @@
+
 // 每个页面加载时 主动发读指令
 function StateRead(i){
 	if(i==1){

@@ -12,14 +12,14 @@
 	<script src="../js/Control.js"></script>
 	<script src="../js/websocket.js"></script>
 	<script src="../js/mui.min.js"></script>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		mui.init();
-	</script>
+	</script> -->
 	<script src="../js/Send.js"></script>
 </head>  
 <body> 
 <header class="mui-bar mui-bar-nav">
-	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="./home.html"></a>
 	<h1 class="mui-title">RGB灯</h1>
 </header>
     <div class="mui-content">  
@@ -79,7 +79,14 @@
     </div>
 	
 </body>  
-<script>
+<script type="text/javascript">
 	var state_bug = 0;
-</script>
+		mui.init({
+			swipeBack:true,
+			
+			beforeback: function(){
+				window.history.back();
+			}
+		});
+	</script>
 </html>

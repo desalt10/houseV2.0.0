@@ -154,7 +154,14 @@
 			speed_buf = 1;
 		}
     </script>
-	<script>
+	
+	<script type="text/javascript">
 		var state_bug = 0;
+		mui.init({
+			swipeBack:true,
+			beforeback: function(){
+				window.history.back();
+			}
+		});
 	</script>
 </html>

@@ -12,9 +12,9 @@
     <script src="../js/Control.js"></script>
     <script src="../js/websocket.js"></script>
     <script src="../js/mui.min.js"></script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     	mui.init();
-    </script>
+    </script> -->
     <script src="../js/Receive8.js" type="text/javascript"></script>
     <script src="../js/Send.js"></script>
 </head>  
@@ -62,5 +62,12 @@
 </body>  
 <script>
 	var state_bug = 0;
+	mui.init({
+		swipeBack:true,
+		
+		beforeback: function(){
+			window.history.back();
+		}
+	});
 </script>
 </html>

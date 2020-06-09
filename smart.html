@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>安防系统</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="./js/mui.min.js"></script>
+		<script src="./js/rem.js"></script>
+		<link href="./css/mui.min.css" rel="stylesheet"/>
+		<link href="./css/smart.css" rel="stylesheet"/>
+		<script src="./js/iconfont.js"></script>
+		<script src="./js/jquery-3.4.1.js"></script>
+		<script src="./js/Control.js"></script>
+		<script src="./js/websocket.js"></script>
+		<script src="./js/Receivesmart.js"></script>
+		<script src="./js/Send.js"></script>
+	</head>
+	<body>
+			<header class="mui-bar mui-bar-nav">
+			    <h1 class="mui-title" style="color: #FFFFFF">安防系统</h1>
+			</header>
+			<div class="mui-content">  
+				<div class="container">
+					<div class="sa-part1">防区
+						<ul class="sa-ul">
+							<li>
+								<img id="smimg1" src="./img/smart-1.png">
+								<p>1</p>
+							</li>
+							<li>
+								<img id="smimg2" src="./img/smart-1.png">
+								<p>2</p>
+							</li>
+							<li>
+								<img  id="smimg3"src="./img/smart-1.png">
+								<p>3</p>
+							</li>
+							<li>
+								<img id="smimg4" src="./img/smart-1.png">
+								<p>4</p>
+							</li>
+							<li>
+								<img id="smimg5" src="./img/smart-1.png">
+								<p>5</p>
+							</li>
+							<li>
+								<img id="smimg6" src="./img/smart-1.png">
+								<p>6</p>
+							</li>
+							<li>
+								<img  id="smimg7" src="./img/smart-1.png">
+								<p>7</p>
+							</li>
+							<li>
+								<img id="smimg8" src="./img/smart-1.png">
+								<p>8</p>
+							</li>
+						</ul>
+					</div>
+					<div class="sa-part2">报警状态
+						<ul>
+							<li>
+								<img id="smimg9" src="./img/smart-2.png">
+								<p>紧急报警</p>
+							</li>
+							<li>
+								<img id="smimg10" src="./img/smart-4.png">
+								<p>火警报警</p>
+							</li>
+							<li>
+								<img id="smimg11" src="./img/smart-6.png">
+								<p>盗警报警</p>
+							</li>
+						</ul>
+					</div>
+					<div class="sa-part3">信息
+						<ul>
+							<div>
+								<label>报警状态</label>
+								<input value="无" disabled ="disabled" id="sm-pol">
+								<label>通讯故障</label>
+								<input value="无" disabled ="disabled" id="sm-fault">
+							</div>
+							
+							<div>
+								<label>撤布防</label>
+								<button id="sm-detest" onclick="Smdetest()">撤防</button>
+								<label>服务灯</label>
+								<button disabled ="disabled" class="serve-power"></button>
+							</div>
+						</ul>
+					</div>
+					<div id="popover" class="mui-popover">
+						<div class="sa-popver">
+							<table>
+								<input id="smtext" value=""/>
+								<tr>
+									<td onclick="Smpass(1)">1</td>
+									<td onclick="Smpass(2)">2</td>
+									<td onclick="Smpass(3)">3</td>
+									<td rowspan="2" id="clr" onclick="Smclean()">清除</td>
+								</tr>
+								<tr>
+									<td onclick="Smpass(4)">4</td>
+									<td onclick="Smpass(5)">5</td>
+									<td onclick="Smpass(6)">6</td>
+								</tr>
+								<tr>
+									<td onclick="Smpass(7)">7</td>
+									<td onclick="Smpass(8)">8</td>
+									<td onclick="Smpass(9)">9</td>
+									<td rowspan="2" id="con" onclick="SmCon()">确定</td>
+								</tr>
+								<tr>
+									<td onclick="Smpass('*')">*</td>
+									<td onclick="Smpass(0)">0</td>
+									<td onclick="Smpass('#')">#</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<script type="text/javascript">
+			mui.init()
+			var state_bug = 14;
+		</script>
+	</body>
+</html>
