@@ -296,6 +296,7 @@ function btnPower(){
 *  功能说明: airTry() 尝试匹配按键
 *  功能说明: airCon()  匹配成功按键
 */
+
 var air_power_mask = false;
 function airPower(){
 	if(air_power_mask){
